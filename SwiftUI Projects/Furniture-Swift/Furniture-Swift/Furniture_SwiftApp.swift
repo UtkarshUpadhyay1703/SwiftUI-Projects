@@ -11,8 +11,7 @@ import SwiftUI
 struct Furniture_SwiftApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            ProductView(product: productList[0])
+            ContentView()
         }
     }
 }

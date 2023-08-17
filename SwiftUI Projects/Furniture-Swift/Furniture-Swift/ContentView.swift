@@ -19,10 +19,9 @@ struct ContentView: View {
     @Namespace var animation
     var body: some View {
         TabView(selection: $currentTab){
-            Text("Home View")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .background()
-                .tag(Tab.Home)
+
+            HomePageView()
+
             Text("Search View")
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background()
@@ -63,7 +62,7 @@ struct ContentView: View {
                 VStack(spacing: 0){
                     Image(systemName: currentTab == tab ? tab.rawValue + ".fill" : tab.rawValue)
                         .resizable()
-                        .foregroundColor(Color("kPrimary"))
+                        .foregroundColor(Color.kPrimary)
                         .aspectRatio(contentMode: .fit)
                         .frame(width: 25, height: 25)
                         .frame(maxWidth: .infinity)

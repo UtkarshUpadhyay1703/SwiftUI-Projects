@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ProductView: View {
+struct ProductCartView: View {
     @EnvironmentObject var cartManager: CartManager
     var product: Product
     
@@ -23,6 +23,7 @@ struct ProductView: View {
                     Text(product.name)
                         .font(.headline)
                         .padding(.vertical, 1)
+                        .foregroundColor(.black)
                     
                     Text(product.supplier)
                         .foregroundColor(.gray)
@@ -31,6 +32,7 @@ struct ProductView: View {
                     
                     Text("₹‎ \(product.price)")
                         .bold()
+                        .foregroundColor(.black)
                 }
                 Button{
                     cartManager.addToCart(product: product)
@@ -50,7 +52,7 @@ struct ProductView: View {
 
 struct ProductView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductView(product: productList[2])
+        ProductCartView(product: productList[2])
             .environmentObject(CartManager())
     }
 }
