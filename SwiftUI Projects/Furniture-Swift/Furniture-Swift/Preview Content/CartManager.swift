@@ -11,6 +11,7 @@ class CartManager: ObservableObject {
     @Published private(set) var products: [Product] = []
     
     @Published private(set) var total: Int = 0
+    // private(set) means: Can be modified from within the struct or class that declares it but cannot be modified from outside that context.
     
     func addToCart(product: Product){
         products.append(product)

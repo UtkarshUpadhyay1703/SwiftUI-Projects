@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Localization Usage
+
+  Created by admin on 8/21/23.
+  
+*/
+
+"what_is_your_plan" = "WHAT IS YOUR PLAN";
+"your age is %@" = "YOUR AGE IS %@";
+"your age is" = "YOUR AGE IS = ";
+//"Hindi" = "हिंदी";

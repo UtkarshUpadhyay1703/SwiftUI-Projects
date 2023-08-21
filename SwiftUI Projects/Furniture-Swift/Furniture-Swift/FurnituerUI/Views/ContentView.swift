@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ProfileView: View {
     @StateObject var cartManager = CartManager()
     
     @State var currentTab: Tab = .Home
@@ -91,11 +91,8 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            ContentView()
-            ContentView()
-                .preferredColorScheme(.dark)
-        }
+
+            ProfileView()
         .environmentObject(CartManager())
     }
 }

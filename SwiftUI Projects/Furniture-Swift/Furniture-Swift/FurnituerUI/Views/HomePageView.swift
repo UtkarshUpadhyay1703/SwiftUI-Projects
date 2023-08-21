@@ -29,8 +29,12 @@ struct HomePageView: View {
                         
                         Spacer()
                         
-                        Image(systemName: "circle.grid.2x2.fill")
-                            .foregroundColor(Color("kPrimary"))
+                        NavigationLink(destination: {
+                            ProductsView()
+                        }, label: {
+                            Image(systemName: "circle.grid.2x2.fill")
+                                .foregroundColor(Color("kPrimary"))
+                        })
                     }
                     .padding()
                     
@@ -38,7 +42,8 @@ struct HomePageView: View {
                         HStack(spacing: 10){
                             ForEach(productList, id: \.id){ product in
                                 NavigationLink{
-                                    Text(product.name)
+//                                    Text(product.name)
+                                    ProductDetailsView(product: product)
                                 } label: {
                                     ProductCartView(product: product)
                                         .environmentObject(cartManager)
@@ -82,7 +87,9 @@ struct AppBar: View {
                 
                 Spacer()
                 
-                NavigationLink(destination: Text("")){
+                NavigationLink(destination: CartView()
+                                .environmentObject(cartManager)
+                ){
                     CartButton(numberOfProducts: cartManager.products.count)
                 }
             }

@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  Localization Usage
+
+  Created by admin on 8/21/23.
+  
+*/
+
+"what_is_your_plan" = "каков твой план";
+"your age is %@" = "твой возраст %@";
