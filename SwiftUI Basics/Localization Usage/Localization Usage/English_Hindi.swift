@@ -12,8 +12,17 @@ struct English_Hindi: View {
     @State var variable2: String = "your age is ="
     var age = "55"
     @State var count = 1
+    
+    static let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .short
+        return formatter
+    }()
+    
     var body: some View {
         VStack{
+            Text(Self.dateFormatter.string(from: Date()))
             HStack{
                 Button(action: {
                     variable1 = "what_is_your_plan".localizableString(loc: "en")

@@ -10,3 +10,8 @@
 "your age is %@" = "YOUR AGE IS %@";
 "your age is" = "YOUR AGE IS = ";
 //"Hindi" = "हिंदी";
+
+
+"unread_messages" = "%d unread message";
+"unread_messages_plural" = "%d unread messages";
+

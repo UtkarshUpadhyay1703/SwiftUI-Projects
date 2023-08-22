@@ -6,7 +6,7 @@
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
 		<string>%#@VARIABLE@</string>
-		<key>VARIABLE</key>
+		<key>Variable</key>
 		<dict>
 			<key>NSStringFormatSpecTypeKey</key>
 			<string>NSStringPluralRuleType</string>
@@ -24,6 +24,24 @@
 			<string></string>
 			<key>other</key>
 			<string></string>
+		</dict>
+	</dict>
+	<key>overdue</key>
+	<dict>
+		<key>NSStringLocalizedFormatKey</key>
+		<string>%#@days@</string>
+		<key>days</key>
+		<dict>
+			<key>NSStringFormatSpecTypeKey</key>
+			<string>NSStringPluralRuleType</string>
+			<key>NSStringFormatValueTypeKey</key>
+			<string>d</string>
+			<key>zero</key>
+			<string>Your account is overdue</string>
+			<key>one</key>
+			<string>Account %d day overdue</string>
+			<key>other</key>
+			<string>Account %d days overdue</string>
 		</dict>
 	</dict>
 </dict>

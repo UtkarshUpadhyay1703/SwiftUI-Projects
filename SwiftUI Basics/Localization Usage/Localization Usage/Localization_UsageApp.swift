@@ -12,7 +12,8 @@ struct Localization_UsageApp: App {
     var body: some Scene {
         WindowGroup {
 //            ContentView()
-            English_Hindi()
+//            English_Hindi()
+            Pluralization()
         }
     }
 }
