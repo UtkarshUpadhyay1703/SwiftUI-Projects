@@ -1,17 +1,18 @@
-/* 
-  Localizable.strings
+/* "Hindi" = "हिंदी"; */
+"unread_messages" = "%d unread message";
+
+/* (No Comment) */
+"unread_messages_plural" = "%d unread messages";
+
+/* Localizable.strings
   Localization Usage
 
-  Created by admin on 8/21/23.
-  
-*/
+  Created by admin on 8/22/23. */
+"what_is_your_plan" = "WHAT IS YOUR PLAN?";
 
-"what_is_your_plan" = "WHAT IS YOUR PLAN";
-"your age is %@" = "YOUR AGE IS %@";
+/* (No Comment) */
 "your age is" = "YOUR AGE IS = ";
-//"Hindi" = "हिंदी";
 
-
-"unread_messages" = "%d unread message";
-"unread_messages_plural" = "%d unread messages";
+/* (No Comment) */
+"your age is %@" = "YOUR AGE IS %@";
 

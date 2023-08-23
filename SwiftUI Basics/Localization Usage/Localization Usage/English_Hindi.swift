@@ -36,7 +36,8 @@ struct English_Hindi: View {
                     .background(.purple)
                     .font(.title.bold())
                 Button(action: {
-                    variable1 = variable1.localizableString(loc: "hi")
+                    variable1 = "what_is_your_plan".localizableString(loc: "hi")
+                    //We cannot write variable1.localizableString(loc: "hi") because variable1 is a state wrapper of String type not a String.
                     variable2 = "your age is".localizableString(loc: "hi")
                 }, label: {
                     Text("हिंदी")
@@ -73,6 +74,6 @@ extension String{
 struct English_Hindi_Previews: PreviewProvider {
     static var previews: some View {
         English_Hindi()
-            .environment(\.locale, Locale.init(identifier: "en"))
+            .environment(\.locale, Locale.init(identifier: "hi"))
     }
 }

@@ -13,7 +13,8 @@ struct Localization_UsageApp: App {
         WindowGroup {
 //            ContentView()
 //            English_Hindi()
-            Pluralization()
+//            Pluralization()
+            AutomaticGrammarAgreement()
         }
     }
 }

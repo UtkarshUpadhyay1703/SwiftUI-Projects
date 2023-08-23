@@ -1,0 +1,18 @@
+/* "Hindi" = "हिंदी"; */
+"unread_messages" = "%d ongelezen bericht";
+
+/* (No Comment) */
+"unread_messages_plural" = "%d ongelezen berichten";
+
+/* Localizable.strings
+  Localization Usage
+
+  Created by admin on 8/22/23. */
+"what_is_your_plan" = "WAT IS JE PLAN?";
+
+/* (No Comment) */
+"your age is" = "JE LEEFTIJD IS =";
+
+/* (No Comment) */
+"your age is %@" = "JE LEEFTIJD IS %@";
+

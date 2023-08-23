@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct Pluralization: View {
+    let unreadCount0 = 0
+    let unreadCount1 = 1
+    let unreadCount2 = 3
+    
     func findBro(_ count: Int) -> String{
         let localized = NSLocalizedString("overdue", comment: "xxx")
         let formatted = String(format: localized, count)
         return formatted
     }
-    
-    let unreadCount0 = 0
-    let unreadCount1 = 1
-    let unreadCount2 = 3
     
     var body: some View {
         VStack{
