@@ -10,11 +10,17 @@ import SwiftUI
 struct ContentView: View {
     //    @State private var selectedState: String = "Arunachal Pradesh"
     @State private var selectedLanguage: String = "English"
-    @State private var Dish1: String = "Dish1"
-    @State private var Dish2: String = "Dish2"
-    @State private var Dish3: String = "Dish3"
-    @State private var Dish4: String = "Dish4"
-    @State private var Dish5: String = "Dish5"
+//    @State private var Dish1: String = "Dish1"
+//    @State private var Dish2: String = "Dish2"
+//    @State private var Dish3: String = "Dish3"
+//    @State private var Dish4: String = "Dish4"
+//    @State private var Dish5: String = "Dish5"
+    
+    @State private var show1: Bool = false
+    @State private var show2: Bool = false
+    @State private var show3: Bool = false
+    @State private var show4: Bool = false
+    @State private var show5: Bool = false
     
     //    private var stateNames: [String] = [ "Arunachal Pradesh", "Uttar Pradesh", "Maharashtra", "Tamil Nadu", "Punjab"]
     
@@ -23,34 +29,34 @@ struct ContentView: View {
     var body: some View {
         NavigationView{
             ScrollView{
-                Text("Select Your Language")
-                HStack{
-                    Picker(selection: $selectedLanguage, content: {
-                        //                        ForEach(languages, id: \.self){ language in
-                        //                            Text(language)
-                        //                                .foregroundColor(.red)
-                        //                                .tag(<#T##tag: Hashable##Hashable#>)
-                        //                        }
-                        ForEach(languages.indices){ index in
-                            Text(languages[index])
-                                .foregroundColor(.red)
-                                .tag(languages[index])
-                            
-                        }
-                    }, label: {
-                        Text("Select Your Language")
-                    })
-                        .pickerStyle(.segmented)
-                        .onChange(of: selectedLanguage) { newValue in
-                            if newValue == "English" {
-                                Dish1 = "Dish1".localizableString(loc: "en")
-                                Dish2 = "Dish2".localizableString(loc: "en")
-                                Dish3 = "Dish3".localizableString(loc: "en")
-                                Dish4 = "Dish4".localizableString(loc: "en")
-                                Dish5 = "Dish5".localizableString(loc: "en")
-                            }
-                        }
-                }
+//                Text("Select Your Language")
+//                HStack{
+//                    Picker(selection: $selectedLanguage, content: {
+//                        //                        ForEach(languages, id: \.self){ language in
+//                        //                            Text(language)
+//                        //                                .foregroundColor(.red)
+//                        //                                .tag(<#T##tag: Hashable##Hashable#>)
+//                        //                        }
+//                        ForEach(languages.indices){ index in
+//                            Text(languages[index])
+//                                .foregroundColor(.red)
+//                                .tag(languages[index])
+//
+//                        }
+//                    }, label: {
+//                        Text("Select Your Language")
+//                    })
+//                        .pickerStyle(.segmented)
+//                        .onChange(of: selectedLanguage) { newValue in
+//                            if newValue == "English" {
+//                                Dish1 = "Dish1".localizableString(loc: "en")
+//                                Dish2 = "Dish2".localizableString(loc: "en")
+//                                Dish3 = "Dish3".localizableString(loc: "en")
+//                                Dish4 = "Dish4".localizableString(loc: "en")
+//                                Dish5 = "Dish5".localizableString(loc: "en")
+//                            }
+//                        }
+//                }
                 
                 Spacer()
                 
@@ -58,15 +64,40 @@ struct ContentView: View {
                     //                    ForEach(0..<5){ index in
                     
                     NavigationLink(destination: {
-                        Text(Dish1)
+                        //                        ZStack{
+                        Text(dish1)
+                        
                     }, label: {
-                        Image(Dish1)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 250, height: 250)
-                            .cornerRadius(100)
-                            .shadow(color: .gray, radius: 10, x: 10, y: 10)
-                        Text(Dish1)
+                        ZStack{
+                            Image(dish1)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 250, height: 250)
+                                .cornerRadius(100)
+                                .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                                .onTapGesture(perform: {
+                                    show1 = true
+                                })
+                            if show1{
+                                VStack{
+                                    Button(action: {
+                                        show1 = false
+                                    }) {
+                                        Image(systemName: "xmark.circle.fill")
+                                    }
+                                    .frame(width: 10, height: 10, alignment: .topTrailing)
+                                    .foregroundColor(.red)
+                                    
+                                    Image(dish1)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 550, height: 550)
+                                        .cornerRadius(100)
+                                        .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                                }
+                            }
+                        }
+                        Text(dish1)
                             .font(.title.bold())
                     })
                         .padding()
@@ -75,12 +106,35 @@ struct ContentView: View {
                     NavigationLink(destination: {
                         Text(dish2)
                     }, label: {
-                        Image(dish2)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 250, height: 250)
-                            .cornerRadius(100)
-                            .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                        ZStack{
+                            Image(dish2)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 250, height: 250)
+                                .cornerRadius(100)
+                                .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                                .onTapGesture(perform: {
+                                    show2 = true
+                                })
+                            if show2{
+                                VStack{
+                                    Button(action: {
+                                        show2 = false
+                                    }) {
+                                        Image(systemName: "xmark.circle.fill")
+                                    }
+                                    .frame(width: 10, height: 10, alignment: .topTrailing)
+                                    .foregroundColor(.red)
+                                    
+                                    Image(dish2)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 550, height: 550)
+                                        .cornerRadius(100)
+                                        .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                                }
+                            }
+                        }
                         Text(dish2)
                             .font(.title.bold())
                     })
@@ -90,12 +144,35 @@ struct ContentView: View {
                     NavigationLink(destination: {
                         Text(dish3)
                     }, label: {
-                        Image(dish3)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 250, height: 250)
-                            .cornerRadius(100)
-                            .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                        ZStack{
+                            Image(dish3)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 250, height: 250)
+                                .cornerRadius(100)
+                                .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                                .onTapGesture(perform: {
+                                    show3 = true
+                                })
+                            if show3{
+                                VStack{
+                                    Button(action: {
+                                        show3 = false
+                                    }) {
+                                        Image(systemName: "xmark.circle.fill")
+                                    }
+                                    .frame(width: 10, height: 10, alignment: .topTrailing)
+                                    .foregroundColor(.red)
+                                    
+                                    Image(dish3)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 550, height: 550)
+                                        .cornerRadius(100)
+                                        .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                                }
+                            }
+                        }
                         Text(dish3)
                             .font(.title.bold())
                     })
@@ -104,12 +181,35 @@ struct ContentView: View {
                     NavigationLink(destination: {
                         Text(dish4)
                     }, label: {
-                        Image(dish4)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 250, height: 250)
-                            .cornerRadius(100)
-                            .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                        ZStack{
+                            Image(dish4)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 250, height: 250)
+                                .cornerRadius(100)
+                                .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                                .onTapGesture(perform: {
+                                    show4 = true
+                                })
+                            if show4{
+                                VStack{
+                                    Button(action: {
+                                        show4 = false
+                                    }) {
+                                        Image(systemName: "xmark.circle.fill")
+                                    }
+                                    .frame(width: 10, height: 10, alignment: .topTrailing)
+                                    .foregroundColor(.red)
+                                    
+                                    Image(dish4)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 550, height: 550)
+                                        .cornerRadius(100)
+                                        .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                                }
+                            }
+                        }
                         Text(dish4)
                             .font(.title.bold())
                     })
@@ -119,12 +219,35 @@ struct ContentView: View {
                     NavigationLink(destination: {
                         Text(dish5)
                     }, label: {
-                        Image(dish5)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 250, height: 250)
-                            .cornerRadius(100)
-                            .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                        ZStack{
+                            Image(dish5)
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 250, height: 250)
+                                .cornerRadius(100)
+                                .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                                .onTapGesture(perform: {
+                                    show5 = true
+                                })
+                            if show5{
+                                VStack{
+                                    Button(action: {
+                                        show5 = false
+                                    }) {
+                                        Image(systemName: "xmark.circle.fill")
+                                    }
+                                    .frame(width: 10, height: 10, alignment: .topTrailing)
+                                    .foregroundColor(.red)
+                                    
+                                    Image(dish5)
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 550, height: 550)
+                                        .cornerRadius(100)
+                                        .shadow(color: .gray, radius: 10, x: 10, y: 10)
+                                }
+                            }
+                        }
                         Text(dish5)
                             .font(.title.bold())
                     })
