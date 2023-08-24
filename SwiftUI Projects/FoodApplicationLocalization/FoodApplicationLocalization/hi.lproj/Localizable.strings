@@ -6,7 +6,8 @@
   
 */
 
-"State" = "उत्तर प्रदेश (Uttar Pradesh)";
+"State" = "उत्तर प्रदेश";
+"State English" = "(Uttar Pradesh)";
 "Dish1" = "बेढ़ई";
 "Dish2" = "पेढ़ा";
 "Dish3" = "पेठा";

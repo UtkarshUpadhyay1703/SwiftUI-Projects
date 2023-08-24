@@ -6,7 +6,8 @@
   
 */
 
-"State" = "ਪੰਜਾਬ (Punjab)";
+"State" = "ਪੰਜਾਬ";
+"State English" = "(Punjab)";
 "Dish1" = "ਸ਼ਕਰ ਪਾਰਾ";
 "Dish2" = "ਲੱਸੀ";
 "Dish3" = "ਛੋਲੇ-ਭਟੂਰੇ";

@@ -6,7 +6,8 @@
   
 */
 
-"State" = "தமிழ்நாடு (Tamil Nadu)";
+"State" = "தமிழ்நாடு";
+"State English" = "(Tamil Nadu)";
 "Dish1" = "உத்தபம்";
 "Dish2" = "வாழைப்பழ போண்டா";
 "Dish3" = "ரசம்";
