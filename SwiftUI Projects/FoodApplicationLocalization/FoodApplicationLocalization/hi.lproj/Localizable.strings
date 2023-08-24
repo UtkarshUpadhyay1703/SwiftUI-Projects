@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  FoodApplicationLocalization
+
+  Created by admin on 8/23/23.
+  
+*/
+
+"State" = "उत्तर प्रदेश (Uttar Pradesh)";
+"Dish1" = "बेढ़ई";
+"Dish2" = "पेढ़ा";
+"Dish3" = "पेठा";
+"Dish4" = "बत्ती चोखा";
+"Dish5" = "मालपुआ";

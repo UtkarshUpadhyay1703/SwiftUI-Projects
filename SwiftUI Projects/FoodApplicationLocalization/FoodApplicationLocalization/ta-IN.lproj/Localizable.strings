@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  FoodApplicationLocalization
+
+  Created by admin on 8/23/23.
+  
+*/
+
+"State" = "தமிழ்நாடு (Tamil Nadu)";
+"Dish1" = "உத்தபம்";
+"Dish2" = "வாழைப்பழ போண்டா";
+"Dish3" = "ரசம்";
+"Dish4" = "தோசை";
+"Dish5" = "முறுக்கு";

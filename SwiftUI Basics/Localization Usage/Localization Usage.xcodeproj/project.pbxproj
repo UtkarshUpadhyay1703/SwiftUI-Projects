@@ -16,6 +16,7 @@
 		8484E6062A94853D00700EFB /* Pluralization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484E6052A94853D00700EFB /* Pluralization.swift */; };
 		8484E6082A94B21500700EFB /* AutomaticGrammarAgreement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484E6072A94B21500700EFB /* AutomaticGrammarAgreement.swift */; };
 		8484E62F2A94E28000700EFB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8484E6312A94E28000700EFB /* Localizable.strings */; };
+		848790652A95E52B00C07207 /* ImageTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848790642A95E52B00C07207 /* ImageTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		8484E6322A94E2C500700EFB /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8484E6332A94E2CE00700EFB /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		848790612A95D0C100C07207 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		848790642A95E52B00C07207 /* ImageTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				84523DEE2A9361DB008B4FA0 /* English_Hindi.swift */,
 				8484E6052A94853D00700EFB /* Pluralization.swift */,
 				8484E6072A94B21500700EFB /* AutomaticGrammarAgreement.swift */,
+				848790642A95E52B00C07207 /* ImageTest.swift */,
 				84523DF02A93935C008B4FA0 /* Localizable.stringsdict */,
 				8484E6312A94E28000700EFB /* Localizable.strings */,
 				84523DDD2A9339D8008B4FA0 /* Assets.xcassets */,
@@ -163,6 +166,7 @@
 				8484E6062A94853D00700EFB /* Pluralization.swift in Sources */,
 				84523DEF2A9361DB008B4FA0 /* English_Hindi.swift in Sources */,
 				84523DDC2A9339D5008B4FA0 /* ContentView.swift in Sources */,
+				848790652A95E52B00C07207 /* ImageTest.swift in Sources */,
 				8484E6082A94B21500700EFB /* AutomaticGrammarAgreement.swift in Sources */,
 				84523DDA2A9339D5008B4FA0 /* Localization_UsageApp.swift in Sources */,
 			);

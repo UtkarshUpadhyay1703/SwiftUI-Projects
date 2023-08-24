@@ -14,7 +14,9 @@ struct Localization_UsageApp: App {
 //            ContentView()
 //            English_Hindi()
 //            Pluralization()
-            AutomaticGrammarAgreement()
+//            AutomaticGrammarAgreement()
+//            TranslateApiTest()
+            ImageTest()
         }
     }
 }
