@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "84523DD52A9339D5008B4FA0"
-               BuildableName = "Localization Usage.app"
-               BlueprintName = "Localization Usage"
-               ReferencedContainer = "container:Localization Usage.xcodeproj">
+               BlueprintIdentifier = "8478E9B12A9CA51F00DA1AB7"
+               BuildableName = "FoodAppNormal.app"
+               BlueprintName = "FoodAppNormal"
+               ReferencedContainer = "container:FoodAppNormal.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = "nl"
-      region = "IN"
+      language = "mr-IN"
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -46,10 +45,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "84523DD52A9339D5008B4FA0"
-            BuildableName = "Localization Usage.app"
-            BlueprintName = "Localization Usage"
-            ReferencedContainer = "container:Localization Usage.xcodeproj">
+            BlueprintIdentifier = "8478E9B12A9CA51F00DA1AB7"
+            BuildableName = "FoodAppNormal.app"
+            BlueprintName = "FoodAppNormal"
+            ReferencedContainer = "container:FoodAppNormal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -63,10 +62,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "84523DD52A9339D5008B4FA0"
-            BuildableName = "Localization Usage.app"
-            BlueprintName = "Localization Usage"
-            ReferencedContainer = "container:Localization Usage.xcodeproj">
+            BlueprintIdentifier = "8478E9B12A9CA51F00DA1AB7"
+            BuildableName = "FoodAppNormal.app"
+            BlueprintName = "FoodAppNormal"
+            ReferencedContainer = "container:FoodAppNormal.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

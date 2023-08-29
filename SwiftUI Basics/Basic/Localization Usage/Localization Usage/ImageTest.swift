@@ -12,10 +12,10 @@ struct ImageTest: View {
     
     var imageNameOnLanguageBasis: String {
         //For restricting country wise Application
-//        if locale.regionCode == "IN" {
-//            print("Terminate")
-//            exit(0)
-//        }
+        //        if locale.regionCode == "IN" {
+        //            print("Terminate")
+        //            exit(0)
+        //        }
         return NSLocalizedString("Flag", comment: "")
     }
     
@@ -32,6 +32,7 @@ struct ImageTest: View {
             Image(imageNameOnLanguageBasis)
                 .resizable()
                 .scaledToFit()
+            
             Image(imageNameOnRegionBasis)
                 .resizable()
                 .scaledToFit()

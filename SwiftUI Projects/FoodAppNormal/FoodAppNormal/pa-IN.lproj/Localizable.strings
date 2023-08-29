@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  FoodAppNormal
+
+  Created by admin on 8/28/23.
+  
+*/
+
+"State" = "ਪੰਜਾਬ";
+"State English" = "(Punjab)";
+"Dish1" = "ਸ਼ਕਰ ਪਾਰਾ";
+"Dish2" = "ਲੱਸੀ";
+"Dish3" = "ਛੋਲੇ-ਭਟੂਰੇ";
+"Dish4" = "ਪਰਾਂਥਾ";
+"Dish5" = "ਪਨੀਰ ਟਿੱਕਾ";

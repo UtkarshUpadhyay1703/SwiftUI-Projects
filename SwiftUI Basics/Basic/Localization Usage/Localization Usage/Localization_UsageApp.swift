@@ -11,12 +11,12 @@ import SwiftUI
 struct Localization_UsageApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
+            ContentView()
 //            English_Hindi()
 //            Pluralization()
 //            AutomaticGrammarAgreement()
 //            TranslateApiTest()
-            ImageTest()
+//            ImageTest()
         }
     }
 }

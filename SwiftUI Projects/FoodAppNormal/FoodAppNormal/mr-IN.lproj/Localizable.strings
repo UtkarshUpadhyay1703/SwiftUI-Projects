@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  FoodAppNormal
+
+  Created by admin on 8/28/23.
+  
+*/
+
+"State" = "महाराष्ट्र";
+"State English" = "(Maharashtra)";
+"Dish1" = "पावभाजी";
+"Dish2" = "वडा पाव";
+"Dish3" = "पुरण पोळी";
+"Dish4" = "मिसळ पाव";
+"Dish5" = "मोदक";

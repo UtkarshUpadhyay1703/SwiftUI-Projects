@@ -7,28 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		842E02B92A865C050021093C /* MagnificationGesture_UseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E02B82A865C050021093C /* MagnificationGesture_UseApp.swift */; };
-		842E02BB2A865C050021093C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842E02BA2A865C050021093C /* ContentView.swift */; };
-		842E02BD2A865C0A0021093C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842E02BC2A865C0A0021093C /* Assets.xcassets */; };
-		842E02C02A865C0A0021093C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842E02BF2A865C0A0021093C /* Preview Assets.xcassets */; };
-		8478E9A62A9C943000DA1AB7 /* Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478E9A52A9C943000DA1AB7 /* Drag.swift */; };
-		8478E9A82A9C9EF300DA1AB7 /* Swipe Drag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478E9A72A9C9EF300DA1AB7 /* Swipe Drag.swift */; };
-		8484D28B2A9C7DD500D0172C /* Rotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8484D28A2A9C7DD500D0172C /* Rotation.swift */; };
+		8478E9B62A9CA51F00DA1AB7 /* FoodAppNormalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478E9B52A9CA51F00DA1AB7 /* FoodAppNormalApp.swift */; };
+		8478E9B82A9CA51F00DA1AB7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8478E9B72A9CA51F00DA1AB7 /* ContentView.swift */; };
+		8478E9BA2A9CA52300DA1AB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8478E9B92A9CA52300DA1AB7 /* Assets.xcassets */; };
+		8478E9BD2A9CA52300DA1AB7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8478E9BC2A9CA52300DA1AB7 /* Preview Assets.xcassets */; };
+		8478E9C52A9CA6AD00DA1AB7 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8478E9C72A9CA6AD00DA1AB7 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		842E02B52A865C040021093C /* MagnificationGesture Use.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MagnificationGesture Use.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		842E02B82A865C050021093C /* MagnificationGesture_UseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagnificationGesture_UseApp.swift; sourceTree = "<group>"; };
-		842E02BA2A865C050021093C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		842E02BC2A865C0A0021093C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		842E02BF2A865C0A0021093C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8478E9A52A9C943000DA1AB7 /* Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drag.swift; sourceTree = "<group>"; };
-		8478E9A72A9C9EF300DA1AB7 /* Swipe Drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swipe Drag.swift"; sourceTree = "<group>"; };
-		8484D28A2A9C7DD500D0172C /* Rotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rotation.swift; sourceTree = "<group>"; };
+		8478E9B22A9CA51F00DA1AB7 /* FoodAppNormal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodAppNormal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8478E9B52A9CA51F00DA1AB7 /* FoodAppNormalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppNormalApp.swift; sourceTree = "<group>"; };
+		8478E9B72A9CA51F00DA1AB7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8478E9B92A9CA52300DA1AB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8478E9BC2A9CA52300DA1AB7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8478E9C62A9CA6AD00DA1AB7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8478E9C82A9CA6B100DA1AB7 /* ta-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "ta-IN"; path = "ta-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8478E9C92A9CA6E100DA1AB7 /* pa-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pa-IN"; path = "pa-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8478E9CA2A9CA6F600DA1AB7 /* mr-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "mr-IN"; path = "mr-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		8478E9CB2A9CA6FD00DA1AB7 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		842E02B22A865C040021093C /* Frameworks */ = {
+		8478E9AF2A9CA51F00DA1AB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -38,40 +38,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		842E02AC2A865C040021093C = {
+		8478E9A92A9CA51F00DA1AB7 = {
 			isa = PBXGroup;
 			children = (
-				842E02B72A865C040021093C /* MagnificationGesture Use */,
-				842E02B62A865C040021093C /* Products */,
+				8478E9B42A9CA51F00DA1AB7 /* FoodAppNormal */,
+				8478E9B32A9CA51F00DA1AB7 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		842E02B62A865C040021093C /* Products */ = {
+		8478E9B32A9CA51F00DA1AB7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				842E02B52A865C040021093C /* MagnificationGesture Use.app */,
+				8478E9B22A9CA51F00DA1AB7 /* FoodAppNormal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		842E02B72A865C040021093C /* MagnificationGesture Use */ = {
+		8478E9B42A9CA51F00DA1AB7 /* FoodAppNormal */ = {
 			isa = PBXGroup;
 			children = (
-				842E02B82A865C050021093C /* MagnificationGesture_UseApp.swift */,
-				842E02BA2A865C050021093C /* ContentView.swift */,
-				8484D28A2A9C7DD500D0172C /* Rotation.swift */,
-				8478E9A52A9C943000DA1AB7 /* Drag.swift */,
-				8478E9A72A9C9EF300DA1AB7 /* Swipe Drag.swift */,
-				842E02BC2A865C0A0021093C /* Assets.xcassets */,
-				842E02BE2A865C0A0021093C /* Preview Content */,
+				8478E9B52A9CA51F00DA1AB7 /* FoodAppNormalApp.swift */,
+				8478E9B72A9CA51F00DA1AB7 /* ContentView.swift */,
+				8478E9C72A9CA6AD00DA1AB7 /* Localizable.strings */,
+				8478E9B92A9CA52300DA1AB7 /* Assets.xcassets */,
+				8478E9BB2A9CA52300DA1AB7 /* Preview Content */,
 			);
-			path = "MagnificationGesture Use";
+			path = FoodAppNormal;
 			sourceTree = "<group>";
 		};
-		842E02BE2A865C0A0021093C /* Preview Content */ = {
+		8478E9BB2A9CA52300DA1AB7 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				842E02BF2A865C0A0021093C /* Preview Assets.xcassets */,
+				8478E9BC2A9CA52300DA1AB7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -79,85 +77,102 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		842E02B42A865C040021093C /* MagnificationGesture Use */ = {
+		8478E9B12A9CA51F00DA1AB7 /* FoodAppNormal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 842E02C32A865C0A0021093C /* Build configuration list for PBXNativeTarget "MagnificationGesture Use" */;
+			buildConfigurationList = 8478E9C02A9CA52300DA1AB7 /* Build configuration list for PBXNativeTarget "FoodAppNormal" */;
 			buildPhases = (
-				842E02B12A865C040021093C /* Sources */,
-				842E02B22A865C040021093C /* Frameworks */,
-				842E02B32A865C040021093C /* Resources */,
+				8478E9AE2A9CA51F00DA1AB7 /* Sources */,
+				8478E9AF2A9CA51F00DA1AB7 /* Frameworks */,
+				8478E9B02A9CA51F00DA1AB7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "MagnificationGesture Use";
-			productName = "MagnificationGesture Use";
-			productReference = 842E02B52A865C040021093C /* MagnificationGesture Use.app */;
+			name = FoodAppNormal;
+			productName = FoodAppNormal;
+			productReference = 8478E9B22A9CA51F00DA1AB7 /* FoodAppNormal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		842E02AD2A865C040021093C /* Project object */ = {
+		8478E9AA2A9CA51F00DA1AB7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					842E02B42A865C040021093C = {
+					8478E9B12A9CA51F00DA1AB7 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 842E02B02A865C040021093C /* Build configuration list for PBXProject "MagnificationGesture Use" */;
+			buildConfigurationList = 8478E9AD2A9CA51F00DA1AB7 /* Build configuration list for PBXProject "FoodAppNormal" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"ta-IN",
+				"pa-IN",
+				"mr-IN",
+				hi,
 			);
-			mainGroup = 842E02AC2A865C040021093C;
-			productRefGroup = 842E02B62A865C040021093C /* Products */;
+			mainGroup = 8478E9A92A9CA51F00DA1AB7;
+			productRefGroup = 8478E9B32A9CA51F00DA1AB7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				842E02B42A865C040021093C /* MagnificationGesture Use */,
+				8478E9B12A9CA51F00DA1AB7 /* FoodAppNormal */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		842E02B32A865C040021093C /* Resources */ = {
+		8478E9B02A9CA51F00DA1AB7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842E02C02A865C0A0021093C /* Preview Assets.xcassets in Resources */,
-				842E02BD2A865C0A0021093C /* Assets.xcassets in Resources */,
+				8478E9BD2A9CA52300DA1AB7 /* Preview Assets.xcassets in Resources */,
+				8478E9C52A9CA6AD00DA1AB7 /* Localizable.strings in Resources */,
+				8478E9BA2A9CA52300DA1AB7 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		842E02B12A865C040021093C /* Sources */ = {
+		8478E9AE2A9CA51F00DA1AB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				842E02BB2A865C050021093C /* ContentView.swift in Sources */,
-				8484D28B2A9C7DD500D0172C /* Rotation.swift in Sources */,
-				842E02B92A865C050021093C /* MagnificationGesture_UseApp.swift in Sources */,
-				8478E9A82A9C9EF300DA1AB7 /* Swipe Drag.swift in Sources */,
-				8478E9A62A9C943000DA1AB7 /* Drag.swift in Sources */,
+				8478E9B82A9CA51F00DA1AB7 /* ContentView.swift in Sources */,
+				8478E9B62A9CA51F00DA1AB7 /* FoodAppNormalApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		8478E9C72A9CA6AD00DA1AB7 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8478E9C62A9CA6AD00DA1AB7 /* en */,
+				8478E9C82A9CA6B100DA1AB7 /* ta-IN */,
+				8478E9C92A9CA6E100DA1AB7 /* pa-IN */,
+				8478E9CA2A9CA6F600DA1AB7 /* mr-IN */,
+				8478E9CB2A9CA6FD00DA1AB7 /* hi */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		842E02C12A865C0A0021093C /* Debug */ = {
+		8478E9BE2A9CA52300DA1AB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -218,7 +233,7 @@
 			};
 			name = Debug;
 		};
-		842E02C22A865C0A0021093C /* Release */ = {
+		8478E9BF2A9CA52300DA1AB7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -273,14 +288,14 @@
 			};
 			name = Release;
 		};
-		842E02C42A865C0A0021093C /* Debug */ = {
+		8478E9C12A9CA52300DA1AB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MagnificationGesture Use/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FoodAppNormal/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -293,7 +308,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.MagnificationGesture-Use";
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.FoodAppNormal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -301,14 +316,14 @@
 			};
 			name = Debug;
 		};
-		842E02C52A865C0A0021093C /* Release */ = {
+		8478E9C22A9CA52300DA1AB7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MagnificationGesture Use/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"FoodAppNormal/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -321,7 +336,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.MagnificationGesture-Use";
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.FoodAppNormal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -332,25 +347,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		842E02B02A865C040021093C /* Build configuration list for PBXProject "MagnificationGesture Use" */ = {
+		8478E9AD2A9CA51F00DA1AB7 /* Build configuration list for PBXProject "FoodAppNormal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				842E02C12A865C0A0021093C /* Debug */,
-				842E02C22A865C0A0021093C /* Release */,
+				8478E9BE2A9CA52300DA1AB7 /* Debug */,
+				8478E9BF2A9CA52300DA1AB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		842E02C32A865C0A0021093C /* Build configuration list for PBXNativeTarget "MagnificationGesture Use" */ = {
+		8478E9C02A9CA52300DA1AB7 /* Build configuration list for PBXNativeTarget "FoodAppNormal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				842E02C42A865C0A0021093C /* Debug */,
-				842E02C52A865C0A0021093C /* Release */,
+				8478E9C12A9CA52300DA1AB7 /* Debug */,
+				8478E9C22A9CA52300DA1AB7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 842E02AD2A865C040021093C /* Project object */;
+	rootObject = 8478E9AA2A9CA51F00DA1AB7 /* Project object */;
 }
