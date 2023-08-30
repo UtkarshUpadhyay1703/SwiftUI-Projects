@@ -7,23 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		848A10552A975D0200C1CE02 /* Local_Notification_UsageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A10542A975D0200C1CE02 /* Local_Notification_UsageApp.swift */; };
-		848A10572A975D0200C1CE02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848A10562A975D0200C1CE02 /* ContentView.swift */; };
-		848A10592A975D0600C1CE02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848A10582A975D0600C1CE02 /* Assets.xcassets */; };
-		848A105C2A975D0600C1CE02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848A105B2A975D0600C1CE02 /* Preview Assets.xcassets */; };
+		8473009D2A9DF9FC00B800BB /* Try_API_CallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473009C2A9DF9FC00B800BB /* Try_API_CallApp.swift */; };
+		8473009F2A9DF9FC00B800BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473009E2A9DF9FC00B800BB /* ContentView.swift */; };
+		847300A12A9DFA0000B800BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847300A02A9DFA0000B800BB /* Assets.xcassets */; };
+		847300A42A9DFA0000B800BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847300A32A9DFA0000B800BB /* Preview Assets.xcassets */; };
+		847300AB2A9DFA1E00B800BB /* Petrol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847300AA2A9DFA1E00B800BB /* Petrol.swift */; };
+		847300AD2A9DFBAD00B800BB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847300AC2A9DFBAD00B800BB /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8477CC652A9F1C4900FAAA0C /* Local-Notification-Usage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Local-Notification-Usage-Info.plist"; sourceTree = SOURCE_ROOT; };
-		848A10512A975D0200C1CE02 /* Local Notification Usage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Local Notification Usage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		848A10542A975D0200C1CE02 /* Local_Notification_UsageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Local_Notification_UsageApp.swift; sourceTree = "<group>"; };
-		848A10562A975D0200C1CE02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		848A10582A975D0600C1CE02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		848A105B2A975D0600C1CE02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		847300992A9DF9FC00B800BB /* Try API Call.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Try API Call.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8473009C2A9DF9FC00B800BB /* Try_API_CallApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Try_API_CallApp.swift; sourceTree = "<group>"; };
+		8473009E2A9DF9FC00B800BB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		847300A02A9DFA0000B800BB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		847300A32A9DFA0000B800BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		847300AA2A9DFA1E00B800BB /* Petrol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petrol.swift; sourceTree = "<group>"; };
+		847300AC2A9DFBAD00B800BB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		848A104E2A975D0100C1CE02 /* Frameworks */ = {
+		847300962A9DF9FC00B800BB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,38 +36,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		848A10482A975D0100C1CE02 = {
+		847300902A9DF9FB00B800BB = {
 			isa = PBXGroup;
 			children = (
-				848A10532A975D0200C1CE02 /* Local Notification Usage */,
-				848A10522A975D0200C1CE02 /* Products */,
+				8473009B2A9DF9FC00B800BB /* Try API Call */,
+				8473009A2A9DF9FC00B800BB /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		848A10522A975D0200C1CE02 /* Products */ = {
+		8473009A2A9DF9FC00B800BB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				848A10512A975D0200C1CE02 /* Local Notification Usage.app */,
+				847300992A9DF9FC00B800BB /* Try API Call.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		848A10532A975D0200C1CE02 /* Local Notification Usage */ = {
+		8473009B2A9DF9FC00B800BB /* Try API Call */ = {
 			isa = PBXGroup;
 			children = (
-				8477CC652A9F1C4900FAAA0C /* Local-Notification-Usage-Info.plist */,
-				848A10542A975D0200C1CE02 /* Local_Notification_UsageApp.swift */,
-				848A10562A975D0200C1CE02 /* ContentView.swift */,
-				848A10582A975D0600C1CE02 /* Assets.xcassets */,
-				848A105A2A975D0600C1CE02 /* Preview Content */,
+				8473009C2A9DF9FC00B800BB /* Try_API_CallApp.swift */,
+				8473009E2A9DF9FC00B800BB /* ContentView.swift */,
+				847300AC2A9DFBAD00B800BB /* HomeViewModel.swift */,
+				847300AA2A9DFA1E00B800BB /* Petrol.swift */,
+				847300A02A9DFA0000B800BB /* Assets.xcassets */,
+				847300A22A9DFA0000B800BB /* Preview Content */,
 			);
-			path = "Local Notification Usage";
+			path = "Try API Call";
 			sourceTree = "<group>";
 		};
-		848A105A2A975D0600C1CE02 /* Preview Content */ = {
+		847300A22A9DFA0000B800BB /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				848A105B2A975D0600C1CE02 /* Preview Assets.xcassets */,
+				847300A32A9DFA0000B800BB /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -72,39 +76,39 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		848A10502A975D0100C1CE02 /* Local Notification Usage */ = {
+		847300982A9DF9FC00B800BB /* Try API Call */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 848A105F2A975D0600C1CE02 /* Build configuration list for PBXNativeTarget "Local Notification Usage" */;
+			buildConfigurationList = 847300A72A9DFA0000B800BB /* Build configuration list for PBXNativeTarget "Try API Call" */;
 			buildPhases = (
-				848A104D2A975D0100C1CE02 /* Sources */,
-				848A104E2A975D0100C1CE02 /* Frameworks */,
-				848A104F2A975D0100C1CE02 /* Resources */,
+				847300952A9DF9FC00B800BB /* Sources */,
+				847300962A9DF9FC00B800BB /* Frameworks */,
+				847300972A9DF9FC00B800BB /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Local Notification Usage";
-			productName = "Local Notification Usage";
-			productReference = 848A10512A975D0200C1CE02 /* Local Notification Usage.app */;
+			name = "Try API Call";
+			productName = "Try API Call";
+			productReference = 847300992A9DF9FC00B800BB /* Try API Call.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		848A10492A975D0100C1CE02 /* Project object */ = {
+		847300912A9DF9FB00B800BB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					848A10502A975D0100C1CE02 = {
+					847300982A9DF9FC00B800BB = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 848A104C2A975D0100C1CE02 /* Build configuration list for PBXProject "Local Notification Usage" */;
+			buildConfigurationList = 847300942A9DF9FB00B800BB /* Build configuration list for PBXProject "Try API Call" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,42 +116,44 @@
 				en,
 				Base,
 			);
-			mainGroup = 848A10482A975D0100C1CE02;
-			productRefGroup = 848A10522A975D0200C1CE02 /* Products */;
+			mainGroup = 847300902A9DF9FB00B800BB;
+			productRefGroup = 8473009A2A9DF9FC00B800BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				848A10502A975D0100C1CE02 /* Local Notification Usage */,
+				847300982A9DF9FC00B800BB /* Try API Call */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		848A104F2A975D0100C1CE02 /* Resources */ = {
+		847300972A9DF9FC00B800BB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848A105C2A975D0600C1CE02 /* Preview Assets.xcassets in Resources */,
-				848A10592A975D0600C1CE02 /* Assets.xcassets in Resources */,
+				847300A42A9DFA0000B800BB /* Preview Assets.xcassets in Resources */,
+				847300A12A9DFA0000B800BB /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		848A104D2A975D0100C1CE02 /* Sources */ = {
+		847300952A9DF9FC00B800BB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848A10572A975D0200C1CE02 /* ContentView.swift in Sources */,
-				848A10552A975D0200C1CE02 /* Local_Notification_UsageApp.swift in Sources */,
+				847300AB2A9DFA1E00B800BB /* Petrol.swift in Sources */,
+				8473009F2A9DF9FC00B800BB /* ContentView.swift in Sources */,
+				8473009D2A9DF9FC00B800BB /* Try_API_CallApp.swift in Sources */,
+				847300AD2A9DFBAD00B800BB /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		848A105D2A975D0600C1CE02 /* Debug */ = {
+		847300A52A9DFA0000B800BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -208,7 +214,7 @@
 			};
 			name = Debug;
 		};
-		848A105E2A975D0600C1CE02 /* Release */ = {
+		847300A62A9DFA0000B800BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -263,19 +269,16 @@
 			};
 			name = Release;
 		};
-		848A10602A975D0600C1CE02 /* Debug */ = {
+		847300A82A9DFA0000B800BB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Local Notification Usage/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Try API Call/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Local-Notification-Usage-Info.plist";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide personalized recommendations.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show nearby points of interest.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -286,7 +289,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Local-Notification-Usage";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Try-API-Call";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -294,19 +297,16 @@
 			};
 			name = Debug;
 		};
-		848A10612A975D0600C1CE02 /* Release */ = {
+		847300A92A9DFA0000B800BB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Local Notification Usage/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Try API Call/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Local-Notification-Usage-Info.plist";
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "We need your location to provide personalized recommendations.";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to show nearby points of interest.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -317,7 +317,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Local-Notification-Usage";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Try-API-Call";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -328,25 +328,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		848A104C2A975D0100C1CE02 /* Build configuration list for PBXProject "Local Notification Usage" */ = {
+		847300942A9DF9FB00B800BB /* Build configuration list for PBXProject "Try API Call" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				848A105D2A975D0600C1CE02 /* Debug */,
-				848A105E2A975D0600C1CE02 /* Release */,
+				847300A52A9DFA0000B800BB /* Debug */,
+				847300A62A9DFA0000B800BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		848A105F2A975D0600C1CE02 /* Build configuration list for PBXNativeTarget "Local Notification Usage" */ = {
+		847300A72A9DFA0000B800BB /* Build configuration list for PBXNativeTarget "Try API Call" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				848A10602A975D0600C1CE02 /* Debug */,
-				848A10612A975D0600C1CE02 /* Release */,
+				847300A82A9DFA0000B800BB /* Debug */,
+				847300A92A9DFA0000B800BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 848A10492A975D0100C1CE02 /* Project object */;
+	rootObject = 847300912A9DF9FB00B800BB /* Project object */;
 }

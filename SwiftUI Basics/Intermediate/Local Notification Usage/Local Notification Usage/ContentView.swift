@@ -24,32 +24,83 @@ class NotificationManager {
         }
     }
     
-    //MARK: Time, Calendar, Location
-    func ScheduleNotification() {
+    // Time, Calendar, Location
+    
+    //MARK: Time
+    func ScheduleNotificationWithDelay() {
+        let content = UNMutableNotificationContent()
+        content.title = "10-Sec Delay Notification"
+        content.subtitle = "This is delay notification of 10 sec"
+        content.sound = .default
+        content.badge = 1
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 10, repeats: false)
+        //You can repeat also but time should be greater than 1 minute
+        
+        let request = UNNotificationRequest(
+            identifier: UUID().uuidString,
+            content: content,
+            trigger: trigger
+        )
+        
+        UNUserNotificationCenter.current().add(request)
+    }
+    
+    //MARK: Calendar Fixed Date
+    func scheduledNotificationOnSpecificDate(){
+        let content = UNMutableNotificationContent()
+        content.title = "This is Calendar Notification"
+        content.subtitle = "Custom Defined Notification"
+        content.sound = .default
+        content.badge = 1
+        
+        var dateComponents = DateComponents()
+        dateComponents.hour = 18
+        dateComponents.minute = 20
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        let request = UNNotificationRequest(
+            identifier: UUID().uuidString,
+            content: content,
+            trigger: trigger
+        )
+        
+        UNUserNotificationCenter.current().add(request)
+    }
+    
+    //MARK: Calendar Custom
+    func notificationOnCustomDate(customDate: Date){
         let content = UNMutableNotificationContent()
         content.title = "This is my first notification app"
         content.subtitle = "This was too easy"
         content.sound = .default
         content.badge = 1
         
-//        We have 3 types of Local Notifications:
+        let dateComponents = Calendar.current.dateComponents([.day, .month, .year, .hour, .minute], from: customDate)
         
-//        Time: after a specified interval of time.
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5.0, repeats: false)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+                    
+        let request = UNNotificationRequest(
+            identifier: UUID().uuidString,
+            content: content,
+            trigger: trigger
+        )
         
-//        Calander: On a specified Date and Time.
-        var dateComponents = DateComponents()
-        //As this time is in 24-hour format then this is called
-        dateComponents.hour = 16
-        dateComponents.minute = 41
-        
-//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        
-//        Location: On approaching a specified location.
+        UNUserNotificationCenter.current().add(request)
+    }
+    
+    //MARK: Location
+    func ScheduleNotificationOnLocation() {
+        let content = UNMutableNotificationContent()
+        content.title = "This is Location Notification"
+        content.subtitle = "On approaching a specific location"
+        content.sound = .default
+        content.badge = 1
         
         let coordinates = CLLocationCoordinate2D(
-            latitude: 120,
-            longitude: 120
+            latitude: 50,
+            longitude: 50
         )
         
         let region = CLCircularRegion(
@@ -67,38 +118,15 @@ class NotificationManager {
             content: content,
             trigger: trigger
         )
-        UNUserNotificationCenter.current().add(request)
         
+        UNUserNotificationCenter.current().add(request)
     }
     
+    //MARK: Cancle All Notifications
     func cancleNotification() {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
     }
-    
-    func notificationOnCustomDate(customDate: Date){
-        let content = UNMutableNotificationContent()
-        content.title = "This is my first notification app"
-        content.subtitle = "This was too easy"
-        content.sound = .default
-        content.badge = 1
-        
-        let dateComponents = Calendar.current.dateComponents([.day, .month, .year, .hour, .minute], from: customDate)
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
-        
-//        Location: On approaching a specified location.
-        
-        
-        let request = UNNotificationRequest(
-            identifier: UUID().uuidString,
-            content: content,
-            trigger: trigger
-        )
-        UNUserNotificationCenter.current().add(request)
-        
-    }
-    
 }
 
 struct ContentView: View {
@@ -106,6 +134,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 40){
+            //MARK: Request
             Button("Request Permission"){
                 NotificationManager.instance.requestAuthorization()
             }
@@ -115,15 +144,50 @@ struct ContentView: View {
             .foregroundColor(.red)
             .background(.yellow)
             
-            Button("Schedule Notification"){
-                NotificationManager.instance.ScheduleNotification()
+            //MARK: Time
+            Button("Schedule 10-Sec Delay Notification"){
+                NotificationManager.instance.ScheduleNotificationWithDelay()
             }
             .font(.title2.bold())
-            .frame(width: 250, height: 50)
+            .frame(width: 400, height: 50)
             .border(.brown, width: 10)
             .foregroundColor(.red)
             .background(.yellow)
             
+            //MARK: Calender Fixed
+            Button("Schedule Calendar time Notification"){
+                NotificationManager.instance.scheduledNotificationOnSpecificDate()
+            }
+            .font(.title2.bold())
+            .frame(width: 400, height: 50)
+            .border(.brown, width: 10)
+            .foregroundColor(.red)
+            .background(.yellow)
+            
+            DatePicker("Pick a date : ", selection: $selectedDate, in: Date()...)
+            
+            //MARK: Calendar Custom
+            Button("Custom Scheduled date Notification"){
+                NotificationManager.instance.notificationOnCustomDate(customDate: selectedDate)
+            }
+            .font(.title2.bold())
+            .frame(width: 400, height: 50)
+            .border(.brown, width: 10)
+            .foregroundColor(.red)
+            .background(.yellow)
+            
+            //MARK: Location
+            //But not working
+            Button("Schedule Location Notification"){
+                NotificationManager.instance.ScheduleNotificationOnLocation()
+            }
+            .font(.title2.bold())
+            .frame(width: 400, height: 50)
+            .border(.brown, width: 10)
+            .foregroundColor(.red)
+            .background(.yellow)
+            
+            //MARK: Increase Badge
             Button("Increase Badge") {
                 UIApplication.shared.applicationIconBadgeNumber += 1
             }
@@ -133,17 +197,7 @@ struct ContentView: View {
             .foregroundColor(.red)
             .background(.yellow)
             
-            DatePicker("Pick a date : ", selection: $selectedDate, in: Date()...)
-            
-            Button("Custom Scheduled date"){
-                NotificationManager.instance.notificationOnCustomDate(customDate: selectedDate)
-            }
-            .font(.title2.bold())
-            .frame(width: 250, height: 50)
-            .border(.brown, width: 10)
-            .foregroundColor(.red)
-            .background(.yellow)
-            
+            //MARK: 
             Button("Cancle Notification"){
                 NotificationManager.instance.cancleNotification()
             }
