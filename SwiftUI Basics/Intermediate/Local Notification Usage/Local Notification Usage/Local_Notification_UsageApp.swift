@@ -11,8 +11,7 @@ import SwiftUI
 struct Local_Notification_UsageApp: App {
     var body: some Scene {
         WindowGroup {
-//            ContentView()
-            LocationNotification()
+            ContentView()
         }
     }
 }

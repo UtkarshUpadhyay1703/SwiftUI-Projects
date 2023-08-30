@@ -131,6 +131,9 @@ class NotificationManager {
 
 struct ContentView: View {
     @State private var selectedDate = Date()
+    //For Location
+    @StateObject private var locationDelegate = LocationDelegate()
+    @State private var locationManager = CLLocationManager()
     
     var body: some View {
         VStack(spacing: 40){
@@ -209,6 +212,22 @@ struct ContentView: View {
         }
         .onAppear{
             UIApplication.shared.applicationIconBadgeNumber = 0
+            // For location
+                    locationManager.delegate = locationDelegate
+                    locationManager.requestWhenInUseAuthorization()
+                    locationManager.startUpdatingLocation()
+        }
+    }
+}
+
+//For Location
+class LocationDelegate: NSObject, CLLocationManagerDelegate, ObservableObject {
+    @Published var userLocation: CLLocationCoordinate2D?
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.last?.coordinate {
+            print("Received location update: \(location.latitude), \(location.longitude)")
+            userLocation = location
         }
     }
 }
