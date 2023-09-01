@@ -105,7 +105,7 @@ class NotificationManager {
         
         let region = CLCircularRegion(
             center: coordinates,
-            radius: 100,
+            radius: 1000,
             identifier: UUID().uuidString
         )
         region.notifyOnEntry = true
