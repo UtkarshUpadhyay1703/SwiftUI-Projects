@@ -8,9 +8,10 @@
 import Foundation
 
 class HomeViewModel: ObservableObject {
-    @Published var record = [Record]()
+//    @Published var record = [Record]()
 //    @Published var petrol: Petrol? = nil
-    @Published var petrol = Petrol(from: <#Decoder#>)
+    @Published var petrol: Petrol?
+    
     
     init(){
         fetchCoinData()
@@ -18,9 +19,16 @@ class HomeViewModel: ObservableObject {
     
     func fetchCoinData() {
         let urlString = "https://api.data.gov.in/resource/518e560e-7fa7-4f5b-8aed-3b90323ed965?api-key=579b464db66ec23bdd000001cdd3946e44ce4aad7209ff7b23ac571b&format=json"
+        
         guard let url = URL(string: urlString) else { return }
         
         URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard let data = data else {
+                print("No data")
+                return
+            }
+            
             if let error = error {
                 print("DEBUG: Error \(error.localizedDescription)")
                 return
@@ -30,17 +38,14 @@ class HomeViewModel: ObservableObject {
                 print("DEBUG: Response Code \(response.statusCode)")
             }
             
-            guard let data = data else { return }
-            
             let dataAsString = String(data: data, encoding: .utf8)
             print("DEBUG: Data \(dataAsString ?? "pata nahi")")
             
             do{
-                let record = try JSONDecoder().decode(petrol.self, from: data)
-//                print("DEBUG: Coins \(record)")
+                let petrol = try JSONDecoder().decode(Petrol.self, from: data)
+                print("DEBUG: Petrol = \(petrol)")
                 DispatchQueue.main.async {
-                    self.record = record
-//                    self.configureTopMovingCoins()
+                    self.petrol = petrol
                 }
             } catch let error {
                 print("Failed to decode with error: \(error)")

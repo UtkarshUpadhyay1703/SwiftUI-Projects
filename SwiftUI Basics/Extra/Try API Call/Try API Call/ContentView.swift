@@ -11,8 +11,9 @@ struct ContentView: View {
     @StateObject var viewModel = HomeViewModel()
     
     var body: some View {
-        Text()
-            .padding()
+        VStack{
+            Text(viewModel.)
+        }
     }
 }
 
