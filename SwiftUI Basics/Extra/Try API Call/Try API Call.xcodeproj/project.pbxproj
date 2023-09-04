@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8449B11B2AA5DF35004859B5 /* DGCharts in Frameworks */ = {isa = PBXBuildFile; productRef = 8449B11A2AA5DF35004859B5 /* DGCharts */; };
 		8473009D2A9DF9FC00B800BB /* Try_API_CallApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473009C2A9DF9FC00B800BB /* Try_API_CallApp.swift */; };
 		8473009F2A9DF9FC00B800BB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473009E2A9DF9FC00B800BB /* ContentView.swift */; };
 		847300A12A9DFA0000B800BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847300A02A9DFA0000B800BB /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8449B11B2AA5DF35004859B5 /* DGCharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = "Try API Call";
+			packageProductDependencies = (
+				8449B11A2AA5DF35004859B5 /* DGCharts */,
+			);
 			productName = "Try API Call";
 			productReference = 847300992A9DF9FC00B800BB /* Try API Call.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 847300902A9DF9FB00B800BB;
+			packageReferences = (
+				8449B1192AA5DF35004859B5 /* XCRemoteSwiftPackageReference "Charts" */,
+			);
 			productRefGroup = 8473009A2A9DF9FC00B800BB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -347,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8449B1192AA5DF35004859B5 /* XCRemoteSwiftPackageReference "Charts" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/danielgindi/Charts.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8449B11A2AA5DF35004859B5 /* DGCharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8449B1192AA5DF35004859B5 /* XCRemoteSwiftPackageReference "Charts" */;
+			productName = DGCharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 847300912A9DF9FB00B800BB /* Project object */;
 }

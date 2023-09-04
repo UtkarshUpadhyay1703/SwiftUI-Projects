@@ -122,7 +122,7 @@ class NotificationManager {
         UNUserNotificationCenter.current().add(request)
     }
     
-    //MARK: Cancle All Notifications
+    //MARK: Cancel All Notifications
     func cancleNotification() {
         UNUserNotificationCenter.current().removeAllPendingNotificationRequests()
         UNUserNotificationCenter.current().removeAllDeliveredNotifications()
