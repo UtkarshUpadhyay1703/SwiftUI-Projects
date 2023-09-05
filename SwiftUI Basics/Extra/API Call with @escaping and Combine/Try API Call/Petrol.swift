@@ -57,8 +57,10 @@ struct Record: Codable {
 }
 
 enum Month: String, Codable {
+    
     case july = "July"
     case june = "June"
+    case august = "August"
 }
 
 // MARK: - TargetBucket

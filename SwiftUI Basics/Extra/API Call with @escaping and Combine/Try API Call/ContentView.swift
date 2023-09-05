@@ -6,18 +6,20 @@
 //
 
 import SwiftUI
-import DGCharts
+//import DGCharts
 //import Charts
 
 struct ContentView: View {
-    @ObservedObject var viewModel = HomeViewModel()
+//    @ObservedObject var viewModel = HomeViewModel()
+    @StateObject var viewModel = DownloadWithCombineViewModel()
     
     var body: some View {
         ScrollView{
             VStack{
-                //            Text("Title = \(viewModel.petrol?.title)")
                 if let title = viewModel.petrol?.title {
-                    Text("Title = \(title)")
+                    Text(title)
+                        .font(.title.bold())
+                    
                 } else {
                     Text("Title not available")
                 }

@@ -14,6 +14,7 @@
 		847300A42A9DFA0000B800BB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847300A32A9DFA0000B800BB /* Preview Assets.xcassets */; };
 		847300AB2A9DFA1E00B800BB /* Petrol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847300AA2A9DFA1E00B800BB /* Petrol.swift */; };
 		847300AD2A9DFBAD00B800BB /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847300AC2A9DFBAD00B800BB /* HomeViewModel.swift */; };
+		8496DD012AA6F6C40016399F /* CombineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8496DD002AA6F6C40016399F /* CombineViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		847300A32A9DFA0000B800BB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		847300AA2A9DFA1E00B800BB /* Petrol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petrol.swift; sourceTree = "<group>"; };
 		847300AC2A9DFBAD00B800BB /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8496DD002AA6F6C40016399F /* CombineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CombineViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				8473009E2A9DF9FC00B800BB /* ContentView.swift */,
 				847300AC2A9DFBAD00B800BB /* HomeViewModel.swift */,
 				847300AA2A9DFA1E00B800BB /* Petrol.swift */,
+				8496DD002AA6F6C40016399F /* CombineViewModel.swift */,
 				847300A02A9DFA0000B800BB /* Assets.xcassets */,
 				847300A22A9DFA0000B800BB /* Preview Content */,
 			);
@@ -155,6 +158,7 @@
 				8473009F2A9DF9FC00B800BB /* ContentView.swift in Sources */,
 				8473009D2A9DF9FC00B800BB /* Try_API_CallApp.swift in Sources */,
 				847300AD2A9DFBAD00B800BB /* HomeViewModel.swift in Sources */,
+				8496DD012AA6F6C40016399F /* CombineViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
