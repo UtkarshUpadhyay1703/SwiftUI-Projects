@@ -1,0 +1,10 @@
+{
+    "aps" : {
+        "alert" : {
+            "title" : "Test Notification",
+            "body" : "Hello World"
+        },
+        "badge" : 1
+    },
+    "Simulator Target Bundle" : "com.faronics.SimulationRemotePushNotification"
+}
