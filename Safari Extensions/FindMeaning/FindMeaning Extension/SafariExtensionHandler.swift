@@ -1,8 +1,8 @@
 //
 //  SafariExtensionHandler.swift
-//  Tab Extension
+//  FindMeaning Extension
 //
-//  Created by admin on 9/11/23.
+//  Created by admin on 9/12/23.
 //
 
 import SafariServices
@@ -18,7 +18,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
 
     override func toolbarItemClicked(in window: SFSafariWindow) {
         // This method will be called when your toolbar item is clicked.
-        NSLog("!!!!!!!!!!!!!The extension's toolbar item was clicked")
+        NSLog("The extension's toolbar item was clicked")
     }
     
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {
@@ -30,4 +30,21 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         return SafariExtensionViewController.shared
     }
 
+    override func contextMenuItemSelected(withCommand command: String, in page: SFSafariPage, userInfo: [String : Any]? = nil) {
+        switch command {
+        case "Find":
+            if let userInfo = userInfo, let text = userInfo["selection"] {
+                NSLog("Received text: \(text)")
+//                let arr = 
+                sendResponse(to: page)
+            }
+        default:
+            break
+        }
+    }
+    
+    func sendResponse(to page: SFSafariPage) {
+        NSLog("2222222222222222")
+        page.dispatchMessageToScript(withName: "Find", userInfo: ["response": "I am message from handler"])
+    }
 }

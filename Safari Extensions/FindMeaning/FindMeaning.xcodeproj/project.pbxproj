@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		847EABBA2AB067830058E35B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EABB92AB067830058E35B /* AppDelegate.swift */; };
+		847EABBE2AB067830058E35B /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 847EABBC2AB067830058E35B /* Main.html */; };
+		847EABC02AB067830058E35B /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 847EABBF2AB067830058E35B /* Icon.png */; };
+		847EABC22AB067830058E35B /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 847EABC12AB067830058E35B /* Style.css */; };
+		847EABC42AB067830058E35B /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 847EABC32AB067830058E35B /* Script.js */; };
+		847EABC62AB067830058E35B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EABC52AB067830058E35B /* ViewController.swift */; };
+		847EABC92AB067830058E35B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847EABC72AB067830058E35B /* Main.storyboard */; };
+		847EABCB2AB067880058E35B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847EABCA2AB067880058E35B /* Assets.xcassets */; };
+		847EABD32AB067890058E35B /* FindMeaning Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 847EABD22AB067890058E35B /* FindMeaning Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		847EABD82AB067890058E35B /* SafariExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EABD72AB067890058E35B /* SafariExtensionHandler.swift */; };
+		847EABDA2AB067890058E35B /* SafariExtensionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847EABD92AB067890058E35B /* SafariExtensionViewController.swift */; };
+		847EABDD2AB067890058E35B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 847EABDC2AB067890058E35B /* script.js */; };
+		847EABDF2AB067890058E35B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 847EABDE2AB067890058E35B /* ToolbarItemIcon.pdf */; };
+		847EABE22AB067890058E35B /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847EABE02AB067890058E35B /* SafariExtensionViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		847EABD42AB067890058E35B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847EABAE2AB067830058E35B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847EABD12AB067890058E35B;
+			remoteInfo = "FindMeaning Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		847EABEA2AB067890058E35B /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				847EABD32AB067890058E35B /* FindMeaning Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		847EABB62AB067830058E35B /* FindMeaning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindMeaning.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		847EABB92AB067830058E35B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		847EABBD2AB067830058E35B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		847EABBF2AB067830058E35B /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		847EABC12AB067830058E35B /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		847EABC32AB067830058E35B /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		847EABC52AB067830058E35B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		847EABC82AB067830058E35B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		847EABCA2AB067880058E35B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		847EABCC2AB067880058E35B /* FindMeaning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindMeaning.entitlements; sourceTree = "<group>"; };
+		847EABCD2AB067880058E35B /* FindMeaning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindMeaning.entitlements; sourceTree = "<group>"; };
+		847EABD22AB067890058E35B /* FindMeaning Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "FindMeaning Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		847EABD72AB067890058E35B /* SafariExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionHandler.swift; sourceTree = "<group>"; };
+		847EABD92AB067890058E35B /* SafariExtensionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariExtensionViewController.swift; sourceTree = "<group>"; };
+		847EABDC2AB067890058E35B /* script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = script.js; sourceTree = "<group>"; };
+		847EABDE2AB067890058E35B /* ToolbarItemIcon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = ToolbarItemIcon.pdf; sourceTree = "<group>"; };
+		847EABE12AB067890058E35B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
+		847EABE32AB067890058E35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847EABE42AB067890058E35B /* FindMeaning_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindMeaning_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		847EABB32AB067830058E35B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847EABCF2AB067890058E35B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		847EABAD2AB067830058E35B = {
+			isa = PBXGroup;
+			children = (
+				847EABB82AB067830058E35B /* FindMeaning */,
+				847EABD62AB067890058E35B /* FindMeaning Extension */,
+				847EABB72AB067830058E35B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		847EABB72AB067830058E35B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				847EABB62AB067830058E35B /* FindMeaning.app */,
+				847EABD22AB067890058E35B /* FindMeaning Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		847EABB82AB067830058E35B /* FindMeaning */ = {
+			isa = PBXGroup;
+			children = (
+				847EABB92AB067830058E35B /* AppDelegate.swift */,
+				847EABC52AB067830058E35B /* ViewController.swift */,
+				847EABC72AB067830058E35B /* Main.storyboard */,
+				847EABCA2AB067880058E35B /* Assets.xcassets */,
+				847EABCC2AB067880058E35B /* FindMeaning.entitlements */,
+				847EABCD2AB067880058E35B /* FindMeaning.entitlements */,
+				847EABBB2AB067830058E35B /* Resources */,
+			);
+			path = FindMeaning;
+			sourceTree = "<group>";
+		};
+		847EABBB2AB067830058E35B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				847EABBC2AB067830058E35B /* Main.html */,
+				847EABBF2AB067830058E35B /* Icon.png */,
+				847EABC12AB067830058E35B /* Style.css */,
+				847EABC32AB067830058E35B /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		847EABD62AB067890058E35B /* FindMeaning Extension */ = {
+			isa = PBXGroup;
+			children = (
+				847EABD72AB067890058E35B /* SafariExtensionHandler.swift */,
+				847EABD92AB067890058E35B /* SafariExtensionViewController.swift */,
+				847EABE02AB067890058E35B /* SafariExtensionViewController.xib */,
+				847EABE32AB067890058E35B /* Info.plist */,
+				847EABE42AB067890058E35B /* FindMeaning_Extension.entitlements */,
+				847EABDB2AB067890058E35B /* Resources */,
+			);
+			path = "FindMeaning Extension";
+			sourceTree = "<group>";
+		};
+		847EABDB2AB067890058E35B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				847EABDC2AB067890058E35B /* script.js */,
+				847EABDE2AB067890058E35B /* ToolbarItemIcon.pdf */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		847EABB52AB067830058E35B /* FindMeaning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847EABEB2AB067890058E35B /* Build configuration list for PBXNativeTarget "FindMeaning" */;
+			buildPhases = (
+				847EABB22AB067830058E35B /* Sources */,
+				847EABB32AB067830058E35B /* Frameworks */,
+				847EABB42AB067830058E35B /* Resources */,
+				847EABEA2AB067890058E35B /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				847EABD52AB067890058E35B /* PBXTargetDependency */,
+			);
+			name = FindMeaning;
+			productName = FindMeaning;
+			productReference = 847EABB62AB067830058E35B /* FindMeaning.app */;
+			productType = "com.apple.product-type.application";
+		};
+		847EABD12AB067890058E35B /* FindMeaning Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847EABE72AB067890058E35B /* Build configuration list for PBXNativeTarget "FindMeaning Extension" */;
+			buildPhases = (
+				847EABCE2AB067890058E35B /* Sources */,
+				847EABCF2AB067890058E35B /* Frameworks */,
+				847EABD02AB067890058E35B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "FindMeaning Extension";
+			productName = "FindMeaning Extension";
+			productReference = 847EABD22AB067890058E35B /* FindMeaning Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		847EABAE2AB067830058E35B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					847EABB52AB067830058E35B = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					847EABD12AB067890058E35B = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 847EABB12AB067830058E35B /* Build configuration list for PBXProject "FindMeaning" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 847EABAD2AB067830058E35B;
+			productRefGroup = 847EABB72AB067830058E35B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				847EABB52AB067830058E35B /* FindMeaning */,
+				847EABD12AB067890058E35B /* FindMeaning Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		847EABB42AB067830058E35B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847EABC02AB067830058E35B /* Icon.png in Resources */,
+				847EABC92AB067830058E35B /* Main.storyboard in Resources */,
+				847EABC42AB067830058E35B /* Script.js in Resources */,
+				847EABBE2AB067830058E35B /* Main.html in Resources */,
+				847EABCB2AB067880058E35B /* Assets.xcassets in Resources */,
+				847EABC22AB067830058E35B /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847EABD02AB067890058E35B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847EABE22AB067890058E35B /* SafariExtensionViewController.xib in Resources */,
+				847EABDF2AB067890058E35B /* ToolbarItemIcon.pdf in Resources */,
+				847EABDD2AB067890058E35B /* script.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		847EABB22AB067830058E35B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847EABC62AB067830058E35B /* ViewController.swift in Sources */,
+				847EABBA2AB067830058E35B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847EABCE2AB067890058E35B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847EABDA2AB067890058E35B /* SafariExtensionViewController.swift in Sources */,
+				847EABD82AB067890058E35B /* SafariExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		847EABD52AB067890058E35B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 847EABD12AB067890058E35B /* FindMeaning Extension */;
+			targetProxy = 847EABD42AB067890058E35B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		847EABBC2AB067830058E35B /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847EABBD2AB067830058E35B /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		847EABC72AB067830058E35B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847EABC82AB067830058E35B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		847EABE02AB067890058E35B /* SafariExtensionViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847EABE12AB067890058E35B /* Base */,
+			);
+			name = SafariExtensionViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		847EABE52AB067890058E35B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		847EABE62AB067890058E35B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		847EABE82AB067890058E35B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "FindMeaning Extension/FindMeaning_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FindMeaning Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FindMeaning Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.FindMeaning.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		847EABE92AB067890058E35B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "FindMeaning Extension/FindMeaning_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "FindMeaning Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "FindMeaning Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.FindMeaning.Extension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		847EABEC2AB067890058E35B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FindMeaning/FindMeaning.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FindMeaning;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.FindMeaning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		847EABED2AB067890058E35B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = FindMeaning/FindMeaning.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FindMeaning;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.FindMeaning;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		847EABB12AB067830058E35B /* Build configuration list for PBXProject "FindMeaning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847EABE52AB067890058E35B /* Debug */,
+				847EABE62AB067890058E35B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847EABE72AB067890058E35B /* Build configuration list for PBXNativeTarget "FindMeaning Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847EABE82AB067890058E35B /* Debug */,
+				847EABE92AB067890058E35B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847EABEB2AB067890058E35B /* Build configuration list for PBXNativeTarget "FindMeaning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847EABEC2AB067890058E35B /* Debug */,
+				847EABED2AB067890058E35B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 847EABAE2AB067830058E35B /* Project object */;
+}

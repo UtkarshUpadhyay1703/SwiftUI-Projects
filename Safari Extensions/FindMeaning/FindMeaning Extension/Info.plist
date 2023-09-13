@@ -4,6 +4,15 @@
 <dict>
 	<key>NSExtension</key>
 	<dict>
+		<key>SFSafariContextMenu</key>
+		<array>
+			<dict>
+				<key>Text</key>
+				<string>Find Meaning</string>
+				<key>Command</key>
+				<string>Find</string>
+			</dict>
+		</array>
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.Safari.extension</string>
 		<key>NSExtensionPrincipalClass</key>
@@ -28,15 +37,11 @@
 		</dict>
 		<key>SFSafariWebsiteAccess</key>
 		<dict>
-			<key>Allowed Domains</key>
-			<array>
-				<string>example.com</string>
-			</array>
 			<key>Level</key>
-			<string>Some</string>
+			<string>All</string>
 		</dict>
 	</dict>
 	<key>NSHumanReadableDescription</key>
-	<string>This is Tab Extension. You should tell us what your extension does here.</string>
+	<string>This is FindMeaning Extension. You should tell us what your extension does here.</string>
 </dict>
 </plist>
