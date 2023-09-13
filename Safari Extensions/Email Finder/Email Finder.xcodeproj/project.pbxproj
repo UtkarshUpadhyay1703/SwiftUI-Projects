@@ -1,0 +1,960 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8495FEE02AB1809C0059BD73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495FEDF2AB1809C0059BD73 /* AppDelegate.swift */; };
+		8495FEE22AB1809C0059BD73 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495FEE12AB1809C0059BD73 /* SceneDelegate.swift */; };
+		8495FEE52AB1809C0059BD73 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8495FEE32AB1809C0059BD73 /* LaunchScreen.storyboard */; };
+		8495FEE82AB1809C0059BD73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8495FEE62AB1809C0059BD73 /* Main.storyboard */; };
+		8495FEF12AB1809C0059BD73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495FEF02AB1809C0059BD73 /* AppDelegate.swift */; };
+		8495FEF42AB1809C0059BD73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8495FEF22AB1809C0059BD73 /* Main.storyboard */; };
+		8495FEFB2AB1809C0059BD73 /* Email Finder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8495FEFA2AB1809C0059BD73 /* Email Finder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8495FF052AB1809C0059BD73 /* Email Finder Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8495FF042AB1809C0059BD73 /* Email Finder Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8495FF0B2AB1809C0059BD73 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8495FEC62AB180980059BD73 /* Main.html */; };
+		8495FF0C2AB1809C0059BD73 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 8495FEC62AB180980059BD73 /* Main.html */; };
+		8495FF0D2AB1809C0059BD73 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8495FEC82AB180980059BD73 /* Icon.png */; };
+		8495FF0E2AB1809C0059BD73 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8495FEC82AB180980059BD73 /* Icon.png */; };
+		8495FF0F2AB1809C0059BD73 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8495FEC92AB180980059BD73 /* Style.css */; };
+		8495FF102AB1809C0059BD73 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 8495FEC92AB180980059BD73 /* Style.css */; };
+		8495FF112AB1809C0059BD73 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8495FECA2AB180980059BD73 /* Script.js */; };
+		8495FF122AB1809C0059BD73 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 8495FECA2AB180980059BD73 /* Script.js */; };
+		8495FF132AB1809C0059BD73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495FECB2AB180980059BD73 /* ViewController.swift */; };
+		8495FF142AB1809C0059BD73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495FECB2AB180980059BD73 /* ViewController.swift */; };
+		8495FF152AB1809C0059BD73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8495FECC2AB1809C0059BD73 /* Assets.xcassets */; };
+		8495FF162AB1809C0059BD73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8495FECC2AB1809C0059BD73 /* Assets.xcassets */; };
+		8495FF172AB1809C0059BD73 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495FECE2AB1809C0059BD73 /* SafariWebExtensionHandler.swift */; };
+		8495FF182AB1809C0059BD73 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495FECE2AB1809C0059BD73 /* SafariWebExtensionHandler.swift */; };
+		8495FF192AB1809C0059BD73 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED02AB1809C0059BD73 /* _locales */; };
+		8495FF1A2AB1809C0059BD73 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED02AB1809C0059BD73 /* _locales */; };
+		8495FF1B2AB1809C0059BD73 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED12AB1809C0059BD73 /* images */; };
+		8495FF1C2AB1809C0059BD73 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED12AB1809C0059BD73 /* images */; };
+		8495FF1D2AB1809C0059BD73 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED22AB1809C0059BD73 /* manifest.json */; };
+		8495FF1E2AB1809C0059BD73 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED22AB1809C0059BD73 /* manifest.json */; };
+		8495FF1F2AB1809C0059BD73 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED32AB1809C0059BD73 /* background.js */; };
+		8495FF202AB1809C0059BD73 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED32AB1809C0059BD73 /* background.js */; };
+		8495FF212AB1809C0059BD73 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED42AB1809C0059BD73 /* content.js */; };
+		8495FF222AB1809C0059BD73 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED42AB1809C0059BD73 /* content.js */; };
+		8495FF232AB1809C0059BD73 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED52AB1809C0059BD73 /* popup.html */; };
+		8495FF242AB1809C0059BD73 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED52AB1809C0059BD73 /* popup.html */; };
+		8495FF252AB1809C0059BD73 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED62AB1809C0059BD73 /* popup.css */; };
+		8495FF262AB1809C0059BD73 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED62AB1809C0059BD73 /* popup.css */; };
+		8495FF272AB1809C0059BD73 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED72AB1809C0059BD73 /* popup.js */; };
+		8495FF282AB1809C0059BD73 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 8495FED72AB1809C0059BD73 /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8495FEFC2AB1809C0059BD73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8495FEC02AB180980059BD73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8495FEF92AB1809C0059BD73;
+			remoteInfo = "Email Finder Extension (iOS)";
+		};
+		8495FF062AB1809C0059BD73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8495FEC02AB180980059BD73 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8495FF032AB1809C0059BD73;
+			remoteInfo = "Email Finder Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8495FF2E2AB1809C0059BD73 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8495FEFB2AB1809C0059BD73 /* Email Finder Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8495FF352AB1809C0059BD73 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8495FF052AB1809C0059BD73 /* Email Finder Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		8495FEC72AB180980059BD73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		8495FEC82AB180980059BD73 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		8495FEC92AB180980059BD73 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		8495FECA2AB180980059BD73 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		8495FECB2AB180980059BD73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8495FECC2AB1809C0059BD73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8495FECE2AB1809C0059BD73 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		8495FED02AB1809C0059BD73 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		8495FED12AB1809C0059BD73 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		8495FED22AB1809C0059BD73 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		8495FED32AB1809C0059BD73 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		8495FED42AB1809C0059BD73 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		8495FED52AB1809C0059BD73 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		8495FED62AB1809C0059BD73 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		8495FED72AB1809C0059BD73 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		8495FEDC2AB1809C0059BD73 /* Email Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Email Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8495FEDF2AB1809C0059BD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8495FEE12AB1809C0059BD73 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8495FEE42AB1809C0059BD73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8495FEE72AB1809C0059BD73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8495FEE92AB1809C0059BD73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8495FEEE2AB1809C0059BD73 /* Email Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Email Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8495FEF02AB1809C0059BD73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8495FEF32AB1809C0059BD73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8495FEF52AB1809C0059BD73 /* Email Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Email Finder.entitlements"; sourceTree = "<group>"; };
+		8495FEFA2AB1809C0059BD73 /* Email Finder Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Email Finder Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8495FEFF2AB1809C0059BD73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8495FF042AB1809C0059BD73 /* Email Finder Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Email Finder Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8495FF092AB1809C0059BD73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8495FF0A2AB1809C0059BD73 /* Email Finder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Email Finder.entitlements"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8495FED92AB1809C0059BD73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8495FEEB2AB1809C0059BD73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8495FEF72AB1809C0059BD73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8495FF012AB1809C0059BD73 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8495FEBF2AB180980059BD73 = {
+			isa = PBXGroup;
+			children = (
+				8495FEC42AB180980059BD73 /* Shared (App) */,
+				8495FECD2AB1809C0059BD73 /* Shared (Extension) */,
+				8495FEDE2AB1809C0059BD73 /* iOS (App) */,
+				8495FEEF2AB1809C0059BD73 /* macOS (App) */,
+				8495FEFE2AB1809C0059BD73 /* iOS (Extension) */,
+				8495FF082AB1809C0059BD73 /* macOS (Extension) */,
+				8495FEDD2AB1809C0059BD73 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8495FEC42AB180980059BD73 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8495FECB2AB180980059BD73 /* ViewController.swift */,
+				8495FECC2AB1809C0059BD73 /* Assets.xcassets */,
+				8495FEC52AB180980059BD73 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		8495FEC52AB180980059BD73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8495FEC62AB180980059BD73 /* Main.html */,
+				8495FEC82AB180980059BD73 /* Icon.png */,
+				8495FEC92AB180980059BD73 /* Style.css */,
+				8495FECA2AB180980059BD73 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8495FECD2AB1809C0059BD73 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8495FECE2AB1809C0059BD73 /* SafariWebExtensionHandler.swift */,
+				8495FECF2AB1809C0059BD73 /* Resources */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		8495FECF2AB1809C0059BD73 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8495FED02AB1809C0059BD73 /* _locales */,
+				8495FED12AB1809C0059BD73 /* images */,
+				8495FED22AB1809C0059BD73 /* manifest.json */,
+				8495FED32AB1809C0059BD73 /* background.js */,
+				8495FED42AB1809C0059BD73 /* content.js */,
+				8495FED52AB1809C0059BD73 /* popup.html */,
+				8495FED62AB1809C0059BD73 /* popup.css */,
+				8495FED72AB1809C0059BD73 /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8495FEDD2AB1809C0059BD73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8495FEDC2AB1809C0059BD73 /* Email Finder.app */,
+				8495FEEE2AB1809C0059BD73 /* Email Finder.app */,
+				8495FEFA2AB1809C0059BD73 /* Email Finder Extension.appex */,
+				8495FF042AB1809C0059BD73 /* Email Finder Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8495FEDE2AB1809C0059BD73 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8495FEDF2AB1809C0059BD73 /* AppDelegate.swift */,
+				8495FEE12AB1809C0059BD73 /* SceneDelegate.swift */,
+				8495FEE32AB1809C0059BD73 /* LaunchScreen.storyboard */,
+				8495FEE62AB1809C0059BD73 /* Main.storyboard */,
+				8495FEE92AB1809C0059BD73 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		8495FEEF2AB1809C0059BD73 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8495FEF02AB1809C0059BD73 /* AppDelegate.swift */,
+				8495FEF22AB1809C0059BD73 /* Main.storyboard */,
+				8495FEF52AB1809C0059BD73 /* Email Finder.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		8495FEFE2AB1809C0059BD73 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8495FEFF2AB1809C0059BD73 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		8495FF082AB1809C0059BD73 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				8495FF092AB1809C0059BD73 /* Info.plist */,
+				8495FF0A2AB1809C0059BD73 /* Email Finder.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8495FEDB2AB1809C0059BD73 /* Email Finder (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8495FF2F2AB1809C0059BD73 /* Build configuration list for PBXNativeTarget "Email Finder (iOS)" */;
+			buildPhases = (
+				8495FED82AB1809C0059BD73 /* Sources */,
+				8495FED92AB1809C0059BD73 /* Frameworks */,
+				8495FEDA2AB1809C0059BD73 /* Resources */,
+				8495FF2E2AB1809C0059BD73 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8495FEFD2AB1809C0059BD73 /* PBXTargetDependency */,
+			);
+			name = "Email Finder (iOS)";
+			productName = "Email Finder (iOS)";
+			productReference = 8495FEDC2AB1809C0059BD73 /* Email Finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8495FEED2AB1809C0059BD73 /* Email Finder (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8495FF362AB1809C0059BD73 /* Build configuration list for PBXNativeTarget "Email Finder (macOS)" */;
+			buildPhases = (
+				8495FEEA2AB1809C0059BD73 /* Sources */,
+				8495FEEB2AB1809C0059BD73 /* Frameworks */,
+				8495FEEC2AB1809C0059BD73 /* Resources */,
+				8495FF352AB1809C0059BD73 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8495FF072AB1809C0059BD73 /* PBXTargetDependency */,
+			);
+			name = "Email Finder (macOS)";
+			productName = "Email Finder (macOS)";
+			productReference = 8495FEEE2AB1809C0059BD73 /* Email Finder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8495FEF92AB1809C0059BD73 /* Email Finder Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8495FF2B2AB1809C0059BD73 /* Build configuration list for PBXNativeTarget "Email Finder Extension (iOS)" */;
+			buildPhases = (
+				8495FEF62AB1809C0059BD73 /* Sources */,
+				8495FEF72AB1809C0059BD73 /* Frameworks */,
+				8495FEF82AB1809C0059BD73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Email Finder Extension (iOS)";
+			productName = "Email Finder Extension (iOS)";
+			productReference = 8495FEFA2AB1809C0059BD73 /* Email Finder Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		8495FF032AB1809C0059BD73 /* Email Finder Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8495FF322AB1809C0059BD73 /* Build configuration list for PBXNativeTarget "Email Finder Extension (macOS)" */;
+			buildPhases = (
+				8495FF002AB1809C0059BD73 /* Sources */,
+				8495FF012AB1809C0059BD73 /* Frameworks */,
+				8495FF022AB1809C0059BD73 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Email Finder Extension (macOS)";
+			productName = "Email Finder Extension (macOS)";
+			productReference = 8495FF042AB1809C0059BD73 /* Email Finder Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8495FEC02AB180980059BD73 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					8495FEDB2AB1809C0059BD73 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					8495FEED2AB1809C0059BD73 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					8495FEF92AB1809C0059BD73 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					8495FF032AB1809C0059BD73 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8495FEC32AB180980059BD73 /* Build configuration list for PBXProject "Email Finder" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8495FEBF2AB180980059BD73;
+			productRefGroup = 8495FEDD2AB1809C0059BD73 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8495FEDB2AB1809C0059BD73 /* Email Finder (iOS) */,
+				8495FEED2AB1809C0059BD73 /* Email Finder (macOS) */,
+				8495FEF92AB1809C0059BD73 /* Email Finder Extension (iOS) */,
+				8495FF032AB1809C0059BD73 /* Email Finder Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8495FEDA2AB1809C0059BD73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8495FF0D2AB1809C0059BD73 /* Icon.png in Resources */,
+				8495FEE52AB1809C0059BD73 /* LaunchScreen.storyboard in Resources */,
+				8495FF0B2AB1809C0059BD73 /* Main.html in Resources */,
+				8495FF112AB1809C0059BD73 /* Script.js in Resources */,
+				8495FF152AB1809C0059BD73 /* Assets.xcassets in Resources */,
+				8495FEE82AB1809C0059BD73 /* Main.storyboard in Resources */,
+				8495FF0F2AB1809C0059BD73 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8495FEEC2AB1809C0059BD73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8495FF0E2AB1809C0059BD73 /* Icon.png in Resources */,
+				8495FF102AB1809C0059BD73 /* Style.css in Resources */,
+				8495FEF42AB1809C0059BD73 /* Main.storyboard in Resources */,
+				8495FF122AB1809C0059BD73 /* Script.js in Resources */,
+				8495FF162AB1809C0059BD73 /* Assets.xcassets in Resources */,
+				8495FF0C2AB1809C0059BD73 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8495FEF82AB1809C0059BD73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8495FF1F2AB1809C0059BD73 /* background.js in Resources */,
+				8495FF252AB1809C0059BD73 /* popup.css in Resources */,
+				8495FF232AB1809C0059BD73 /* popup.html in Resources */,
+				8495FF1B2AB1809C0059BD73 /* images in Resources */,
+				8495FF1D2AB1809C0059BD73 /* manifest.json in Resources */,
+				8495FF192AB1809C0059BD73 /* _locales in Resources */,
+				8495FF212AB1809C0059BD73 /* content.js in Resources */,
+				8495FF272AB1809C0059BD73 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8495FF022AB1809C0059BD73 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8495FF202AB1809C0059BD73 /* background.js in Resources */,
+				8495FF262AB1809C0059BD73 /* popup.css in Resources */,
+				8495FF242AB1809C0059BD73 /* popup.html in Resources */,
+				8495FF1C2AB1809C0059BD73 /* images in Resources */,
+				8495FF1E2AB1809C0059BD73 /* manifest.json in Resources */,
+				8495FF1A2AB1809C0059BD73 /* _locales in Resources */,
+				8495FF222AB1809C0059BD73 /* content.js in Resources */,
+				8495FF282AB1809C0059BD73 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8495FED82AB1809C0059BD73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8495FF132AB1809C0059BD73 /* ViewController.swift in Sources */,
+				8495FEE02AB1809C0059BD73 /* AppDelegate.swift in Sources */,
+				8495FEE22AB1809C0059BD73 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8495FEEA2AB1809C0059BD73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8495FF142AB1809C0059BD73 /* ViewController.swift in Sources */,
+				8495FEF12AB1809C0059BD73 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8495FEF62AB1809C0059BD73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8495FF172AB1809C0059BD73 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8495FF002AB1809C0059BD73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8495FF182AB1809C0059BD73 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8495FEFD2AB1809C0059BD73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8495FEF92AB1809C0059BD73 /* Email Finder Extension (iOS) */;
+			targetProxy = 8495FEFC2AB1809C0059BD73 /* PBXContainerItemProxy */;
+		};
+		8495FF072AB1809C0059BD73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8495FF032AB1809C0059BD73 /* Email Finder Extension (macOS) */;
+			targetProxy = 8495FF062AB1809C0059BD73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8495FEC62AB180980059BD73 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8495FEC72AB180980059BD73 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		8495FEE32AB1809C0059BD73 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8495FEE42AB1809C0059BD73 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8495FEE62AB1809C0059BD73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8495FEE72AB1809C0059BD73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8495FEF22AB1809C0059BD73 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8495FEF32AB1809C0059BD73 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8495FF292AB1809C0059BD73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8495FF2A2AB1809C0059BD73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		8495FF2C2AB1809C0059BD73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Email Finder Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Email-Finder.Extension";
+				PRODUCT_NAME = "Email Finder Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8495FF2D2AB1809C0059BD73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Email Finder Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Email-Finder.Extension";
+				PRODUCT_NAME = "Email Finder Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8495FF302AB1809C0059BD73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Email Finder";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Email-Finder";
+				PRODUCT_NAME = "Email Finder";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8495FF312AB1809C0059BD73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Email Finder";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Email-Finder";
+				PRODUCT_NAME = "Email Finder";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8495FF332AB1809C0059BD73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Email Finder.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Email Finder Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Email-Finder.Extension";
+				PRODUCT_NAME = "Email Finder Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8495FF342AB1809C0059BD73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Email Finder.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Email Finder Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Email-Finder.Extension";
+				PRODUCT_NAME = "Email Finder Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		8495FF372AB1809C0059BD73 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Email Finder.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Email Finder";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Email-Finder";
+				PRODUCT_NAME = "Email Finder";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8495FF382AB1809C0059BD73 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Email Finder.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Email Finder";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Email-Finder";
+				PRODUCT_NAME = "Email Finder";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8495FEC32AB180980059BD73 /* Build configuration list for PBXProject "Email Finder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8495FF292AB1809C0059BD73 /* Debug */,
+				8495FF2A2AB1809C0059BD73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8495FF2B2AB1809C0059BD73 /* Build configuration list for PBXNativeTarget "Email Finder Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8495FF2C2AB1809C0059BD73 /* Debug */,
+				8495FF2D2AB1809C0059BD73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8495FF2F2AB1809C0059BD73 /* Build configuration list for PBXNativeTarget "Email Finder (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8495FF302AB1809C0059BD73 /* Debug */,
+				8495FF312AB1809C0059BD73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8495FF322AB1809C0059BD73 /* Build configuration list for PBXNativeTarget "Email Finder Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8495FF332AB1809C0059BD73 /* Debug */,
+				8495FF342AB1809C0059BD73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8495FF362AB1809C0059BD73 /* Build configuration list for PBXNativeTarget "Email Finder (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8495FF372AB1809C0059BD73 /* Debug */,
+				8495FF382AB1809C0059BD73 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8495FEC02AB180980059BD73 /* Project object */;
+}

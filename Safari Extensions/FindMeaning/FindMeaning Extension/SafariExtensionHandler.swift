@@ -34,8 +34,6 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         switch command {
         case "Find":
             if let userInfo = userInfo, let text = userInfo["selection"] {
-                NSLog("Received text: \(text)")
-//                let arr = 
                 sendResponse(to: page)
             }
         default:
@@ -44,7 +42,6 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     }
     
     func sendResponse(to page: SFSafariPage) {
-        NSLog("2222222222222222")
         page.dispatchMessageToScript(withName: "Find", userInfo: ["response": "I am message from handler"])
     }
 }
