@@ -5,8 +5,8 @@
 body {
     min-width: 220px;
     padding: 10px;
-    color:skyblue
-    background-color: rbg(46, 79, 154)
+    color:cyan;
+    background-color: yellowgreen;
     font-family: system-ui;
     text-align: center;
 }
@@ -19,6 +19,7 @@ body {
 
 #email_list {
     font: -apple-system-title3;
+    background-color: black;
 }
 
 #email_list ul, #email_list li {
