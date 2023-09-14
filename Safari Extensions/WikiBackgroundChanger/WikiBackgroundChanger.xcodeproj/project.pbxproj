@@ -1,0 +1,960 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8417363A2AB2E460007001B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841736392AB2E460007001B1 /* AppDelegate.swift */; };
+		8417363C2AB2E460007001B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417363B2AB2E460007001B1 /* SceneDelegate.swift */; };
+		8417363F2AB2E460007001B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8417363D2AB2E460007001B1 /* LaunchScreen.storyboard */; };
+		841736422AB2E460007001B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841736402AB2E460007001B1 /* Main.storyboard */; };
+		8417364B2AB2E460007001B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8417364A2AB2E460007001B1 /* AppDelegate.swift */; };
+		8417364E2AB2E460007001B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8417364C2AB2E460007001B1 /* Main.storyboard */; };
+		841736552AB2E460007001B1 /* WikiBackgroundChanger Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 841736542AB2E460007001B1 /* WikiBackgroundChanger Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8417365F2AB2E460007001B1 /* WikiBackgroundChanger Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8417365E2AB2E460007001B1 /* WikiBackgroundChanger Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		841736652AB2E460007001B1 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 841736202AB2E45C007001B1 /* Main.html */; };
+		841736662AB2E460007001B1 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 841736202AB2E45C007001B1 /* Main.html */; };
+		841736672AB2E460007001B1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 841736222AB2E45C007001B1 /* Icon.png */; };
+		841736682AB2E460007001B1 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 841736222AB2E45C007001B1 /* Icon.png */; };
+		841736692AB2E460007001B1 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 841736232AB2E45C007001B1 /* Style.css */; };
+		8417366A2AB2E460007001B1 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 841736232AB2E45C007001B1 /* Style.css */; };
+		8417366B2AB2E460007001B1 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 841736242AB2E45C007001B1 /* Script.js */; };
+		8417366C2AB2E460007001B1 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 841736242AB2E45C007001B1 /* Script.js */; };
+		8417366D2AB2E460007001B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841736252AB2E45C007001B1 /* ViewController.swift */; };
+		8417366E2AB2E460007001B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841736252AB2E45C007001B1 /* ViewController.swift */; };
+		8417366F2AB2E460007001B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841736262AB2E460007001B1 /* Assets.xcassets */; };
+		841736702AB2E460007001B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841736262AB2E460007001B1 /* Assets.xcassets */; };
+		841736712AB2E460007001B1 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841736282AB2E460007001B1 /* SafariWebExtensionHandler.swift */; };
+		841736722AB2E460007001B1 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841736282AB2E460007001B1 /* SafariWebExtensionHandler.swift */; };
+		841736732AB2E460007001B1 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 8417362A2AB2E460007001B1 /* _locales */; };
+		841736742AB2E460007001B1 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 8417362A2AB2E460007001B1 /* _locales */; };
+		841736752AB2E460007001B1 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8417362B2AB2E460007001B1 /* images */; };
+		841736762AB2E460007001B1 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 8417362B2AB2E460007001B1 /* images */; };
+		841736772AB2E460007001B1 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8417362C2AB2E460007001B1 /* manifest.json */; };
+		841736782AB2E460007001B1 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 8417362C2AB2E460007001B1 /* manifest.json */; };
+		841736792AB2E460007001B1 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 8417362D2AB2E460007001B1 /* background.js */; };
+		8417367A2AB2E460007001B1 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 8417362D2AB2E460007001B1 /* background.js */; };
+		8417367B2AB2E460007001B1 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 8417362E2AB2E460007001B1 /* content.js */; };
+		8417367C2AB2E460007001B1 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 8417362E2AB2E460007001B1 /* content.js */; };
+		8417367D2AB2E460007001B1 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 8417362F2AB2E460007001B1 /* popup.html */; };
+		8417367E2AB2E460007001B1 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 8417362F2AB2E460007001B1 /* popup.html */; };
+		8417367F2AB2E460007001B1 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 841736302AB2E460007001B1 /* popup.css */; };
+		841736802AB2E460007001B1 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 841736302AB2E460007001B1 /* popup.css */; };
+		841736812AB2E460007001B1 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 841736312AB2E460007001B1 /* popup.js */; };
+		841736822AB2E460007001B1 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 841736312AB2E460007001B1 /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		841736562AB2E460007001B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8417361A2AB2E45C007001B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 841736532AB2E460007001B1;
+			remoteInfo = "WikiBackgroundChanger Extension (iOS)";
+		};
+		841736602AB2E460007001B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8417361A2AB2E45C007001B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8417365D2AB2E460007001B1;
+			remoteInfo = "WikiBackgroundChanger Extension (macOS)";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		841736882AB2E460007001B1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				841736552AB2E460007001B1 /* WikiBackgroundChanger Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8417368F2AB2E460007001B1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8417365F2AB2E460007001B1 /* WikiBackgroundChanger Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		841736212AB2E45C007001B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		841736222AB2E45C007001B1 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		841736232AB2E45C007001B1 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		841736242AB2E45C007001B1 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		841736252AB2E45C007001B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		841736262AB2E460007001B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		841736282AB2E460007001B1 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		8417362A2AB2E460007001B1 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		8417362B2AB2E460007001B1 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		8417362C2AB2E460007001B1 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		8417362D2AB2E460007001B1 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		8417362E2AB2E460007001B1 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		8417362F2AB2E460007001B1 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		841736302AB2E460007001B1 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		841736312AB2E460007001B1 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		841736362AB2E460007001B1 /* WikiBackgroundChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiBackgroundChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		841736392AB2E460007001B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8417363B2AB2E460007001B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8417363E2AB2E460007001B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		841736412AB2E460007001B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		841736432AB2E460007001B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841736482AB2E460007001B1 /* WikiBackgroundChanger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiBackgroundChanger.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8417364A2AB2E460007001B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8417364D2AB2E460007001B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8417364F2AB2E460007001B1 /* WikiBackgroundChanger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WikiBackgroundChanger.entitlements; sourceTree = "<group>"; };
+		841736542AB2E460007001B1 /* WikiBackgroundChanger Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WikiBackgroundChanger Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		841736592AB2E460007001B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8417365E2AB2E460007001B1 /* WikiBackgroundChanger Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WikiBackgroundChanger Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		841736632AB2E460007001B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841736642AB2E460007001B1 /* WikiBackgroundChanger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WikiBackgroundChanger.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		841736332AB2E460007001B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841736452AB2E460007001B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841736512AB2E460007001B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8417365B2AB2E460007001B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		841736192AB2E45C007001B1 = {
+			isa = PBXGroup;
+			children = (
+				8417361E2AB2E45C007001B1 /* Shared (App) */,
+				841736272AB2E460007001B1 /* Shared (Extension) */,
+				841736382AB2E460007001B1 /* iOS (App) */,
+				841736492AB2E460007001B1 /* macOS (App) */,
+				841736582AB2E460007001B1 /* iOS (Extension) */,
+				841736622AB2E460007001B1 /* macOS (Extension) */,
+				841736372AB2E460007001B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8417361E2AB2E45C007001B1 /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				841736252AB2E45C007001B1 /* ViewController.swift */,
+				841736262AB2E460007001B1 /* Assets.xcassets */,
+				8417361F2AB2E45C007001B1 /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		8417361F2AB2E45C007001B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				841736202AB2E45C007001B1 /* Main.html */,
+				841736222AB2E45C007001B1 /* Icon.png */,
+				841736232AB2E45C007001B1 /* Style.css */,
+				841736242AB2E45C007001B1 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		841736272AB2E460007001B1 /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				841736282AB2E460007001B1 /* SafariWebExtensionHandler.swift */,
+				841736292AB2E460007001B1 /* Resources */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		841736292AB2E460007001B1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8417362A2AB2E460007001B1 /* _locales */,
+				8417362B2AB2E460007001B1 /* images */,
+				8417362C2AB2E460007001B1 /* manifest.json */,
+				8417362D2AB2E460007001B1 /* background.js */,
+				8417362E2AB2E460007001B1 /* content.js */,
+				8417362F2AB2E460007001B1 /* popup.html */,
+				841736302AB2E460007001B1 /* popup.css */,
+				841736312AB2E460007001B1 /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		841736372AB2E460007001B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				841736362AB2E460007001B1 /* WikiBackgroundChanger.app */,
+				841736482AB2E460007001B1 /* WikiBackgroundChanger.app */,
+				841736542AB2E460007001B1 /* WikiBackgroundChanger Extension.appex */,
+				8417365E2AB2E460007001B1 /* WikiBackgroundChanger Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		841736382AB2E460007001B1 /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				841736392AB2E460007001B1 /* AppDelegate.swift */,
+				8417363B2AB2E460007001B1 /* SceneDelegate.swift */,
+				8417363D2AB2E460007001B1 /* LaunchScreen.storyboard */,
+				841736402AB2E460007001B1 /* Main.storyboard */,
+				841736432AB2E460007001B1 /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		841736492AB2E460007001B1 /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				8417364A2AB2E460007001B1 /* AppDelegate.swift */,
+				8417364C2AB2E460007001B1 /* Main.storyboard */,
+				8417364F2AB2E460007001B1 /* WikiBackgroundChanger.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		841736582AB2E460007001B1 /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				841736592AB2E460007001B1 /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		841736622AB2E460007001B1 /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				841736632AB2E460007001B1 /* Info.plist */,
+				841736642AB2E460007001B1 /* WikiBackgroundChanger.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		841736352AB2E460007001B1 /* WikiBackgroundChanger (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841736892AB2E460007001B1 /* Build configuration list for PBXNativeTarget "WikiBackgroundChanger (iOS)" */;
+			buildPhases = (
+				841736322AB2E460007001B1 /* Sources */,
+				841736332AB2E460007001B1 /* Frameworks */,
+				841736342AB2E460007001B1 /* Resources */,
+				841736882AB2E460007001B1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				841736572AB2E460007001B1 /* PBXTargetDependency */,
+			);
+			name = "WikiBackgroundChanger (iOS)";
+			productName = "WikiBackgroundChanger (iOS)";
+			productReference = 841736362AB2E460007001B1 /* WikiBackgroundChanger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		841736472AB2E460007001B1 /* WikiBackgroundChanger (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841736902AB2E460007001B1 /* Build configuration list for PBXNativeTarget "WikiBackgroundChanger (macOS)" */;
+			buildPhases = (
+				841736442AB2E460007001B1 /* Sources */,
+				841736452AB2E460007001B1 /* Frameworks */,
+				841736462AB2E460007001B1 /* Resources */,
+				8417368F2AB2E460007001B1 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				841736612AB2E460007001B1 /* PBXTargetDependency */,
+			);
+			name = "WikiBackgroundChanger (macOS)";
+			productName = "WikiBackgroundChanger (macOS)";
+			productReference = 841736482AB2E460007001B1 /* WikiBackgroundChanger.app */;
+			productType = "com.apple.product-type.application";
+		};
+		841736532AB2E460007001B1 /* WikiBackgroundChanger Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841736852AB2E460007001B1 /* Build configuration list for PBXNativeTarget "WikiBackgroundChanger Extension (iOS)" */;
+			buildPhases = (
+				841736502AB2E460007001B1 /* Sources */,
+				841736512AB2E460007001B1 /* Frameworks */,
+				841736522AB2E460007001B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WikiBackgroundChanger Extension (iOS)";
+			productName = "WikiBackgroundChanger Extension (iOS)";
+			productReference = 841736542AB2E460007001B1 /* WikiBackgroundChanger Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		8417365D2AB2E460007001B1 /* WikiBackgroundChanger Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8417368C2AB2E460007001B1 /* Build configuration list for PBXNativeTarget "WikiBackgroundChanger Extension (macOS)" */;
+			buildPhases = (
+				8417365A2AB2E460007001B1 /* Sources */,
+				8417365B2AB2E460007001B1 /* Frameworks */,
+				8417365C2AB2E460007001B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WikiBackgroundChanger Extension (macOS)";
+			productName = "WikiBackgroundChanger Extension (macOS)";
+			productReference = 8417365E2AB2E460007001B1 /* WikiBackgroundChanger Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8417361A2AB2E45C007001B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					841736352AB2E460007001B1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					841736472AB2E460007001B1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					841736532AB2E460007001B1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					8417365D2AB2E460007001B1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 8417361D2AB2E45C007001B1 /* Build configuration list for PBXProject "WikiBackgroundChanger" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 841736192AB2E45C007001B1;
+			productRefGroup = 841736372AB2E460007001B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				841736352AB2E460007001B1 /* WikiBackgroundChanger (iOS) */,
+				841736472AB2E460007001B1 /* WikiBackgroundChanger (macOS) */,
+				841736532AB2E460007001B1 /* WikiBackgroundChanger Extension (iOS) */,
+				8417365D2AB2E460007001B1 /* WikiBackgroundChanger Extension (macOS) */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		841736342AB2E460007001B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841736672AB2E460007001B1 /* Icon.png in Resources */,
+				8417363F2AB2E460007001B1 /* LaunchScreen.storyboard in Resources */,
+				841736652AB2E460007001B1 /* Main.html in Resources */,
+				8417366B2AB2E460007001B1 /* Script.js in Resources */,
+				8417366F2AB2E460007001B1 /* Assets.xcassets in Resources */,
+				841736422AB2E460007001B1 /* Main.storyboard in Resources */,
+				841736692AB2E460007001B1 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841736462AB2E460007001B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841736682AB2E460007001B1 /* Icon.png in Resources */,
+				8417366A2AB2E460007001B1 /* Style.css in Resources */,
+				8417364E2AB2E460007001B1 /* Main.storyboard in Resources */,
+				8417366C2AB2E460007001B1 /* Script.js in Resources */,
+				841736702AB2E460007001B1 /* Assets.xcassets in Resources */,
+				841736662AB2E460007001B1 /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841736522AB2E460007001B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841736792AB2E460007001B1 /* background.js in Resources */,
+				8417367F2AB2E460007001B1 /* popup.css in Resources */,
+				8417367D2AB2E460007001B1 /* popup.html in Resources */,
+				841736752AB2E460007001B1 /* images in Resources */,
+				841736772AB2E460007001B1 /* manifest.json in Resources */,
+				841736732AB2E460007001B1 /* _locales in Resources */,
+				8417367B2AB2E460007001B1 /* content.js in Resources */,
+				841736812AB2E460007001B1 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8417365C2AB2E460007001B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8417367A2AB2E460007001B1 /* background.js in Resources */,
+				841736802AB2E460007001B1 /* popup.css in Resources */,
+				8417367E2AB2E460007001B1 /* popup.html in Resources */,
+				841736762AB2E460007001B1 /* images in Resources */,
+				841736782AB2E460007001B1 /* manifest.json in Resources */,
+				841736742AB2E460007001B1 /* _locales in Resources */,
+				8417367C2AB2E460007001B1 /* content.js in Resources */,
+				841736822AB2E460007001B1 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		841736322AB2E460007001B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8417366D2AB2E460007001B1 /* ViewController.swift in Sources */,
+				8417363A2AB2E460007001B1 /* AppDelegate.swift in Sources */,
+				8417363C2AB2E460007001B1 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841736442AB2E460007001B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8417366E2AB2E460007001B1 /* ViewController.swift in Sources */,
+				8417364B2AB2E460007001B1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841736502AB2E460007001B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841736712AB2E460007001B1 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8417365A2AB2E460007001B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841736722AB2E460007001B1 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		841736572AB2E460007001B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 841736532AB2E460007001B1 /* WikiBackgroundChanger Extension (iOS) */;
+			targetProxy = 841736562AB2E460007001B1 /* PBXContainerItemProxy */;
+		};
+		841736612AB2E460007001B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8417365D2AB2E460007001B1 /* WikiBackgroundChanger Extension (macOS) */;
+			targetProxy = 841736602AB2E460007001B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		841736202AB2E45C007001B1 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				841736212AB2E45C007001B1 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		8417363D2AB2E460007001B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8417363E2AB2E460007001B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		841736402AB2E460007001B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				841736412AB2E460007001B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8417364C2AB2E460007001B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8417364D2AB2E460007001B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		841736832AB2E460007001B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		841736842AB2E460007001B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		841736862AB2E460007001B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WikiBackgroundChanger Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.WikiBackgroundChanger.Extension;
+				PRODUCT_NAME = "WikiBackgroundChanger Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		841736872AB2E460007001B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WikiBackgroundChanger Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.WikiBackgroundChanger.Extension;
+				PRODUCT_NAME = "WikiBackgroundChanger Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8417368A2AB2E460007001B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = WikiBackgroundChanger;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.WikiBackgroundChanger;
+				PRODUCT_NAME = WikiBackgroundChanger;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8417368B2AB2E460007001B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = WikiBackgroundChanger;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.WikiBackgroundChanger;
+				PRODUCT_NAME = WikiBackgroundChanger;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8417368D2AB2E460007001B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/WikiBackgroundChanger.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WikiBackgroundChanger Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.WikiBackgroundChanger.Extension;
+				PRODUCT_NAME = "WikiBackgroundChanger Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		8417368E2AB2E460007001B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/WikiBackgroundChanger.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "WikiBackgroundChanger Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.WikiBackgroundChanger.Extension;
+				PRODUCT_NAME = "WikiBackgroundChanger Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		841736912AB2E460007001B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/WikiBackgroundChanger.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WikiBackgroundChanger;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.WikiBackgroundChanger;
+				PRODUCT_NAME = WikiBackgroundChanger;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		841736922AB2E460007001B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/WikiBackgroundChanger.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = WikiBackgroundChanger;
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.WikiBackgroundChanger;
+				PRODUCT_NAME = WikiBackgroundChanger;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8417361D2AB2E45C007001B1 /* Build configuration list for PBXProject "WikiBackgroundChanger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841736832AB2E460007001B1 /* Debug */,
+				841736842AB2E460007001B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		841736852AB2E460007001B1 /* Build configuration list for PBXNativeTarget "WikiBackgroundChanger Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841736862AB2E460007001B1 /* Debug */,
+				841736872AB2E460007001B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		841736892AB2E460007001B1 /* Build configuration list for PBXNativeTarget "WikiBackgroundChanger (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8417368A2AB2E460007001B1 /* Debug */,
+				8417368B2AB2E460007001B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8417368C2AB2E460007001B1 /* Build configuration list for PBXNativeTarget "WikiBackgroundChanger Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8417368D2AB2E460007001B1 /* Debug */,
+				8417368E2AB2E460007001B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		841736902AB2E460007001B1 /* Build configuration list for PBXNativeTarget "WikiBackgroundChanger (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841736912AB2E460007001B1 /* Debug */,
+				841736922AB2E460007001B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8417361A2AB2E45C007001B1 /* Project object */;
+}

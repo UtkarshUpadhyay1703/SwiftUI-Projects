@@ -19,9 +19,9 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
     override func toolbarItemClicked(in window: SFSafariWindow) {
         // This method will be called when your toolbar item is clicked.
         NSLog("The extension's toolbar item was clicked")
-        changeToolbarColor(window)
+        changeToolbarBadge(window)
     }
-    
+        
     override func validateToolbarItem(in window: SFSafariWindow, validationHandler: @escaping ((Bool, String) -> Void)) {
         // This is called when Safari's state changed in some way that would require the extension's toolbar item to be validated again.
         validationHandler(true, "")
@@ -31,7 +31,7 @@ class SafariExtensionHandler: SFSafariExtensionHandler {
         return SafariExtensionViewController.shared
     }
     
-    func changeToolbarColor(_ window: SFSafariWindow) {
+    func changeToolbarBadge(_ window: SFSafariWindow) {
         window.getToolbarItem { toolbarItem in
             toolbarItem?.setBadgeText("5")
             toolbarItem?.setLabel("HO JO HO JO")
