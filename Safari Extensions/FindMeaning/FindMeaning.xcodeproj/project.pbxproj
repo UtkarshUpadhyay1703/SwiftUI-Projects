@@ -21,6 +21,10 @@
 		847EABDD2AB067890058E35B /* script.js in Resources */ = {isa = PBXBuildFile; fileRef = 847EABDC2AB067890058E35B /* script.js */; };
 		847EABDF2AB067890058E35B /* ToolbarItemIcon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 847EABDE2AB067890058E35B /* ToolbarItemIcon.pdf */; };
 		847EABE22AB067890058E35B /* SafariExtensionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847EABE02AB067890058E35B /* SafariExtensionViewController.xib */; };
+		84F780A02AB48372000D0E9C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F7808C2AB47FD4000D0E9C /* Cocoa.framework */; };
+		84F780A32AB48372000D0E9C /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F780A22AB48372000D0E9C /* blockerList.json */; };
+		84F780A52AB48372000D0E9C /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F780A42AB48372000D0E9C /* ContentBlockerRequestHandler.swift */; };
+		84F780AA2AB48372000D0E9C /* Blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84F7809F2AB48372000D0E9C /* Blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +34,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 847EABD12AB067890058E35B;
 			remoteInfo = "FindMeaning Extension";
+		};
+		84F780A82AB48372000D0E9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847EABAE2AB067830058E35B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F7809E2AB48372000D0E9C;
+			remoteInfo = Blocker;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -41,6 +52,7 @@
 			dstSubfolderSpec = 13;
 			files = (
 				847EABD32AB067890058E35B /* FindMeaning Extension.appex in Embed App Extensions */,
+				84F780AA2AB48372000D0E9C /* Blocker.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,6 +79,16 @@
 		847EABE12AB067890058E35B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/SafariExtensionViewController.xib; sourceTree = "<group>"; };
 		847EABE32AB067890058E35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		847EABE42AB067890058E35B /* FindMeaning_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FindMeaning_Extension.entitlements; sourceTree = "<group>"; };
+		84F7808C2AB47FD4000D0E9C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		84F7808F2AB47FD5000D0E9C /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		84F780912AB47FD5000D0E9C /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		84F780932AB47FD5000D0E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F780942AB47FD5000D0E9C /* Check.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Check.entitlements; sourceTree = "<group>"; };
+		84F7809F2AB48372000D0E9C /* Blocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Blocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F780A22AB48372000D0E9C /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		84F780A42AB48372000D0E9C /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		84F780A62AB48372000D0E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F780A72AB48372000D0E9C /* Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blocker.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +106,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84F7809C2AB48372000D0E9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F780A02AB48372000D0E9C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -92,6 +122,9 @@
 			children = (
 				847EABB82AB067830058E35B /* FindMeaning */,
 				847EABD62AB067890058E35B /* FindMeaning Extension */,
+				84F7808E2AB47FD4000D0E9C /* Check */,
+				84F780A12AB48372000D0E9C /* Blocker */,
+				84F7808B2AB47FD4000D0E9C /* Frameworks */,
 				847EABB72AB067830058E35B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,6 +134,7 @@
 			children = (
 				847EABB62AB067830058E35B /* FindMeaning.app */,
 				847EABD22AB067890058E35B /* FindMeaning Extension.appex */,
+				84F7809F2AB48372000D0E9C /* Blocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +186,36 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		84F7808B2AB47FD4000D0E9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F7808C2AB47FD4000D0E9C /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84F7808E2AB47FD4000D0E9C /* Check */ = {
+			isa = PBXGroup;
+			children = (
+				84F7808F2AB47FD5000D0E9C /* blockerList.json */,
+				84F780912AB47FD5000D0E9C /* ContentBlockerRequestHandler.swift */,
+				84F780932AB47FD5000D0E9C /* Info.plist */,
+				84F780942AB47FD5000D0E9C /* Check.entitlements */,
+			);
+			path = Check;
+			sourceTree = "<group>";
+		};
+		84F780A12AB48372000D0E9C /* Blocker */ = {
+			isa = PBXGroup;
+			children = (
+				84F780A22AB48372000D0E9C /* blockerList.json */,
+				84F780A42AB48372000D0E9C /* ContentBlockerRequestHandler.swift */,
+				84F780A62AB48372000D0E9C /* Info.plist */,
+				84F780A72AB48372000D0E9C /* Blocker.entitlements */,
+			);
+			path = Blocker;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,6 +232,7 @@
 			);
 			dependencies = (
 				847EABD52AB067890058E35B /* PBXTargetDependency */,
+				84F780A92AB48372000D0E9C /* PBXTargetDependency */,
 			);
 			name = FindMeaning;
 			productName = FindMeaning;
@@ -191,6 +256,23 @@
 			productReference = 847EABD22AB067890058E35B /* FindMeaning Extension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		84F7809E2AB48372000D0E9C /* Blocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F780AB2AB48372000D0E9C /* Build configuration list for PBXNativeTarget "Blocker" */;
+			buildPhases = (
+				84F7809B2AB48372000D0E9C /* Sources */,
+				84F7809C2AB48372000D0E9C /* Frameworks */,
+				84F7809D2AB48372000D0E9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Blocker;
+			productName = Blocker;
+			productReference = 84F7809F2AB48372000D0E9C /* Blocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +287,9 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					847EABD12AB067890058E35B = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					84F7809E2AB48372000D0E9C = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -224,6 +309,7 @@
 			targets = (
 				847EABB52AB067830058E35B /* FindMeaning */,
 				847EABD12AB067890058E35B /* FindMeaning Extension */,
+				84F7809E2AB48372000D0E9C /* Blocker */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +338,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84F7809D2AB48372000D0E9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F780A32AB48372000D0E9C /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -273,6 +367,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84F7809B2AB48372000D0E9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F780A52AB48372000D0E9C /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -280,6 +382,11 @@
 			isa = PBXTargetDependency;
 			target = 847EABD12AB067890058E35B /* FindMeaning Extension */;
 			targetProxy = 847EABD42AB067890058E35B /* PBXContainerItemProxy */;
+		};
+		84F780A92AB48372000D0E9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F7809E2AB48372000D0E9C /* Blocker */;
+			targetProxy = 84F780A82AB48372000D0E9C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -556,6 +663,54 @@
 			};
 			name = Release;
 		};
+		84F780AC2AB48372000D0E9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Blocker/Blocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Blocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Blocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.FindMeaning.Blocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		84F780AD2AB48372000D0E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Blocker/Blocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Blocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Blocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.FindMeaning.Blocker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -582,6 +737,15 @@
 			buildConfigurations = (
 				847EABEC2AB067890058E35B /* Debug */,
 				847EABED2AB067890058E35B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F780AB2AB48372000D0E9C /* Build configuration list for PBXNativeTarget "Blocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F780AC2AB48372000D0E9C /* Debug */,
+				84F780AD2AB48372000D0E9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -1,0 +1,1112 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84F7802B2AB424F5000D0E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7802A2AB424F5000D0E9C /* AppDelegate.swift */; };
+		84F7802D2AB424F5000D0E9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7802C2AB424F5000D0E9C /* SceneDelegate.swift */; };
+		84F780302AB424F5000D0E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F7802E2AB424F5000D0E9C /* LaunchScreen.storyboard */; };
+		84F780332AB424F5000D0E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F780312AB424F5000D0E9C /* Main.storyboard */; };
+		84F7803C2AB424F5000D0E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F7803B2AB424F5000D0E9C /* AppDelegate.swift */; };
+		84F7803F2AB424F5000D0E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84F7803D2AB424F5000D0E9C /* Main.storyboard */; };
+		84F780462AB424F5000D0E9C /* Content Blocker Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84F780452AB424F5000D0E9C /* Content Blocker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84F780502AB424F6000D0E9C /* Content Blocker Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84F7804F2AB424F6000D0E9C /* Content Blocker Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		84F780562AB424F6000D0E9C /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 84F780112AB424F3000D0E9C /* Main.html */; };
+		84F780572AB424F6000D0E9C /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 84F780112AB424F3000D0E9C /* Main.html */; };
+		84F780582AB424F6000D0E9C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F780132AB424F3000D0E9C /* Icon.png */; };
+		84F780592AB424F6000D0E9C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 84F780132AB424F3000D0E9C /* Icon.png */; };
+		84F7805A2AB424F6000D0E9C /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 84F780142AB424F3000D0E9C /* Style.css */; };
+		84F7805B2AB424F6000D0E9C /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 84F780142AB424F3000D0E9C /* Style.css */; };
+		84F7805C2AB424F6000D0E9C /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 84F780152AB424F3000D0E9C /* Script.js */; };
+		84F7805D2AB424F6000D0E9C /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 84F780152AB424F3000D0E9C /* Script.js */; };
+		84F7805E2AB424F6000D0E9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F780162AB424F3000D0E9C /* ViewController.swift */; };
+		84F7805F2AB424F6000D0E9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F780162AB424F3000D0E9C /* ViewController.swift */; };
+		84F780602AB424F6000D0E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F780172AB424F5000D0E9C /* Assets.xcassets */; };
+		84F780612AB424F6000D0E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84F780172AB424F5000D0E9C /* Assets.xcassets */; };
+		84F780622AB424F6000D0E9C /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F780192AB424F5000D0E9C /* SafariWebExtensionHandler.swift */; };
+		84F780632AB424F6000D0E9C /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F780192AB424F5000D0E9C /* SafariWebExtensionHandler.swift */; };
+		84F780642AB424F6000D0E9C /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 84F7801B2AB424F5000D0E9C /* _locales */; };
+		84F780652AB424F6000D0E9C /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 84F7801B2AB424F5000D0E9C /* _locales */; };
+		84F780662AB424F6000D0E9C /* images in Resources */ = {isa = PBXBuildFile; fileRef = 84F7801C2AB424F5000D0E9C /* images */; };
+		84F780672AB424F6000D0E9C /* images in Resources */ = {isa = PBXBuildFile; fileRef = 84F7801C2AB424F5000D0E9C /* images */; };
+		84F780682AB424F6000D0E9C /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F7801D2AB424F5000D0E9C /* manifest.json */; };
+		84F780692AB424F6000D0E9C /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F7801D2AB424F5000D0E9C /* manifest.json */; };
+		84F7806A2AB424F6000D0E9C /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 84F7801E2AB424F5000D0E9C /* background.js */; };
+		84F7806B2AB424F6000D0E9C /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 84F7801E2AB424F5000D0E9C /* background.js */; };
+		84F7806C2AB424F6000D0E9C /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 84F7801F2AB424F5000D0E9C /* content.js */; };
+		84F7806D2AB424F6000D0E9C /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 84F7801F2AB424F5000D0E9C /* content.js */; };
+		84F7806E2AB424F6000D0E9C /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 84F780202AB424F5000D0E9C /* popup.html */; };
+		84F7806F2AB424F6000D0E9C /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 84F780202AB424F5000D0E9C /* popup.html */; };
+		84F780702AB424F6000D0E9C /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 84F780212AB424F5000D0E9C /* popup.css */; };
+		84F780712AB424F6000D0E9C /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 84F780212AB424F5000D0E9C /* popup.css */; };
+		84F780722AB424F6000D0E9C /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 84F780222AB424F5000D0E9C /* popup.js */; };
+		84F780732AB424F6000D0E9C /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 84F780222AB424F5000D0E9C /* popup.js */; };
+		84F7810F2AB493EA000D0E9C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84F7810E2AB493EA000D0E9C /* Cocoa.framework */; };
+		84F781122AB493EA000D0E9C /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 84F781112AB493EA000D0E9C /* blockerList.json */; };
+		84F781142AB493EA000D0E9C /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F781132AB493EA000D0E9C /* ContentBlockerRequestHandler.swift */; };
+		84F781192AB493EA000D0E9C /* Blocker.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84F7810C2AB493EA000D0E9C /* Blocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84F780472AB424F5000D0E9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F7800B2AB424F3000D0E9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F780442AB424F5000D0E9C;
+			remoteInfo = "Content Blocker Extension (iOS)";
+		};
+		84F780512AB424F6000D0E9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F7800B2AB424F3000D0E9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F7804E2AB424F6000D0E9C;
+			remoteInfo = "Content Blocker Extension (macOS)";
+		};
+		84F781172AB493EA000D0E9C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84F7800B2AB424F3000D0E9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84F7810B2AB493EA000D0E9C;
+			remoteInfo = Blocker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		84F780792AB424F6000D0E9C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84F780462AB424F5000D0E9C /* Content Blocker Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F780802AB424F6000D0E9C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84F780502AB424F6000D0E9C /* Content Blocker Extension.appex in Embed App Extensions */,
+				84F781192AB493EA000D0E9C /* Blocker.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		84F780122AB424F3000D0E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		84F780132AB424F3000D0E9C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		84F780142AB424F3000D0E9C /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		84F780152AB424F3000D0E9C /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		84F780162AB424F3000D0E9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84F780172AB424F5000D0E9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84F780192AB424F5000D0E9C /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		84F7801B2AB424F5000D0E9C /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		84F7801C2AB424F5000D0E9C /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		84F7801D2AB424F5000D0E9C /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		84F7801E2AB424F5000D0E9C /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		84F7801F2AB424F5000D0E9C /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		84F780202AB424F5000D0E9C /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		84F780212AB424F5000D0E9C /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		84F780222AB424F5000D0E9C /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		84F780272AB424F5000D0E9C /* Content Blocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Content Blocker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F7802A2AB424F5000D0E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84F7802C2AB424F5000D0E9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		84F7802F2AB424F5000D0E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84F780322AB424F5000D0E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84F780342AB424F5000D0E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F780392AB424F5000D0E9C /* Content Blocker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Content Blocker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F7803B2AB424F5000D0E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		84F7803E2AB424F5000D0E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84F780402AB424F5000D0E9C /* Content Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Content Blocker.entitlements"; sourceTree = "<group>"; };
+		84F780452AB424F5000D0E9C /* Content Blocker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Content Blocker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F7804A2AB424F5000D0E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F7804F2AB424F6000D0E9C /* Content Blocker Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Content Blocker Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F780542AB424F6000D0E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F780552AB424F6000D0E9C /* Content Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Content Blocker.entitlements"; sourceTree = "<group>"; };
+		84F7810C2AB493EA000D0E9C /* Blocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = Blocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		84F7810E2AB493EA000D0E9C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		84F781112AB493EA000D0E9C /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
+		84F781132AB493EA000D0E9C /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
+		84F781152AB493EA000D0E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84F781162AB493EA000D0E9C /* Blocker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blocker.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84F780242AB424F5000D0E9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F780362AB424F5000D0E9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F780422AB424F5000D0E9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F7804C2AB424F6000D0E9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F781092AB493EA000D0E9C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F7810F2AB493EA000D0E9C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84F7800A2AB424F3000D0E9C = {
+			isa = PBXGroup;
+			children = (
+				84F7800F2AB424F3000D0E9C /* Shared (App) */,
+				84F780182AB424F5000D0E9C /* Shared (Extension) */,
+				84F780292AB424F5000D0E9C /* iOS (App) */,
+				84F7803A2AB424F5000D0E9C /* macOS (App) */,
+				84F780492AB424F5000D0E9C /* iOS (Extension) */,
+				84F780532AB424F6000D0E9C /* macOS (Extension) */,
+				84F781102AB493EA000D0E9C /* Blocker */,
+				84F7810D2AB493EA000D0E9C /* Frameworks */,
+				84F780282AB424F5000D0E9C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84F7800F2AB424F3000D0E9C /* Shared (App) */ = {
+			isa = PBXGroup;
+			children = (
+				84F780162AB424F3000D0E9C /* ViewController.swift */,
+				84F780172AB424F5000D0E9C /* Assets.xcassets */,
+				84F780102AB424F3000D0E9C /* Resources */,
+			);
+			path = "Shared (App)";
+			sourceTree = "<group>";
+		};
+		84F780102AB424F3000D0E9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84F780112AB424F3000D0E9C /* Main.html */,
+				84F780132AB424F3000D0E9C /* Icon.png */,
+				84F780142AB424F3000D0E9C /* Style.css */,
+				84F780152AB424F3000D0E9C /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84F780182AB424F5000D0E9C /* Shared (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				84F780192AB424F5000D0E9C /* SafariWebExtensionHandler.swift */,
+				84F7801A2AB424F5000D0E9C /* Resources */,
+			);
+			path = "Shared (Extension)";
+			sourceTree = "<group>";
+		};
+		84F7801A2AB424F5000D0E9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				84F7801B2AB424F5000D0E9C /* _locales */,
+				84F7801C2AB424F5000D0E9C /* images */,
+				84F7801D2AB424F5000D0E9C /* manifest.json */,
+				84F7801E2AB424F5000D0E9C /* background.js */,
+				84F7801F2AB424F5000D0E9C /* content.js */,
+				84F780202AB424F5000D0E9C /* popup.html */,
+				84F780212AB424F5000D0E9C /* popup.css */,
+				84F780222AB424F5000D0E9C /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84F780282AB424F5000D0E9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84F780272AB424F5000D0E9C /* Content Blocker.app */,
+				84F780392AB424F5000D0E9C /* Content Blocker.app */,
+				84F780452AB424F5000D0E9C /* Content Blocker Extension.appex */,
+				84F7804F2AB424F6000D0E9C /* Content Blocker Extension.appex */,
+				84F7810C2AB493EA000D0E9C /* Blocker.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84F780292AB424F5000D0E9C /* iOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				84F7802A2AB424F5000D0E9C /* AppDelegate.swift */,
+				84F7802C2AB424F5000D0E9C /* SceneDelegate.swift */,
+				84F7802E2AB424F5000D0E9C /* LaunchScreen.storyboard */,
+				84F780312AB424F5000D0E9C /* Main.storyboard */,
+				84F780342AB424F5000D0E9C /* Info.plist */,
+			);
+			path = "iOS (App)";
+			sourceTree = "<group>";
+		};
+		84F7803A2AB424F5000D0E9C /* macOS (App) */ = {
+			isa = PBXGroup;
+			children = (
+				84F7803B2AB424F5000D0E9C /* AppDelegate.swift */,
+				84F7803D2AB424F5000D0E9C /* Main.storyboard */,
+				84F780402AB424F5000D0E9C /* Content Blocker.entitlements */,
+			);
+			path = "macOS (App)";
+			sourceTree = "<group>";
+		};
+		84F780492AB424F5000D0E9C /* iOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				84F7804A2AB424F5000D0E9C /* Info.plist */,
+			);
+			path = "iOS (Extension)";
+			sourceTree = "<group>";
+		};
+		84F780532AB424F6000D0E9C /* macOS (Extension) */ = {
+			isa = PBXGroup;
+			children = (
+				84F780542AB424F6000D0E9C /* Info.plist */,
+				84F780552AB424F6000D0E9C /* Content Blocker.entitlements */,
+			);
+			path = "macOS (Extension)";
+			sourceTree = "<group>";
+		};
+		84F7810D2AB493EA000D0E9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				84F7810E2AB493EA000D0E9C /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84F781102AB493EA000D0E9C /* Blocker */ = {
+			isa = PBXGroup;
+			children = (
+				84F781112AB493EA000D0E9C /* blockerList.json */,
+				84F781132AB493EA000D0E9C /* ContentBlockerRequestHandler.swift */,
+				84F781152AB493EA000D0E9C /* Info.plist */,
+				84F781162AB493EA000D0E9C /* Blocker.entitlements */,
+			);
+			path = Blocker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84F780262AB424F5000D0E9C /* Content Blocker (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F7807A2AB424F6000D0E9C /* Build configuration list for PBXNativeTarget "Content Blocker (iOS)" */;
+			buildPhases = (
+				84F780232AB424F5000D0E9C /* Sources */,
+				84F780242AB424F5000D0E9C /* Frameworks */,
+				84F780252AB424F5000D0E9C /* Resources */,
+				84F780792AB424F6000D0E9C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84F780482AB424F5000D0E9C /* PBXTargetDependency */,
+			);
+			name = "Content Blocker (iOS)";
+			productName = "Content Blocker (iOS)";
+			productReference = 84F780272AB424F5000D0E9C /* Content Blocker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84F780382AB424F5000D0E9C /* Content Blocker (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F780812AB424F6000D0E9C /* Build configuration list for PBXNativeTarget "Content Blocker (macOS)" */;
+			buildPhases = (
+				84F780352AB424F5000D0E9C /* Sources */,
+				84F780362AB424F5000D0E9C /* Frameworks */,
+				84F780372AB424F5000D0E9C /* Resources */,
+				84F780802AB424F6000D0E9C /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84F780522AB424F6000D0E9C /* PBXTargetDependency */,
+				84F781182AB493EA000D0E9C /* PBXTargetDependency */,
+			);
+			name = "Content Blocker (macOS)";
+			productName = "Content Blocker (macOS)";
+			productReference = 84F780392AB424F5000D0E9C /* Content Blocker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84F780442AB424F5000D0E9C /* Content Blocker Extension (iOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F780762AB424F6000D0E9C /* Build configuration list for PBXNativeTarget "Content Blocker Extension (iOS)" */;
+			buildPhases = (
+				84F780412AB424F5000D0E9C /* Sources */,
+				84F780422AB424F5000D0E9C /* Frameworks */,
+				84F780432AB424F5000D0E9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Content Blocker Extension (iOS)";
+			productName = "Content Blocker Extension (iOS)";
+			productReference = 84F780452AB424F5000D0E9C /* Content Blocker Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		84F7804E2AB424F6000D0E9C /* Content Blocker Extension (macOS) */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F7807D2AB424F6000D0E9C /* Build configuration list for PBXNativeTarget "Content Blocker Extension (macOS)" */;
+			buildPhases = (
+				84F7804B2AB424F6000D0E9C /* Sources */,
+				84F7804C2AB424F6000D0E9C /* Frameworks */,
+				84F7804D2AB424F6000D0E9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Content Blocker Extension (macOS)";
+			productName = "Content Blocker Extension (macOS)";
+			productReference = 84F7804F2AB424F6000D0E9C /* Content Blocker Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		84F7810B2AB493EA000D0E9C /* Blocker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84F7811C2AB493EA000D0E9C /* Build configuration list for PBXNativeTarget "Blocker" */;
+			buildPhases = (
+				84F781082AB493EA000D0E9C /* Sources */,
+				84F781092AB493EA000D0E9C /* Frameworks */,
+				84F7810A2AB493EA000D0E9C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Blocker;
+			productName = Blocker;
+			productReference = 84F7810C2AB493EA000D0E9C /* Blocker.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84F7800B2AB424F3000D0E9C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					84F780262AB424F5000D0E9C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					84F780382AB424F5000D0E9C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					84F780442AB424F5000D0E9C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					84F7804E2AB424F6000D0E9C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					84F7810B2AB493EA000D0E9C = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 84F7800E2AB424F3000D0E9C /* Build configuration list for PBXProject "Content Blocker" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84F7800A2AB424F3000D0E9C;
+			productRefGroup = 84F780282AB424F5000D0E9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84F780262AB424F5000D0E9C /* Content Blocker (iOS) */,
+				84F780382AB424F5000D0E9C /* Content Blocker (macOS) */,
+				84F780442AB424F5000D0E9C /* Content Blocker Extension (iOS) */,
+				84F7804E2AB424F6000D0E9C /* Content Blocker Extension (macOS) */,
+				84F7810B2AB493EA000D0E9C /* Blocker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84F780252AB424F5000D0E9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F780582AB424F6000D0E9C /* Icon.png in Resources */,
+				84F780302AB424F5000D0E9C /* LaunchScreen.storyboard in Resources */,
+				84F780562AB424F6000D0E9C /* Main.html in Resources */,
+				84F7805C2AB424F6000D0E9C /* Script.js in Resources */,
+				84F780602AB424F6000D0E9C /* Assets.xcassets in Resources */,
+				84F780332AB424F5000D0E9C /* Main.storyboard in Resources */,
+				84F7805A2AB424F6000D0E9C /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F780372AB424F5000D0E9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F780592AB424F6000D0E9C /* Icon.png in Resources */,
+				84F7805B2AB424F6000D0E9C /* Style.css in Resources */,
+				84F7803F2AB424F5000D0E9C /* Main.storyboard in Resources */,
+				84F7805D2AB424F6000D0E9C /* Script.js in Resources */,
+				84F780612AB424F6000D0E9C /* Assets.xcassets in Resources */,
+				84F780572AB424F6000D0E9C /* Main.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F780432AB424F5000D0E9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F7806A2AB424F6000D0E9C /* background.js in Resources */,
+				84F780702AB424F6000D0E9C /* popup.css in Resources */,
+				84F7806E2AB424F6000D0E9C /* popup.html in Resources */,
+				84F780662AB424F6000D0E9C /* images in Resources */,
+				84F780682AB424F6000D0E9C /* manifest.json in Resources */,
+				84F780642AB424F6000D0E9C /* _locales in Resources */,
+				84F7806C2AB424F6000D0E9C /* content.js in Resources */,
+				84F780722AB424F6000D0E9C /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F7804D2AB424F6000D0E9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F7806B2AB424F6000D0E9C /* background.js in Resources */,
+				84F780712AB424F6000D0E9C /* popup.css in Resources */,
+				84F7806F2AB424F6000D0E9C /* popup.html in Resources */,
+				84F780672AB424F6000D0E9C /* images in Resources */,
+				84F780692AB424F6000D0E9C /* manifest.json in Resources */,
+				84F780652AB424F6000D0E9C /* _locales in Resources */,
+				84F7806D2AB424F6000D0E9C /* content.js in Resources */,
+				84F780732AB424F6000D0E9C /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F7810A2AB493EA000D0E9C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F781122AB493EA000D0E9C /* blockerList.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84F780232AB424F5000D0E9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F7805E2AB424F6000D0E9C /* ViewController.swift in Sources */,
+				84F7802B2AB424F5000D0E9C /* AppDelegate.swift in Sources */,
+				84F7802D2AB424F5000D0E9C /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F780352AB424F5000D0E9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F7805F2AB424F6000D0E9C /* ViewController.swift in Sources */,
+				84F7803C2AB424F5000D0E9C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F780412AB424F5000D0E9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F780622AB424F6000D0E9C /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F7804B2AB424F6000D0E9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F780632AB424F6000D0E9C /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84F781082AB493EA000D0E9C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F781142AB493EA000D0E9C /* ContentBlockerRequestHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84F780482AB424F5000D0E9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F780442AB424F5000D0E9C /* Content Blocker Extension (iOS) */;
+			targetProxy = 84F780472AB424F5000D0E9C /* PBXContainerItemProxy */;
+		};
+		84F780522AB424F6000D0E9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F7804E2AB424F6000D0E9C /* Content Blocker Extension (macOS) */;
+			targetProxy = 84F780512AB424F6000D0E9C /* PBXContainerItemProxy */;
+		};
+		84F781182AB493EA000D0E9C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84F7810B2AB493EA000D0E9C /* Blocker */;
+			targetProxy = 84F781172AB493EA000D0E9C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84F780112AB424F3000D0E9C /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F780122AB424F3000D0E9C /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		84F7802E2AB424F5000D0E9C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F7802F2AB424F5000D0E9C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		84F780312AB424F5000D0E9C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F780322AB424F5000D0E9C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84F7803D2AB424F5000D0E9C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84F7803E2AB424F5000D0E9C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84F780742AB424F6000D0E9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		84F780752AB424F6000D0E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		84F780772AB424F6000D0E9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Content Blocker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Content-Blocker.Extension";
+				PRODUCT_NAME = "Content Blocker Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84F780782AB424F6000D0E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Content Blocker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Content-Blocker.Extension";
+				PRODUCT_NAME = "Content Blocker Extension";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84F7807B2AB424F6000D0E9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Content Blocker";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Content-Blocker";
+				PRODUCT_NAME = "Content Blocker";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		84F7807C2AB424F6000D0E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iOS (App)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Content Blocker";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Content-Blocker";
+				PRODUCT_NAME = "Content Blocker";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84F7807E2AB424F6000D0E9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Content Blocker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Content Blocker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Content-Blocker.Extension";
+				PRODUCT_NAME = "Content Blocker Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		84F7807F2AB424F6000D0E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "macOS (Extension)/Content Blocker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "macOS (Extension)/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Content Blocker Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Content-Blocker.Extension";
+				PRODUCT_NAME = "Content Blocker Extension";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		84F780822AB424F6000D0E9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Content Blocker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Content Blocker";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Content-Blocker";
+				PRODUCT_NAME = "Content Blocker";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		84F780832AB424F6000D0E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "macOS (App)/Content Blocker.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Content Blocker";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Content-Blocker";
+				PRODUCT_NAME = "Content Blocker";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		84F7811A2AB493EA000D0E9C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Blocker/Blocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Blocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Blocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Content-Blocker.Blocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		84F7811B2AB493EA000D0E9C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Blocker/Blocker.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Blocker/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Blocker;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Content-Blocker.Blocker";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84F7800E2AB424F3000D0E9C /* Build configuration list for PBXProject "Content Blocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F780742AB424F6000D0E9C /* Debug */,
+				84F780752AB424F6000D0E9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F780762AB424F6000D0E9C /* Build configuration list for PBXNativeTarget "Content Blocker Extension (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F780772AB424F6000D0E9C /* Debug */,
+				84F780782AB424F6000D0E9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F7807A2AB424F6000D0E9C /* Build configuration list for PBXNativeTarget "Content Blocker (iOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F7807B2AB424F6000D0E9C /* Debug */,
+				84F7807C2AB424F6000D0E9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F7807D2AB424F6000D0E9C /* Build configuration list for PBXNativeTarget "Content Blocker Extension (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F7807E2AB424F6000D0E9C /* Debug */,
+				84F7807F2AB424F6000D0E9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F780812AB424F6000D0E9C /* Build configuration list for PBXNativeTarget "Content Blocker (macOS)" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F780822AB424F6000D0E9C /* Debug */,
+				84F780832AB424F6000D0E9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84F7811C2AB493EA000D0E9C /* Build configuration list for PBXNativeTarget "Blocker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84F7811A2AB493EA000D0E9C /* Debug */,
+				84F7811B2AB493EA000D0E9C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84F7800B2AB424F3000D0E9C /* Project object */;
+}
