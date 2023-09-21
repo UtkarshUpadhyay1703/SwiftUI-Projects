@@ -1,5 +1,5 @@
 var emails = getEmails();
-console.log("!!!!!!!!!!emails: ", emails);
+console.log("emails: ", emails);
 
 browser.runtime.sendMessage({type: "Read emails response", emails: emails == null ? [""] : emails});
 

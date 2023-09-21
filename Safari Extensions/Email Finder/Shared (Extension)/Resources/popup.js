@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
-    findEmails()
+    console.log("#@@#@#@#@##@##@");
+    findEmails();
 });
 
 function findEmails() {
