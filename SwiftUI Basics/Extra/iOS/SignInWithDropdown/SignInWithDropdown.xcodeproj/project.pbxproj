@@ -7,26 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84225F6F2AD53CEE008D768D /* Tic_Tac_ToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225F6E2AD53CEE008D768D /* Tic_Tac_ToeApp.swift */; };
-		84225F712AD53CEE008D768D /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225F702AD53CEE008D768D /* GameView.swift */; };
-		84225F732AD53CF1008D768D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84225F722AD53CF1008D768D /* Assets.xcassets */; };
-		84225F762AD53CF1008D768D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84225F752AD53CF1008D768D /* Preview Assets.xcassets */; };
-		84225F7D2AD56800008D768D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225F7C2AD56800008D768D /* Alerts.swift */; };
-		8479BBEF2AD66C4600FBD4F9 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479BBEE2AD66C4600FBD4F9 /* GameViewModel.swift */; };
+		8479BBFD2AD6702500FBD4F9 /* SignInWithDropdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479BBFC2AD6702500FBD4F9 /* SignInWithDropdownApp.swift */; };
+		8479BBFF2AD6702500FBD4F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479BBFE2AD6702500FBD4F9 /* ContentView.swift */; };
+		8479BC012AD6702800FBD4F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8479BC002AD6702800FBD4F9 /* Assets.xcassets */; };
+		8479BC042AD6702800FBD4F9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8479BC032AD6702800FBD4F9 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		84225F6B2AD53CEE008D768D /* Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		84225F6E2AD53CEE008D768D /* Tic_Tac_ToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_ToeApp.swift; sourceTree = "<group>"; };
-		84225F702AD53CEE008D768D /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
-		84225F722AD53CF1008D768D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		84225F752AD53CF1008D768D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		84225F7C2AD56800008D768D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		8479BBEE2AD66C4600FBD4F9 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		8479BBF92AD6702500FBD4F9 /* SignInWithDropdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignInWithDropdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8479BBFC2AD6702500FBD4F9 /* SignInWithDropdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithDropdownApp.swift; sourceTree = "<group>"; };
+		8479BBFE2AD6702500FBD4F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8479BC002AD6702800FBD4F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8479BC032AD6702800FBD4F9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		84225F682AD53CEE008D768D /* Frameworks */ = {
+		8479BBF62AD6702500FBD4F9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -36,104 +32,77 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		84225F622AD53CEE008D768D = {
+		8479BBF02AD6702500FBD4F9 = {
 			isa = PBXGroup;
 			children = (
-				84225F6D2AD53CEE008D768D /* Tic Tac Toe */,
-				84225F6C2AD53CEE008D768D /* Products */,
+				8479BBFB2AD6702500FBD4F9 /* SignInWithDropdown */,
+				8479BBFA2AD6702500FBD4F9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		84225F6C2AD53CEE008D768D /* Products */ = {
+		8479BBFA2AD6702500FBD4F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				84225F6B2AD53CEE008D768D /* Tic Tac Toe.app */,
+				8479BBF92AD6702500FBD4F9 /* SignInWithDropdown.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		84225F6D2AD53CEE008D768D /* Tic Tac Toe */ = {
+		8479BBFB2AD6702500FBD4F9 /* SignInWithDropdown */ = {
 			isa = PBXGroup;
 			children = (
-				84225F6E2AD53CEE008D768D /* Tic_Tac_ToeApp.swift */,
-				8452DD442AD68D67003EFD8F /* Model */,
-				8452DD452AD68DAA003EFD8F /* View */,
-				8452DD462AD68DBE003EFD8F /* ViewModel */,
-				84225F722AD53CF1008D768D /* Assets.xcassets */,
-				84225F742AD53CF1008D768D /* Preview Content */,
+				8479BBFC2AD6702500FBD4F9 /* SignInWithDropdownApp.swift */,
+				8479BBFE2AD6702500FBD4F9 /* ContentView.swift */,
+				8479BC002AD6702800FBD4F9 /* Assets.xcassets */,
+				8479BC022AD6702800FBD4F9 /* Preview Content */,
 			);
-			path = "Tic Tac Toe";
+			path = SignInWithDropdown;
 			sourceTree = "<group>";
 		};
-		84225F742AD53CF1008D768D /* Preview Content */ = {
+		8479BC022AD6702800FBD4F9 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				84225F752AD53CF1008D768D /* Preview Assets.xcassets */,
+				8479BC032AD6702800FBD4F9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		8452DD442AD68D67003EFD8F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				84225F7C2AD56800008D768D /* Alerts.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		8452DD452AD68DAA003EFD8F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				84225F702AD53CEE008D768D /* GameView.swift */,
-			);
-			name = View;
-			path = "New Group1";
-			sourceTree = "<group>";
-		};
-		8452DD462AD68DBE003EFD8F /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				8479BBEE2AD66C4600FBD4F9 /* GameViewModel.swift */,
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		84225F6A2AD53CEE008D768D /* Tic Tac Toe */ = {
+		8479BBF82AD6702500FBD4F9 /* SignInWithDropdown */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 84225F792AD53CF1008D768D /* Build configuration list for PBXNativeTarget "Tic Tac Toe" */;
+			buildConfigurationList = 8479BC072AD6702800FBD4F9 /* Build configuration list for PBXNativeTarget "SignInWithDropdown" */;
 			buildPhases = (
-				84225F672AD53CEE008D768D /* Sources */,
-				84225F682AD53CEE008D768D /* Frameworks */,
-				84225F692AD53CEE008D768D /* Resources */,
+				8479BBF52AD6702500FBD4F9 /* Sources */,
+				8479BBF62AD6702500FBD4F9 /* Frameworks */,
+				8479BBF72AD6702500FBD4F9 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Tic Tac Toe";
-			productName = "Tic Tac Toe";
-			productReference = 84225F6B2AD53CEE008D768D /* Tic Tac Toe.app */;
+			name = SignInWithDropdown;
+			productName = SignInWithDropdown;
+			productReference = 8479BBF92AD6702500FBD4F9 /* SignInWithDropdown.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		84225F632AD53CEE008D768D /* Project object */ = {
+		8479BBF12AD6702500FBD4F9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
-					84225F6A2AD53CEE008D768D = {
+					8479BBF82AD6702500FBD4F9 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
 			};
-			buildConfigurationList = 84225F662AD53CEE008D768D /* Build configuration list for PBXProject "Tic Tac Toe" */;
+			buildConfigurationList = 8479BBF42AD6702500FBD4F9 /* Build configuration list for PBXProject "SignInWithDropdown" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -141,44 +110,42 @@
 				en,
 				Base,
 			);
-			mainGroup = 84225F622AD53CEE008D768D;
-			productRefGroup = 84225F6C2AD53CEE008D768D /* Products */;
+			mainGroup = 8479BBF02AD6702500FBD4F9;
+			productRefGroup = 8479BBFA2AD6702500FBD4F9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				84225F6A2AD53CEE008D768D /* Tic Tac Toe */,
+				8479BBF82AD6702500FBD4F9 /* SignInWithDropdown */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		84225F692AD53CEE008D768D /* Resources */ = {
+		8479BBF72AD6702500FBD4F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84225F762AD53CF1008D768D /* Preview Assets.xcassets in Resources */,
-				84225F732AD53CF1008D768D /* Assets.xcassets in Resources */,
+				8479BC042AD6702800FBD4F9 /* Preview Assets.xcassets in Resources */,
+				8479BC012AD6702800FBD4F9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		84225F672AD53CEE008D768D /* Sources */ = {
+		8479BBF52AD6702500FBD4F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8479BBEF2AD66C4600FBD4F9 /* GameViewModel.swift in Sources */,
-				84225F712AD53CEE008D768D /* GameView.swift in Sources */,
-				84225F7D2AD56800008D768D /* Alerts.swift in Sources */,
-				84225F6F2AD53CEE008D768D /* Tic_Tac_ToeApp.swift in Sources */,
+				8479BBFF2AD6702500FBD4F9 /* ContentView.swift in Sources */,
+				8479BBFD2AD6702500FBD4F9 /* SignInWithDropdownApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		84225F772AD53CF1008D768D /* Debug */ = {
+		8479BC052AD6702800FBD4F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -239,7 +206,7 @@
 			};
 			name = Debug;
 		};
-		84225F782AD53CF1008D768D /* Release */ = {
+		8479BC062AD6702800FBD4F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -294,14 +261,14 @@
 			};
 			name = Release;
 		};
-		84225F7A2AD53CF1008D768D /* Debug */ = {
+		8479BC082AD6702800FBD4F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tic Tac Toe/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SignInWithDropdown/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -314,7 +281,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Tic-Tac-Toe";
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.SignInWithDropdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -322,14 +289,14 @@
 			};
 			name = Debug;
 		};
-		84225F7B2AD53CF1008D768D /* Release */ = {
+		8479BC092AD6702800FBD4F9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Tic Tac Toe/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SignInWithDropdown/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -342,7 +309,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Tic-Tac-Toe";
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.SignInWithDropdown;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -353,25 +320,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		84225F662AD53CEE008D768D /* Build configuration list for PBXProject "Tic Tac Toe" */ = {
+		8479BBF42AD6702500FBD4F9 /* Build configuration list for PBXProject "SignInWithDropdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				84225F772AD53CF1008D768D /* Debug */,
-				84225F782AD53CF1008D768D /* Release */,
+				8479BC052AD6702800FBD4F9 /* Debug */,
+				8479BC062AD6702800FBD4F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		84225F792AD53CF1008D768D /* Build configuration list for PBXNativeTarget "Tic Tac Toe" */ = {
+		8479BC072AD6702800FBD4F9 /* Build configuration list for PBXNativeTarget "SignInWithDropdown" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				84225F7A2AD53CF1008D768D /* Debug */,
-				84225F7B2AD53CF1008D768D /* Release */,
+				8479BC082AD6702800FBD4F9 /* Debug */,
+				8479BC092AD6702800FBD4F9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 84225F632AD53CEE008D768D /* Project object */;
+	rootObject = 8479BBF12AD6702500FBD4F9 /* Project object */;
 }
