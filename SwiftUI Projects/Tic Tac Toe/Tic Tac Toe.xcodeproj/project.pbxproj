@@ -12,6 +12,7 @@
 		84225F732AD53CF1008D768D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84225F722AD53CF1008D768D /* Assets.xcassets */; };
 		84225F762AD53CF1008D768D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84225F752AD53CF1008D768D /* Preview Assets.xcassets */; };
 		84225F7D2AD56800008D768D /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225F7C2AD56800008D768D /* Alerts.swift */; };
+		8452DD482AD68F3F003EFD8F /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452DD472AD68F3F003EFD8F /* LandingPage.swift */; };
 		8479BBEF2AD66C4600FBD4F9 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479BBEE2AD66C4600FBD4F9 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -22,6 +23,7 @@
 		84225F722AD53CF1008D768D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84225F752AD53CF1008D768D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84225F7C2AD56800008D768D /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		8452DD472AD68F3F003EFD8F /* LandingPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 		8479BBEE2AD66C4600FBD4F9 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				84225F702AD53CEE008D768D /* GameView.swift */,
+				8452DD472AD68F3F003EFD8F /* LandingPage.swift */,
 			);
 			name = View;
 			path = "New Group1";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8479BBEF2AD66C4600FBD4F9 /* GameViewModel.swift in Sources */,
+				8452DD482AD68F3F003EFD8F /* LandingPage.swift in Sources */,
 				84225F712AD53CEE008D768D /* GameView.swift in Sources */,
 				84225F7D2AD56800008D768D /* Alerts.swift in Sources */,
 				84225F6F2AD53CEE008D768D /* Tic_Tac_ToeApp.swift in Sources */,

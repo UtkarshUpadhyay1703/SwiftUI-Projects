@@ -9,6 +9,8 @@ import SwiftUI
 
 struct GameView: View {
     @StateObject private var viewModel = GameViewModel()
+    var isSinglePlayerMatch: Bool
+    @State private var isFirstPlayer: Bool = true
     
     var body: some View {
         GeometryReader{ geometry in
@@ -22,7 +24,8 @@ struct GameView: View {
                             PlayerIndicator(systemImageName: viewModel.moves[index]?.indicator ?? "")
                         }
                         .onTapGesture {
-                            viewModel.processPlayerMove(for: index)
+                            isSinglePlayerMatch ? viewModel.processPlayerMove(for: index) : viewModel.processMultiPlayer(for: index, firstPlayer: isFirstPlayer ? true : false)
+                            if !isSinglePlayerMatch { isFirstPlayer.toggle() }
                         }
                     }
                 }
@@ -37,22 +40,11 @@ struct GameView: View {
     }
 }
 
-enum Player {
-    case human, computer
-}
 
-struct Move {
-    let player: Player
-    let boardIndex: Int
-    
-    var indicator: String{
-        return player == .human ? "xmark" : "circle"
-    }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(isSinglePlayerMatch: false)
     }
 }
 

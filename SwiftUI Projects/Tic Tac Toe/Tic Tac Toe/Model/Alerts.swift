@@ -18,5 +18,9 @@ struct AlertContext {
     
     static let computerWin = AlertItem(title: Text("You Lost !!!!"), message: Text("You created a super AI"), buttonTitle: Text("Rematch"))
     
+    static let firstPersonWin = AlertItem(title: Text("Person 1 Won !!!!!"), message: Text("Person 1 is so Smart"), buttonTitle: Text("Courage To Rematch"))
+    
+    static let secondPersonWin = AlertItem(title: Text("Person 2 Won !!!!!"), message: Text("Person 2 is so Smart"), buttonTitle: Text("Courage To Rematch"))
+    
     static let draw = AlertItem(title: Text("Draw !!!!!"), message: Text("What a battel of wits we have here...."), buttonTitle: Text("Try Again"))
 }

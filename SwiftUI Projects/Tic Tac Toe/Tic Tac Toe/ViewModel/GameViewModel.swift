@@ -17,6 +17,23 @@ final class GameViewModel: ObservableObject {
     @Published var isGameBoadDisable = false
     @Published var alertItem: AlertItem?
     
+    func processMultiPlayer(for position: Int ,firstPlayer: Bool) {
+        if isSquareOccupied(forIndex: position) { return }
+        moves[position] = firstPlayer ? Move(player: .human, boardIndex: position) : Move(player: .computer, boardIndex: position)
+        
+        //Check Win condition
+        if checkWinCondition(for: firstPlayer ? .human : .computer) {
+            alertItem = firstPlayer ? AlertContext.firstPersonWin : AlertContext.secondPersonWin
+            return
+        }
+        
+        // Check Draw Condition
+        if checkForDraw(){
+            alertItem = AlertContext.draw
+            return
+        }
+    }
+    
     func processPlayerMove(for position: Int){
         //Human Move Processing
         if isSquareOccupied(forIndex: position) { return }
@@ -111,3 +128,21 @@ final class GameViewModel: ObservableObject {
         moves = Array(repeating: nil, count: 9)
     }
 }
+
+enum Player {
+    case human, computer
+}
+
+//enum MultiPlayer {
+//    case player1, player2
+//}
+
+struct Move {
+    let player: Player
+    let boardIndex: Int
+    
+    var indicator: String{
+        return player == .human ? "xmark" : "circle"
+    }
+}
+
