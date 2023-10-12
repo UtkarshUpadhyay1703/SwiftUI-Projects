@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-final class GameViewModel: ObservableObject {
+class GameViewModel: ObservableObject {
     let columns: [GridItem] = [GridItem(.flexible()),
                                GridItem(.flexible()),
                                GridItem(.flexible())
@@ -16,6 +16,7 @@ final class GameViewModel: ObservableObject {
     @Published var moves: [Move?] = Array(repeating: nil, count: 9)
     @Published var isGameBoadDisable = false
     @Published var alertItem: AlertItem?
+//    @StateObject private var photoViewModel = PhotoPickerViewModel()
     
     func processMultiPlayer(for position: Int ,firstPlayer: Bool) {
         if isSquareOccupied(forIndex: position) { return }
@@ -132,10 +133,6 @@ final class GameViewModel: ObservableObject {
 enum Player {
     case human, computer
 }
-
-//enum MultiPlayer {
-//    case player1, player2
-//}
 
 struct Move {
     let player: Player

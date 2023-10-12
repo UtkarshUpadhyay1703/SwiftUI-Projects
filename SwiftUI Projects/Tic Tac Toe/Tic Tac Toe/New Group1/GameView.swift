@@ -11,10 +11,33 @@ struct GameView: View {
     @StateObject private var viewModel = GameViewModel()
     var isSinglePlayerMatch: Bool
     @State private var isFirstPlayer: Bool = true
-    
+    @State private var firstPersonImage: UIImage?
+    @StateObject private var photoViewModel = PhotoPickerViewModel()
     var body: some View {
         GeometryReader{ geometry in
             VStack{
+                HStack{
+                    Image(uiImage: firstPersonImage ?? UIImage())
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+                        .shadow(radius: 10)
+                        .overlay(Circle()
+                                    .stroke(.gray,lineWidth: 3))
+                    Spacer()
+                    
+                    Text("V/S")
+                    
+                    
+                    Spacer()
+                    Image("computerImage")
+                        .resizable()
+                        .frame(width: 100, height: 100)
+                        .clipShape(Circle())
+                        .shadow(radius: 10)
+                        .overlay(Circle()
+                                    .stroke(.gray,lineWidth: 3))
+                }
                 Spacer()
                 LazyVGrid(columns: viewModel.columns, spacing: 5){
                     ForEach(0..<9){ index in
@@ -37,6 +60,9 @@ struct GameView: View {
                 Alert(title: alert.title, message: alert.message, dismissButton: .default(viewModel.alertItem?.buttonTitle ?? Text(""), action: { viewModel.resetGame() }))
             }
         }
+        .onAppear {
+            firstPersonImage = photoViewModel.setFirstImage()
+        }
     }
 }
 
@@ -44,7 +70,7 @@ struct GameView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView(isSinglePlayerMatch: false)
+        GameView(isSinglePlayerMatch: true)
     }
 }
 

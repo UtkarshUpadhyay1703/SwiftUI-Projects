@@ -9,7 +9,7 @@ import SwiftUI
 
 struct LandingPage: View {    
     var body: some View {
-        NavigationView{
+//        NavigationView{
             GeometryReader { geometry in
                 VStack{
                     Spacer()
@@ -37,7 +37,7 @@ struct LandingPage: View {
                             .cornerRadius(10)
                         }
                         NavigationLink {
-                            GameView(isSinglePlayerMatch: false)
+                            SecondPersonSignUp()
                         } label: {
                             VStack{
                                 Image(systemName: "person.2.circle")
@@ -61,7 +61,7 @@ struct LandingPage: View {
             .background(.red)
         }
     }
-}
+//}
 
 struct LandingPage_Previews: PreviewProvider {
     static var previews: some View {

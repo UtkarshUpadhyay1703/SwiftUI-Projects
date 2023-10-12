@@ -11,7 +11,9 @@ import SwiftUI
 struct Tic_Tac_ToeApp: App {
     var body: some Scene {
         WindowGroup {
-            LandingPage()
+            FirstPersonSignUp()
+//            SecondPersonSignUp()
+//            GameView(isSinglePlayerMatch: true)
         }
     }
 }
