@@ -29,9 +29,9 @@ import SwiftUI
         }
     }
     
-    func setFirstImage() -> UIImage {
-        getImageFromDirectory(isFirst: true)
-        return firstProfileImage
+     func setProfileImage(isFirst: Bool) -> UIImage {
+         isFirst ? getImageFromDirectory(isFirst: true) : getImageFromDirectory(isFirst: false)
+         return isFirst ? firstProfileImage : secondProfileImage
     }
     
     func getImageFromDirectory(isFirst: Bool) {

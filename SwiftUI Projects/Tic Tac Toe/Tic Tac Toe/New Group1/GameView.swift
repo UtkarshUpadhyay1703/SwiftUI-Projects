@@ -12,6 +12,7 @@ struct GameView: View {
     var isSinglePlayerMatch: Bool
     @State private var isFirstPlayer: Bool = true
     @State private var firstPersonImage: UIImage?
+    @State private var secondPersonImage: UIImage?
     @StateObject private var photoViewModel = PhotoPickerViewModel()
     var body: some View {
         GeometryReader{ geometry in
@@ -22,21 +23,30 @@ struct GameView: View {
                         .frame(width: 100, height: 100)
                         .clipShape(Circle())
                         .shadow(radius: 10)
-                        .overlay(Circle()
-                                    .stroke(.gray,lineWidth: 3))
+                        .overlay(Circle() .stroke(.gray,lineWidth: 3))
                     Spacer()
                     
                     Text("V/S")
                     
                     
                     Spacer()
-                    Image("computerImage")
-                        .resizable()
-                        .frame(width: 100, height: 100)
-                        .clipShape(Circle())
-                        .shadow(radius: 10)
-                        .overlay(Circle()
-                                    .stroke(.gray,lineWidth: 3))
+                    if isSinglePlayerMatch {
+                        Image("computerImage")
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                            .shadow(radius: 10)
+                            .overlay(Circle()
+                                        .stroke(.gray,lineWidth: 3))
+                    } else {
+                        Image(uiImage: secondPersonImage ?? UIImage())
+                            .resizable()
+                            .frame(width: 100, height: 100)
+                            .clipShape(Circle())
+                            .shadow(radius: 10)
+                            .overlay(Circle()
+                                        .stroke(.gray,lineWidth: 3))
+                    }
                 }
                 Spacer()
                 LazyVGrid(columns: viewModel.columns, spacing: 5){
@@ -61,7 +71,10 @@ struct GameView: View {
             }
         }
         .onAppear {
-            firstPersonImage = photoViewModel.setFirstImage()
+            firstPersonImage = photoViewModel.setProfileImage(isFirst: true)
+            if !isSinglePlayerMatch{
+                secondPersonImage = photoViewModel.setProfileImage(isFirst: false)
+            }
         }
     }
 }
