@@ -16,7 +16,9 @@ class GameViewModel: ObservableObject {
     @Published var moves: [Move?] = Array(repeating: nil, count: 9)
     @Published var isGameBoadDisable = false
     @Published var alertItem: AlertItem?
-//    @StateObject private var photoViewModel = PhotoPickerViewModel()
+    var singlesMode: Mode?
+    
+    let winPatterns: Set<Set<Int>> = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
     
     func processMultiPlayer(for position: Int ,firstPlayer: Bool) {
         if isSquareOccupied(forIndex: position) { return }
@@ -53,7 +55,21 @@ class GameViewModel: ObservableObject {
         
         //Computer Move Processing
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [self] in
-            let computerPosition = determineComputerMovePosition()
+            let computerPosition: Int = {
+                switch singlesMode {
+                case .veryEasy:
+                    return determineComputerVeryEasyMovePosition()
+                case .easy:
+                    return determineComputerEasyMovePosition()
+                case .basic:
+                    return determineComputerBasicMovePosition()
+                case .medium:
+                    return determineComputerMediumMovePosition()
+                case .none:
+                    return determineComputerMediumMovePosition()
+                }
+            }()
+            
             moves[computerPosition] = Move(player: .computer, boardIndex: computerPosition)
             isGameBoadDisable = false
             if checkWinCondition(for: .computer){
@@ -72,9 +88,7 @@ class GameViewModel: ObservableObject {
         return moves.contains { $0?.boardIndex == index }
     }
     
-    func determineComputerMovePosition() -> Int {
-        //If AI can win then Win
-        let winPatterns: Set<Set<Int>> = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
+    private var computerWinMove: Int {
         let computerMoves = moves.compactMap { $0 }.filter{ $0.player == .computer }
         let computerPositions = Set(computerMoves.map{ $0.boardIndex })
         
@@ -86,8 +100,10 @@ class GameViewModel: ObservableObject {
                 if isAvaiable { return winPositions.first! }
             }
         }
-        
-        //If AI can't win then Block
+        return -1
+    }
+    
+    private var computerBlockMove: Int {
         let humanMoves = moves.compactMap { $0 }.filter{ $0.player == .human }
         let humenPositions = Set(humanMoves.map{ $0.boardIndex })
         
@@ -99,17 +115,69 @@ class GameViewModel: ObservableObject {
                 if isAvaiable { return winPositions.first! }
             }
         }
-        
-        //If AI can't block then take the middle square
+        return -1
+    }
+    
+    private var computerCenterMove: Int {
         let centerSquare = 4
-        if !isSquareOccupied(forIndex: centerSquare) { return centerSquare }
-        
-        //If AI can't take middle square then take the random available square
+        if !isSquareOccupied(forIndex: centerSquare) { return centerSquare } else { return -1 }
+    }
+    
+    private var computerRandomMove: Int {
         var movePosition = Int.random(in: 0..<9)
         while isSquareOccupied(forIndex: movePosition){
             movePosition = Int.random(in: 0..<9)
         }
         return movePosition
+    }
+    
+    func determineComputerVeryEasyMovePosition() -> Int {
+        return computerRandomMove
+    }
+    
+    func determineComputerEasyMovePosition() -> Int {
+        //If AI can win then Win
+        if computerWinMove > -1 {
+            return computerWinMove
+        }
+        
+        //If AI can't take middle square then take the random available square
+        return computerRandomMove
+    }
+    
+    func determineComputerBasicMovePosition() -> Int {
+        //If AI can win then Win
+        if computerWinMove > -1 {
+            return computerWinMove
+        }
+        
+        //If AI can't win then Block
+        if computerBlockMove > -1 {
+            return computerBlockMove
+        }
+        
+        //If AI can't take middle square then take the random available square
+        return computerRandomMove
+    }
+    
+    func determineComputerMediumMovePosition() -> Int {
+        //If AI can win then Win
+        if computerWinMove > -1 {
+            return computerWinMove
+        }
+        
+        //If AI can't win then Block
+        if computerBlockMove > -1 {
+            return computerBlockMove
+        }
+        
+        //If AI can't block then take the middle square
+        if computerCenterMove > -1 {
+            return computerCenterMove
+        }
+        
+        //If AI can't take middle square then take the random available square
+        return computerRandomMove
     }
     
     func checkWinCondition(for player: Player) -> Bool {
@@ -134,6 +202,10 @@ enum Player {
     case human, computer
 }
 
+enum Mode: String, CaseIterable {
+    case veryEasy, easy, basic, medium
+}
+
 struct Move {
     let player: Player
     let boardIndex: Int
@@ -142,4 +214,3 @@ struct Move {
         return player == .human ? "xmark" : "circle"
     }
 }
-

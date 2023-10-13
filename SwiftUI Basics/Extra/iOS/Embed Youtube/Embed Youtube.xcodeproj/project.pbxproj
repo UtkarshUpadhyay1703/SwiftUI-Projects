@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		849009742AD94FDA0096CFCA /* XCDYouTubeKit in Frameworks */ = {isa = PBXBuildFile; productRef = 849009732AD94FDA0096CFCA /* XCDYouTubeKit */; };
 		84EE2C762AA9AD3300D76DD9 /* Embed_YoutubeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE2C752AA9AD3300D76DD9 /* Embed_YoutubeApp.swift */; };
 		84EE2C782AA9AD3300D76DD9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EE2C772AA9AD3300D76DD9 /* ContentView.swift */; };
 		84EE2C7A2AA9AD3A00D76DD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84EE2C792AA9AD3A00D76DD9 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				849009742AD94FDA0096CFCA /* XCDYouTubeKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +91,9 @@
 			dependencies = (
 			);
 			name = "Embed Youtube";
+			packageProductDependencies = (
+				849009732AD94FDA0096CFCA /* XCDYouTubeKit */,
+			);
 			productName = "Embed Youtube";
 			productReference = 84EE2C722AA9AD3300D76DD9 /* Embed Youtube.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +122,9 @@
 				Base,
 			);
 			mainGroup = 84EE2C692AA9AD3300D76DD9;
+			packageReferences = (
+				849009722AD94FDA0096CFCA /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */,
+			);
 			productRefGroup = 84EE2C732AA9AD3300D76DD9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -347,6 +355,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		849009722AD94FDA0096CFCA /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/0xced/XCDYouTubeKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		849009732AD94FDA0096CFCA /* XCDYouTubeKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 849009722AD94FDA0096CFCA /* XCRemoteSwiftPackageReference "XCDYouTubeKit" */;
+			productName = XCDYouTubeKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84EE2C6A2AA9AD3300D76DD9 /* Project object */;
 }

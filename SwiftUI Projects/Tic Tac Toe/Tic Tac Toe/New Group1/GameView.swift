@@ -13,6 +13,7 @@ struct GameView: View {
     @State private var isFirstPlayer: Bool = true
     @State private var firstPersonImage: UIImage?
     @State private var secondPersonImage: UIImage?
+    var selectedMode: Mode?
     @StateObject private var photoViewModel = PhotoPickerViewModel()
     var body: some View {
         GeometryReader{ geometry in
@@ -27,8 +28,7 @@ struct GameView: View {
                     Spacer()
                     
                     Text("V/S")
-                    
-                    
+
                     Spacer()
                     if isSinglePlayerMatch {
                         Image("computerImage")
@@ -74,12 +74,12 @@ struct GameView: View {
             firstPersonImage = photoViewModel.setProfileImage(isFirst: true)
             if !isSinglePlayerMatch{
                 secondPersonImage = photoViewModel.setProfileImage(isFirst: false)
+            } else{
+                viewModel.singlesMode = selectedMode
             }
         }
     }
 }
-
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

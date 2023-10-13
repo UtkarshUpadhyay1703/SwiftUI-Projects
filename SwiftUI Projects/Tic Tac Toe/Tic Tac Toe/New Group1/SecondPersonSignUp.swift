@@ -15,7 +15,6 @@ struct SecondPersonSignUp: View {
     @State private var notMyDetails = false
     
     var body: some View {
-//        NavigationView{
             GeometryReader { geometry in
                 VStack(alignment: .center){
                     Text("Profile Image:")
@@ -30,7 +29,6 @@ struct SecondPersonSignUp: View {
                         VStack(alignment: .center){
                             Image(uiImage: personImage)
                                 .resizable()
-                            //                    .scaledToFit()
                                 .frame(width: 300, height: 300)
                                 .edgesIgnoringSafeArea(.all)
                                 .clipShape(Circle())
@@ -98,7 +96,6 @@ struct SecondPersonSignUp: View {
             .background(.red)
             .navigationTitle("Second Person Details:")
         }
-//    }
 }
 
 struct SecondPersonSignUp_Previews: PreviewProvider {

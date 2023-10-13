@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct LandingPage: View {    
+struct LandingPage: View {
+    @State private var singleMode: Mode = .basic
     var body: some View {
-//        NavigationView{
             GeometryReader { geometry in
                 VStack{
                     Spacer()
                     HStack{
                         Spacer()
                         NavigationLink {
-                            GameView(isSinglePlayerMatch: true)
+                            GameView(isSinglePlayerMatch: true,selectedMode: singleMode)
                         } label: {
                             VStack{
                                 
@@ -29,8 +29,7 @@ struct LandingPage: View {
                                     .font(.title)
                                     .bold()
                                     .foregroundColor(.blue)
-                                    
-                                    
+                                                                
                             }
                             .frame(width: geometry.size.width / 2.5, height: geometry.size.width / 2)
                             .background(.yellow)
@@ -55,13 +54,27 @@ struct LandingPage: View {
                         }
                         Spacer()
                     }
+                    
+                    Text("If Playing Singles then Pick Difficulty:")
+                        .font(.title2)
+                        
+                    Picker(selection: $singleMode) {
+                        ForEach(Mode.allCases, id: \.rawValue){mode in
+                            Text(mode.rawValue.capitalized)
+                                .font(.title)
+                                .tag(mode)
+                        }
+                    } label: {
+                        Text("Picker")
+                    }
+                    .pickerStyle(.automatic)
+                    
                     Spacer()
                 }
             }
             .background(.red)
         }
     }
-//}
 
 struct LandingPage_Previews: PreviewProvider {
     static var previews: some View {

@@ -11,11 +11,12 @@ import WebKit
 struct YTView: View {
     let id: String
     var body: some View {
-        
+        VStack{
         Video(videoId: id)
             .frame(width: 350, height: 200)
             .cornerRadius(10)
             .padding(.horizontal, 24)
+        }
     }
 }
 
@@ -27,13 +28,14 @@ struct YTView_Previews: PreviewProvider {
 
 struct Video: UIViewRepresentable{
     let videoId: String
+    //For Normal Embed Youtube Video
     func makeUIView(context: Context) -> some WKWebView {
         return WKWebView()
     }
     
     func updateUIView(_ uiView: UIViewType, context: Context) {
         guard let YouTubeURL = URL(string: "https://www.youtube.com/embed/\(videoId)") else { return }
-        uiView.scrollView.isScrollEnabled = false
-        uiView.load(URLRequest(url: YouTubeURL))
+        uiView.scrollView.isScrollEnabled = true
+        uiView.load( URLRequest(url: YouTubeURL))
     }
 }
