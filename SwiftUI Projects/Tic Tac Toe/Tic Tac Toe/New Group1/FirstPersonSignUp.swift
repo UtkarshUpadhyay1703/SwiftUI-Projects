@@ -87,6 +87,7 @@ struct FirstPersonSignUp: View {
                     Button {
                         notMyDetails = true
                         firstPersonName = ""
+                        photoViewModel.deleteImageFromDirectory(isFirst: true)
                         personImage = UIImage()
                     } label: {
                         Text("Not My Details!!")

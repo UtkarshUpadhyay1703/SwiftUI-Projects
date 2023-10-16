@@ -7,11 +7,9 @@
 import Foundation
 import SwiftUI
 
- class PhotoPickerViewModel: ObservableObject{
+class PhotoPickerViewModel: ObservableObject{
     @Published var firstProfileImage: UIImage = UIImage()
     @Published var secondProfileImage: UIImage = UIImage()
-    
-//    static var shared  = PhotoPickerViewModel()
     
     func imageUrl(isFirst: Bool) -> URL {
         let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
@@ -29,20 +27,43 @@ import SwiftUI
         }
     }
     
-     func setProfileImage(isFirst: Bool) -> UIImage {
-         isFirst ? getImageFromDirectory(isFirst: true) : getImageFromDirectory(isFirst: false)
-         return isFirst ? firstProfileImage : secondProfileImage
+    func setProfileImage(isFirst: Bool) -> UIImage {
+        isFirst ? getImageFromDirectory(isFirst: true) : getImageFromDirectory(isFirst: false)
+        return isFirst ? firstProfileImage : secondProfileImage
+    }
+    
+    func isFileExistAtPath(url: URL) -> Bool {
+        if FileManager.default.fileExists(atPath: url.path){
+            print("File Exist at this path")
+            return true
+        }else{
+            print("File does not exist at this path")
+            return false
+        }
     }
     
     func getImageFromDirectory(isFirst: Bool) {
         let url = imageUrl(isFirst: isFirst)
-        if FileManager.default.fileExists(atPath: url.path ) {
+        if isFileExistAtPath(url: url) {
             if isFirst {
                 firstProfileImage = UIImage(contentsOfFile: url.path)!
             } else{
                 secondProfileImage = UIImage(contentsOfFile: url.path)!
             }
-        } else { print("No Image Found !!!!!") }
+        }
+    }
+    
+    func deleteImage(url: URL){
+        do {
+            try FileManager.default.removeItem(atPath: url.path)
+        } catch {
+            print("Error in Deleting Image: ",error)
+        }
+    }
+    
+    func deleteImageFromDirectory(isFirst: Bool) {
+        let url = imageUrl(isFirst: isFirst)
+        deleteImage(url: url)
     }
 }
 

@@ -15,6 +15,7 @@ struct GameView: View {
     @State private var secondPersonImage: UIImage?
     var selectedMode: Mode?
     @StateObject private var photoViewModel = PhotoPickerViewModel()
+    
     var body: some View {
         GeometryReader{ geometry in
             VStack{
