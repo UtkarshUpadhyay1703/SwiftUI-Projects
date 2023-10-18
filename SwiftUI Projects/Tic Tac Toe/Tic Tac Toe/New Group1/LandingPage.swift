@@ -93,6 +93,9 @@ struct LandingPage: View {
                         .font(.subheadline)
                 }
                 .pickerStyle(.automatic)
+                #if os(watchOS)
+                .frame(height: 80)
+                #endif
                 
 #if !os(watchOS)
                 Spacer()

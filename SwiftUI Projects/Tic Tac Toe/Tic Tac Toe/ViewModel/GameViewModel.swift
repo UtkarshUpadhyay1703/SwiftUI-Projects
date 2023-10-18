@@ -17,7 +17,7 @@ class GameViewModel: ObservableObject {
     @Published var isGameBoadDisable = false
 #if !os(watchOS)
     @Published var alertItem: AlertItem?
-    #else
+#else
     @ObservedObject var notificationViewModel = NotificationViewModel()
 #endif
     var singlesMode: Mode?
@@ -35,9 +35,9 @@ class GameViewModel: ObservableObject {
 #if !os(watchOS)
             alertItem = firstPlayer ? AlertContext.firstPersonWin : AlertContext.secondPersonWin
 #else
-//            firstPlayer ? AlertContext.firstPersonWin : AlertContext.secondPersonWin
+            //            firstPlayer ? AlertContext.firstPersonWin : AlertContext.secondPersonWin
             firstPlayer ? notificationViewModel.sendLocalNotification(title: "Person 1 Won !!!!!", body: "Person 1 is so Smart") : notificationViewModel.sendLocalNotification(title: "Person 2 Won !!!!!", body: "Person 2 is so Smart")
-            resetGame()
+            watchAlertMain()
 #endif
             return
         }
@@ -50,9 +50,8 @@ class GameViewModel: ObservableObject {
 #if !os(watchOS)
             alertItem = AlertContext.draw
 #else
-//            AlertContext(notificationViewModel: notificationViewModel).draw
-            notificationViewModel.sendLocalNotification(title: "Draw !!!!!", body: "What a battel of wits we have here....")
-            resetGame()
+                notificationViewModel.sendLocalNotification(title: "Draw !!!!!", body: "What a battel of wits we have here....")
+                watchAlertMain()
 #endif
             return
         }
@@ -70,9 +69,9 @@ class GameViewModel: ObservableObject {
 #if !os(watchOS)
             alertItem = AlertContext.humanWin
 #else
-//            AlertContext.humanWin
+            //            AlertContext.humanWin
             notificationViewModel.sendLocalNotification(title: "You Win !!!!", body: "You are so smart you beat your own AI")
-            resetGame()
+            watchAlertMain()
 #endif
             return
         }
@@ -82,9 +81,9 @@ class GameViewModel: ObservableObject {
 #if !os(watchOS)
             alertItem = AlertContext.draw
 #else
-//            AlertContext.draw
+            //            AlertContext.draw
             notificationViewModel.sendLocalNotification(title: "Draw !!!!!", body: "What a battel of wits we have here....")
-            resetGame()
+            watchAlertMain()
 #endif
             return
         }
@@ -115,9 +114,9 @@ class GameViewModel: ObservableObject {
 #if !os(watchOS)
                 alertItem = AlertContext.computerWin
 #else
-//                AlertContext.computerWin
+                //                AlertContext.computerWin
                 notificationViewModel.sendLocalNotification(title: "You Lost !!!!", body: "You created a super AI")
-                resetGame()
+                watchAlertMain()
 #endif
                 return
             }
@@ -127,9 +126,9 @@ class GameViewModel: ObservableObject {
 #if !os(watchOS)
                 alertItem = AlertContext.draw
 #else
-//                AlertContext.draw
+                //                AlertContext.draw
                 notificationViewModel.sendLocalNotification(title: "Draw !!!!!", body: "What a battel of wits we have here....")
-                resetGame()
+                watchAlertMain()
 #endif
                 return
             }
@@ -248,6 +247,17 @@ class GameViewModel: ObservableObject {
     
     func resetGame() {
         moves = Array(repeating: nil, count: 9)
+    }
+    
+    func watchAlertMain(){
+    isGameBoadDisable = true
+    print("isGameBoadDisable = \(isGameBoadDisable)")
+    //The behavior you described suggests that the code before the DispatchQueue is executed almost instantaneously, and the print statement doesn't have enough time to be displayed in the console.
+    DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: {
+        print("isGameBoadDisable = \(self.isGameBoadDisable)")
+        self.resetGame()
+        self.isGameBoadDisable = false
+    })
     }
 }
 
