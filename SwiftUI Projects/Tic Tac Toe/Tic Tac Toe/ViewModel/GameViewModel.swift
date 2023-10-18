@@ -15,7 +15,11 @@ class GameViewModel: ObservableObject {
     
     @Published var moves: [Move?] = Array(repeating: nil, count: 9)
     @Published var isGameBoadDisable = false
+#if !os(watchOS)
     @Published var alertItem: AlertItem?
+    #else
+    @ObservedObject var notificationViewModel = NotificationViewModel()
+#endif
     var singlesMode: Mode?
     
     let winPatterns: Set<Set<Int>> = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]]
@@ -26,13 +30,30 @@ class GameViewModel: ObservableObject {
         
         //Check Win condition
         if checkWinCondition(for: firstPlayer ? .human : .computer) {
+            //Alert Display on Watch OS
+            print("Alert on WatchOS \(firstPlayer) Won !!!!!")
+#if !os(watchOS)
             alertItem = firstPlayer ? AlertContext.firstPersonWin : AlertContext.secondPersonWin
+#else
+//            firstPlayer ? AlertContext.firstPersonWin : AlertContext.secondPersonWin
+            firstPlayer ? notificationViewModel.sendLocalNotification(title: "Person 1 Won !!!!!", body: "Person 1 is so Smart") : notificationViewModel.sendLocalNotification(title: "Person 2 Won !!!!!", body: "Person 2 is so Smart")
+            resetGame()
+#endif
             return
         }
         
         // Check Draw Condition
         if checkForDraw(){
+            //Alert Display on Watch OS
+            print("Alert on WatchOS Draw !!!!!!")
+            
+#if !os(watchOS)
             alertItem = AlertContext.draw
+#else
+//            AlertContext(notificationViewModel: notificationViewModel).draw
+            notificationViewModel.sendLocalNotification(title: "Draw !!!!!", body: "What a battel of wits we have here....")
+            resetGame()
+#endif
             return
         }
     }
@@ -44,11 +65,27 @@ class GameViewModel: ObservableObject {
         
         //Check condition for win and for draw
         if checkWinCondition(for: .human) {
+            //Alert Display on Watch OS
+            print("Alert on WatchOS Human WON")
+#if !os(watchOS)
             alertItem = AlertContext.humanWin
+#else
+//            AlertContext.humanWin
+            notificationViewModel.sendLocalNotification(title: "You Win !!!!", body: "You are so smart you beat your own AI")
+            resetGame()
+#endif
             return
         }
         if checkForDraw(){
+            //Alert Display on Watch OS
+            print("Alert on WatchOS Draw")
+#if !os(watchOS)
             alertItem = AlertContext.draw
+#else
+//            AlertContext.draw
+            notificationViewModel.sendLocalNotification(title: "Draw !!!!!", body: "What a battel of wits we have here....")
+            resetGame()
+#endif
             return
         }
         isGameBoadDisable = true
@@ -73,11 +110,27 @@ class GameViewModel: ObservableObject {
             moves[computerPosition] = Move(player: .computer, boardIndex: computerPosition)
             isGameBoadDisable = false
             if checkWinCondition(for: .computer){
+                //Alert Display on Watch OS
+                print("Alert on WatchOS Computer WON")
+#if !os(watchOS)
                 alertItem = AlertContext.computerWin
+#else
+//                AlertContext.computerWin
+                notificationViewModel.sendLocalNotification(title: "You Lost !!!!", body: "You created a super AI")
+                resetGame()
+#endif
                 return
             }
             if checkForDraw(){
+                //Alert Display on Watch OS
+                print("Alert on WatchOS Draw")
+#if !os(watchOS)
                 alertItem = AlertContext.draw
+#else
+//                AlertContext.draw
+                notificationViewModel.sendLocalNotification(title: "Draw !!!!!", body: "What a battel of wits we have here....")
+                resetGame()
+#endif
                 return
             }
         }

@@ -10,15 +10,19 @@ import SwiftUI
 struct GameView: View {
     @StateObject private var viewModel = GameViewModel()
     var isSinglePlayerMatch: Bool
+    var selectedMode: Mode?
     @State private var isFirstPlayer: Bool = true
+#if !os(watchOS)
     @State private var firstPersonImage: UIImage?
     @State private var secondPersonImage: UIImage?
-    var selectedMode: Mode?
     @StateObject private var photoViewModel = PhotoPickerViewModel()
+    #endif
     
     var body: some View {
         GeometryReader{ geometry in
             VStack{
+#if !os(watchOS)
+    
                 HStack{
                     Image(uiImage: firstPersonImage ?? UIImage())
                         .resizable()
@@ -49,6 +53,7 @@ struct GameView: View {
                                         .stroke(.gray,lineWidth: 3))
                     }
                 }
+#endif
                 Spacer()
                 LazyVGrid(columns: viewModel.columns, spacing: 5){
                     ForEach(0..<9){ index in
@@ -67,22 +72,28 @@ struct GameView: View {
             }
             .disabled(viewModel.isGameBoadDisable)
             .padding()
+#if !os(watchOS)
             .alert(item: $viewModel.alertItem) { alert in
                 Alert(title: alert.title, message: alert.message, dismissButton: .default(viewModel.alertItem?.buttonTitle ?? Text(""), action: { viewModel.resetGame() }))
             }
+            #endif
         }
         .onAppear {
+#if !os(watchOS)
             firstPersonImage = photoViewModel.setProfileImage(isFirst: true)
             if !isSinglePlayerMatch{
                 secondPersonImage = photoViewModel.setProfileImage(isFirst: false)
             } else{
                 viewModel.singlesMode = selectedMode
             }
+#else
+            viewModel.singlesMode = selectedMode
+            #endif
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView(isSinglePlayerMatch: true)
     }
