@@ -12,16 +12,15 @@ struct LandingPage: View {
     var body: some View {
         GeometryReader { geometry in
             VStack{
-//#if !os(watchOS)
+                //#if !os(watchOS)
                 Spacer()
-//#endif
+                //#endif
                 HStack{
                     Spacer()
                     NavigationLink {
                         GameView(isSinglePlayerMatch: true,selectedMode: singleMode)
                     } label: {
                         VStack{
-                            
                             Image(systemName: "person.circle")
                                 .resizable()
                                 .frame(width: geometry.size.width / 3, height: geometry.size.width / 3)
@@ -38,14 +37,14 @@ struct LandingPage: View {
                             
                         }
                         .frame(width: geometry.size.width / 2.5, height: geometry.size.width / 2)
-                        .background(.yellow)
+                        .background(Color.yellow)
                         .cornerRadius(10)
                     }
                     NavigationLink {
-#if os(watchOS)
-                        GameView(isSinglePlayerMatch: false)
-#else
+#if os(iOS)
                         SecondPersonSignUp()
+#else
+                        GameView(isSinglePlayerMatch: false)
 #endif
                     } label: {
                         VStack{
@@ -63,7 +62,7 @@ struct LandingPage: View {
                                 .foregroundColor(.blue)
                         }
                         .frame(width: geometry.size.width / 2.5, height: geometry.size.width / 2)
-                        .background(.yellow)
+                        .background(Color.yellow)
                         .cornerRadius(10)
                     }
 #if !os(watchOS)
@@ -85,7 +84,7 @@ struct LandingPage: View {
                         Text(mode.rawValue.capitalized)
                             .font(.title3)
                             .tag(mode)
-                        #endif
+#endif
                         
                     }
                 } label: {
@@ -93,21 +92,23 @@ struct LandingPage: View {
                         .font(.subheadline)
                 }
                 .pickerStyle(.automatic)
-                #if os(watchOS)
+#if os(watchOS)
                 .frame(height: 80)
-                #endif
+#endif
                 
 #if !os(watchOS)
                 Spacer()
 #endif
             }
-                    .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.all)
         }
+//        .buttonStyle(.plain) // Remove the button-like styling
         .edgesIgnoringSafeArea(.all)
-        .background(.red)
+        .background(Color.red)
     }
 }
 
+//@available(macOS 11.0, *)
 struct LandingPage_Previews: PreviewProvider {
     static var previews: some View {
         //#if os(iOS)
@@ -115,9 +116,12 @@ struct LandingPage_Previews: PreviewProvider {
         //                .previewDevice(PreviewDevice(rawValue: "iPhone 13 Pro Max"))
         //                .previewDisplayName("iPhone 13 Pro Max")
         //            #elseif os(watchOS)
-        LandingPage()
-            .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 7 - 45mm"))
-            .previewDisplayName("Apple Watch Series 7 - 45mm")
-        //            #endif
+        
+        
+                LandingPage()
+                    .previewDevice(PreviewDevice(rawValue: "Apple Watch Series 7 - 45mm"))
+                    .previewDisplayName("Apple Watch Series 7 - 45mm")
+//                    #endif
+//        LandingPage()
     }
 }

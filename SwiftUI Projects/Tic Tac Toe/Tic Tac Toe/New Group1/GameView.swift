@@ -12,7 +12,7 @@ struct GameView: View {
     var isSinglePlayerMatch: Bool
     var selectedMode: Mode?
     @State private var isFirstPlayer: Bool = true
-#if !os(watchOS)
+#if os(iOS)
     @State private var firstPersonImage: UIImage?
     @State private var secondPersonImage: UIImage?
     @StateObject private var photoViewModel = PhotoPickerViewModel()
@@ -21,8 +21,7 @@ struct GameView: View {
     var body: some View {
         GeometryReader{ geometry in
             VStack{
-#if !os(watchOS)
-    
+#if os(iOS)
                 HStack{
                     Image(uiImage: firstPersonImage ?? UIImage())
                         .resizable()
@@ -79,14 +78,14 @@ struct GameView: View {
             #endif
         }
         .onAppear {
-#if !os(watchOS)
+#if os(iOS)
             firstPersonImage = photoViewModel.setProfileImage(isFirst: true)
             if !isSinglePlayerMatch{
                 secondPersonImage = photoViewModel.setProfileImage(isFirst: false)
             } else{
                 viewModel.singlesMode = selectedMode
             }
-#else
+#elseif os(watchOS)
             viewModel.singlesMode = selectedMode
             #endif
         }

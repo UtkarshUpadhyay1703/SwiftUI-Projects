@@ -1,18 +1,18 @@
 //
 //  ContentView.swift
-//  WatchTicTacToe WatchKit Extension
+//  Shared
 //
-//  Created by admin on 10/16/23.
+//  Created by admin on 10/19/23.
 //
 
 import SwiftUI
-import UserNotifications
 
 struct ContentView: View {
     var body: some View {
-            LandingPage()
+        Home()
+            .buttonStyle(.borderless)
+            .textFieldStyle(.plain)
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {

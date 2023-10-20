@@ -17,6 +17,14 @@
 		8452DD4A2AD6BE47003EFD8F /* FirstPersonSignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452DD492AD6BE47003EFD8F /* FirstPersonSignUp.swift */; };
 		8452DD4C2AD6CA49003EFD8F /* PhotoPickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452DD4B2AD6CA49003EFD8F /* PhotoPickerViewModel.swift */; };
 		8479BBEF2AD66C4600FBD4F9 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479BBEE2AD66C4600FBD4F9 /* GameViewModel.swift */; };
+		847A68DB2ADFE53600E2A441 /* MacTicTacToeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A68DA2ADFE53600E2A441 /* MacTicTacToeApp.swift */; };
+		847A68DD2ADFE53600E2A441 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A68DC2ADFE53600E2A441 /* ContentView.swift */; };
+		847A68DF2ADFE53A00E2A441 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847A68DE2ADFE53A00E2A441 /* Assets.xcassets */; };
+		847A68E22ADFE53A00E2A441 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847A68E12ADFE53A00E2A441 /* Preview Assets.xcassets */; };
+		847A68E82ADFE94B00E2A441 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225F7C2AD56800008D768D /* Alerts.swift */; };
+		847A68EA2ADFE94B00E2A441 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452DD472AD68F3F003EFD8F /* LandingPage.swift */; };
+		847A68EB2ADFE94B00E2A441 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8479BBEE2AD66C4600FBD4F9 /* GameViewModel.swift */; };
+		847A68ED2ADFE94B00E2A441 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225F702AD53CEE008D768D /* GameView.swift */; };
 		8495AE172ADE662A0008CB4C /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84225F7C2AD56800008D768D /* Alerts.swift */; };
 		8495AE1A2ADEAA790008CB4C /* WatchAlerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8495AE182ADE8C4F0008CB4C /* WatchAlerts.swift */; };
 		849F048D2ADD13120021D073 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 849F048C2ADD13120021D073 /* Assets.xcassets */; };
@@ -88,6 +96,12 @@
 		8452DD492AD6BE47003EFD8F /* FirstPersonSignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPersonSignUp.swift; sourceTree = "<group>"; };
 		8452DD4B2AD6CA49003EFD8F /* PhotoPickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPickerViewModel.swift; sourceTree = "<group>"; };
 		8479BBEE2AD66C4600FBD4F9 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		847A68D82ADFE53600E2A441 /* MacTicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacTicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		847A68DA2ADFE53600E2A441 /* MacTicTacToeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacTicTacToeApp.swift; sourceTree = "<group>"; };
+		847A68DC2ADFE53600E2A441 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		847A68DE2ADFE53A00E2A441 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		847A68E12ADFE53A00E2A441 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		847A68E32ADFE53A00E2A441 /* MacTicTacToe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacTicTacToe.entitlements; sourceTree = "<group>"; };
 		8495AE182ADE8C4F0008CB4C /* WatchAlerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchAlerts.swift; sourceTree = "<group>"; };
 		849F048A2ADD130F0021D073 /* WatchTicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchTicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		849F048C2ADD13120021D073 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -111,6 +125,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		847A68D52ADFE53600E2A441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		849F048F2ADD13130021D073 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -127,6 +148,7 @@
 				84225F6D2AD53CEE008D768D /* Tic Tac Toe */,
 				849F048B2ADD130F0021D073 /* WatchTicTacToe */,
 				849F04962ADD13130021D073 /* WatchTicTacToe WatchKit Extension */,
+				847A68D92ADFE53600E2A441 /* MacTicTacToe */,
 				84225F6C2AD53CEE008D768D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +159,7 @@
 				84225F6B2AD53CEE008D768D /* Tic Tac Toe.app */,
 				849F048A2ADD130F0021D073 /* WatchTicTacToe.app */,
 				849F04922ADD13130021D073 /* WatchTicTacToe WatchKit Extension.appex */,
+				847A68D82ADFE53600E2A441 /* MacTicTacToe.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +213,26 @@
 				8452DD4B2AD6CA49003EFD8F /* PhotoPickerViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		847A68D92ADFE53600E2A441 /* MacTicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				847A68DA2ADFE53600E2A441 /* MacTicTacToeApp.swift */,
+				847A68DC2ADFE53600E2A441 /* ContentView.swift */,
+				847A68DE2ADFE53A00E2A441 /* Assets.xcassets */,
+				847A68E32ADFE53A00E2A441 /* MacTicTacToe.entitlements */,
+				847A68E02ADFE53A00E2A441 /* Preview Content */,
+			);
+			path = MacTicTacToe;
+			sourceTree = "<group>";
+		};
+		847A68E02ADFE53A00E2A441 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				847A68E12ADFE53A00E2A441 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		849F048B2ADD130F0021D073 /* WatchTicTacToe */ = {
@@ -246,6 +289,23 @@
 			productReference = 84225F6B2AD53CEE008D768D /* Tic Tac Toe.app */;
 			productType = "com.apple.product-type.application";
 		};
+		847A68D72ADFE53600E2A441 /* MacTicTacToe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847A68E42ADFE53A00E2A441 /* Build configuration list for PBXNativeTarget "MacTicTacToe" */;
+			buildPhases = (
+				847A68D42ADFE53600E2A441 /* Sources */,
+				847A68D52ADFE53600E2A441 /* Frameworks */,
+				847A68D62ADFE53600E2A441 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacTicTacToe;
+			productName = MacTicTacToe;
+			productReference = 847A68D82ADFE53600E2A441 /* MacTicTacToe.app */;
+			productType = "com.apple.product-type.application";
+		};
 		849F04892ADD130F0021D073 /* WatchTicTacToe */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 849F04B22ADD13160021D073 /* Build configuration list for PBXNativeTarget "WatchTicTacToe" */;
@@ -293,6 +353,9 @@
 					84225F6A2AD53CEE008D768D = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
+					847A68D72ADFE53600E2A441 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					849F04892ADD130F0021D073 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -317,6 +380,7 @@
 				84225F6A2AD53CEE008D768D /* Tic Tac Toe */,
 				849F04892ADD130F0021D073 /* WatchTicTacToe */,
 				849F04912ADD13130021D073 /* WatchTicTacToe WatchKit Extension */,
+				847A68D72ADFE53600E2A441 /* MacTicTacToe */,
 			);
 		};
 /* End PBXProject section */
@@ -328,6 +392,15 @@
 			files = (
 				84225F762AD53CF1008D768D /* Preview Assets.xcassets in Resources */,
 				84225F732AD53CF1008D768D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847A68D62ADFE53600E2A441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847A68E22ADFE53A00E2A441 /* Preview Assets.xcassets in Resources */,
+				847A68DF2ADFE53A00E2A441 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +436,19 @@
 				84225F712AD53CEE008D768D /* GameView.swift in Sources */,
 				84225F7D2AD56800008D768D /* Alerts.swift in Sources */,
 				84225F6F2AD53CEE008D768D /* Tic_Tac_ToeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847A68D42ADFE53600E2A441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847A68EA2ADFE94B00E2A441 /* LandingPage.swift in Sources */,
+				847A68ED2ADFE94B00E2A441 /* GameView.swift in Sources */,
+				847A68DD2ADFE53600E2A441 /* ContentView.swift in Sources */,
+				847A68E82ADFE94B00E2A441 /* Alerts.swift in Sources */,
+				847A68DB2ADFE53600E2A441 /* MacTicTacToeApp.swift in Sources */,
+				847A68EB2ADFE94B00E2A441 /* GameViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +657,60 @@
 			};
 			name = Release;
 		};
+		847A68E52ADFE53A00E2A441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacTicTacToe/MacTicTacToe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MacTicTacToe/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.MacTicTacToe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		847A68E62ADFE53A00E2A441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MacTicTacToe/MacTicTacToe.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MacTicTacToe/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.faronics.MacTicTacToe;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		849F04AC2ADD13160021D073 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -700,6 +840,15 @@
 			buildConfigurations = (
 				84225F7A2AD53CF1008D768D /* Debug */,
 				84225F7B2AD53CF1008D768D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847A68E42ADFE53A00E2A441 /* Build configuration list for PBXNativeTarget "MacTicTacToe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847A68E52ADFE53A00E2A441 /* Debug */,
+				847A68E62ADFE53A00E2A441 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
