@@ -15,14 +15,9 @@ struct NewOrEditNote: View {
     @Binding private var isEditNote: Bool
     
     init(editNote: Binding<Note>, storedNotes: Binding<[Note]>, isEditNote: Binding<Bool>) {
-        //        self.editNote = editNote
         self._editNote = editNote
-        print("Edit Note = \(editNote.note)")
-        //        _textFieldNote = State(initialValue: editNote.note)
-        print("_textFieldNote Note = \(_textFieldNote)")
         self._storedNotes = storedNotes
         self._isEditNote = isEditNote
-        print("_isEditNote Note = \(_isEditNote)")
     }
     var body: some View{
         VStack{
@@ -34,31 +29,13 @@ struct NewOrEditNote: View {
                 .frame(alignment: .center)
             
             TextEditor(text: $textFieldNote)
-            //                .frame(width: 200, height: 400, alignment: .center)
                 .font(isMacOS() ? .title2 : .title3)
                 .background(Color.black)
                 .cornerRadius(10)
-            //                .background(Color(editNote.cardColor))
-            
-            //                .onChange(of: textFieldNote) { newValue in
-            //                    //                    note.note = textFieldNote
-            //
-            //                    // Update the original note's note property
-            //                    if let index = storedNotes.firstIndex(of: editNote) {
-            //                        storedNotes[index].note = textFieldNote
-            //                    }
-            //                }
-            //                .onDisappear {
-            //                    if let index = storedNotes.firstIndex(of: editNote) {
-            //                        storedNotes[index].note = textFieldNote
-            //                        print("Ho gaya Disappear: \(textFieldNote)")
-            //                    }
-            //                }
             HStack{
                 Spacer()
                 DatePicker("  Date: ", selection: $editDate, displayedComponents: .date)
                     .frame(width: 200, height: 50)
-                //                    .border(.gray, width: 5)
                     .foregroundColor(.black)
                     .background(Color(editNote.cardColor))
                     .border(.gray, width: 5)
@@ -85,7 +62,7 @@ struct NewOrEditNote: View {
             } label: {
                 Text("Save")
                     .font(.title2.bold())
-                    .frame(width: 80, height: 20)
+                    .frame(width: isMacOS() ? 80 : 150, height: isMacOS() ? 20 : 50)
                     .background(Color.purple)
                     .foregroundColor(Color.black)
                     .cornerRadius(10)
@@ -98,12 +75,9 @@ struct NewOrEditNote: View {
         .frame(width: 400, height: 700, alignment: .center)
 #endif
         .onAppear {
-            //            print("On Appear Edit Note = \(editNote.note)")
             textFieldNote = editNote.note
             titleFieldNote = editNote.title
             editDate = editNote.date
-            //            print("_textFieldNote Note = \(_textFieldNote)")
-            //            print("_isEditNote Note = \(_isEditNote)")
         }
     }
 }

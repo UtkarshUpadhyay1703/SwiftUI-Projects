@@ -21,24 +21,6 @@ struct Home: View {
     @State private var isNewNote: Bool = false
     @State private var editNote: Note = Note(title: "",note: "", date: getSampleDate(offset: 1), cardColor: "Color-Orange")
     
-    //    init() {
-    //        if let data = storedNotesData,
-    //           let decodedNotes = try? JSONDecoder().decode([Note].self, from: data) {
-    //            _storedNotes = State(initialValue: decodedNotes)
-    //            _filteredNotes = State(initialValue: decodedNotes)
-    //            print("Kuch to h!!!!! \(storedNotes.count)  \(filteredNotes.count)")
-    //        }
-    //                else {
-    //                    print("Kuch bhi nahi h!!!!!")
-    //                    storedNotes = notes
-    //                    filteredNotes = notes
-    //                    if let encodedData = try? JSONEncoder().encode(storedNotes) {
-    //                        storedNotesData = encodedData
-    //                        print("Encode kar k aagaya!!!!")
-    //                    }
-    //                }
-    //    }
-    
     var body: some View {
         HStack(spacing: 0){
             //Side Bar
@@ -53,10 +35,6 @@ struct Home: View {
             }
             //Main Content
             MainContent()
-            //                .onAppear{
-            //                    storedNotes = notes
-            //                    filteredNotes = storedNotes
-            //                }
                 .onAppear {
                     if let data = storedNotesData,
                        let decodedNotes = try? JSONDecoder().decode([Note].self, from: data) {
@@ -82,20 +60,7 @@ struct Home: View {
         .overlay(SideBar())
 #endif
         .preferredColorScheme(.light)
-        
-        //        .sheet(isPresented: $isEditNote) {
-        //            NewOrEditNote(note: noteForEdit, storedNotes: storedNotes)
-        //        }
-        //        .onDisappear {
-        //            if let encodedData = try? JSONEncoder().encode(storedNotes) {
-        //                storedNotesData = encodedData
-        //                print("Encode kar k aagaya!!!!")
-        //            }
-        //        }
-        
     }
-    
-    
     
     @ViewBuilder
     func MainContent() -> some View {
@@ -112,9 +77,9 @@ struct Home: View {
                             filteredNotes = storedNotes
                         }
                         else {
-                            //                                filteredNotes = storedNotes.filter({ $0.title.contains(searchField) })
+                            
                             filteredNotes = storedNotes.filter { note in
-                                // Use the range(of:options:) method with the .caseInsensitive option
+// Use the range(of:options:) method with the .caseInsensitive option
                                 return note.title.range(of: searchField, options: .caseInsensitive) != nil
                             }
                         }
@@ -132,21 +97,6 @@ struct Home: View {
                 alignment: .bottom
             )
             
-            //            Button {
-            //                storedNotes = storedNotes.filter({ note in
-            //                    return note.title == ""
-            //                })
-            //                print("Number = \(storedNotes.count)")
-            //                filteredNotes = storedNotes
-            //
-            //                if let encodedData = try? JSONEncoder().encode(storedNotes) {
-            //                    storedNotesData = encodedData
-            //                    print("Encode kar k aagaya)))))")
-            //                }
-            //            } label: {
-            //                Text("Action")
-            //            }
-            
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 15){
                     Text("Notes")
@@ -161,21 +111,6 @@ struct Home: View {
                             //Card View
                             CardView(note: note)
                         }
-                        //                        .onChange(of: isEditNote) { notes in
-                        //                            if let encodedData = try? JSONEncoder().encode(storedNotes) {
-                        //                                storedNotesData = encodedData
-                        //                                print("Encode kar k aagaya@@@")
-                        //                            }
-                        //                        }
-                        //                        .onChange(of: storedNotes) { notes in
-                        //                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        //                                if let encodedData = try? JSONEncoder().encode(storedNotes) {
-                        //                                    storedNotesData = encodedData
-                        //                                    print("Encode kar k aagaya@")
-                        //                                    print("Note: \(encodedData)")
-                        //                                }
-                        //                            }
-                        //                        }
                     }
                     .padding(.top, 30)
                 }
@@ -200,7 +135,7 @@ struct Home: View {
                 .font(isMacOS() ? .title3 : .body)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            //            }
+            
             HStack{
                 Text(note.date, style: .date)
                     .foregroundColor(.black)
@@ -209,15 +144,7 @@ struct Home: View {
                 Spacer(minLength: 0)
                 //Edit Button
                 Button {
-                    //                    noteForEdit = note
-                    //                    EditNote(note: note)
-                    //                        .onChange(of: textFieldNote) { newValue in
-                    //                    textFieldNote = note.note
-                    //                        }
                     editNote = note
-                    //                    DispatchQueue.main.asyncAfter(deadline: .now() + 1){
-                    //                        isEditNote.toggle()
-                    //                    }
                     isEditNote.toggle()
                 } label: {
                     Image(systemName: "pencil")
@@ -229,39 +156,18 @@ struct Home: View {
                 }
                 .sheet(isPresented: $isEditNote) {
                     NewOrEditNote(editNote: $editNote, storedNotes: $storedNotes, isEditNote: $isEditNote)
-                    
-                    
                         .onDisappear{
-                            
-                            //                            if let index = storedNotes.firstIndex(of: editNote) {
-                            //                                storedNotes[index].note = textFieldNote
-                            //                            }
-                            
                             filteredNotes = storedNotes
-                            
                             saveNotes()
                         }
                 }
-                
-                //                .onChange(of: isEditNote) { notes in
-                //                    print("Galat ho gaya!!!!!!")
-                //                    if let encodedData = try? JSONEncoder().encode(storedNotes) {
-                //                        storedNotesData = encodedData
-                //                        print("Encode kar k aagaya!!!!")
-                //                    }
-                //                }
-                
                 Button {
-                    //                    storedNotes.remove(at: index)
                     if let index = storedNotes.firstIndex(of: note){
                         storedNotes.remove(at: index)
                         filteredNotes = storedNotes
                         
                         saveNotes()
                     }
-                    //                    if let index = storedNotes.firstIndex(of: editNote) {
-                    //                        storedNotes[index].note = textFieldNote
-                    //                    }
                 } label: {
                     Image(systemName: "trash")
                         .font(.system(size: 15, weight: .bold))
@@ -270,7 +176,6 @@ struct Home: View {
                         .background(Color.black)
                         .clipShape(Circle())
                 }
-                
             }
             .padding(.top, 55)
         }
@@ -296,7 +201,6 @@ struct Home: View {
             VStack(spacing: 15){
                 //Colors
                 let colors = ["Color-Red", "Color-Green", "Color-Blue", "Color-Yellow", "Color-Orange"]
-                //                let colors = [Color.redColor, Color.greenColor, Color.blueColor, Color.yellowColor, Color.orangeColor]
                 
                 ForEach(colors, id: \.self){color in
                     Circle()
@@ -411,5 +315,3 @@ extension NSTextField{
     }
 }
 #endif
-
-
