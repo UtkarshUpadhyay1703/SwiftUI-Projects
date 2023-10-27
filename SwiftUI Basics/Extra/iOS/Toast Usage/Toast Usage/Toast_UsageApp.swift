@@ -11,7 +11,7 @@ import SwiftUI
 struct Toast_UsageApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView(type: .warning, title: "Warning", message: "Its an warning to surrender infront of us"){}
+            ToastView(type: .warning, title: "Warning", message: "Its an warning to surrender infront of us"){}
         }
     }
 }

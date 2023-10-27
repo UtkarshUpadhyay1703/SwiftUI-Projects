@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ToastView.swift
 //  Toast Usage
 //
 //  Created by admin on 10/9/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct ToastView: View {
     var type: ToastStyle
     var title: String
     var message: String
@@ -58,9 +58,9 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         VStack{
-            ContentView(type: .error, title: "ERROR", message: "Its time for a war") {}
+            ToastView(type: .error, title: "ERROR", message: "Its time for a war") {}
             
-            ContentView(type: .info, title: "INFO", message: "Please first understanf info then purchase"){}
+            ToastView(type: .info, title: "INFO", message: "Please first understanf info then purchase"){}
         }
     }
 }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8489F1652AD3D01800C58C22 /* Toast_UsageApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489F1642AD3D01800C58C22 /* Toast_UsageApp.swift */; };
-		8489F1672AD3D01800C58C22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489F1662AD3D01800C58C22 /* ContentView.swift */; };
+		8489F1672AD3D01800C58C22 /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489F1662AD3D01800C58C22 /* ToastView.swift */; };
 		8489F1692AD3D02200C58C22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8489F1682AD3D02200C58C22 /* Assets.xcassets */; };
 		8489F16C2AD3D02200C58C22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8489F16B2AD3D02200C58C22 /* Preview Assets.xcassets */; };
 		8489F1732AD3DC8700C58C22 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8489F1722AD3DC8700C58C22 /* Extensions.swift */; };
@@ -17,7 +17,7 @@
 /* Begin PBXFileReference section */
 		8489F1612AD3D01800C58C22 /* Toast Usage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Toast Usage.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8489F1642AD3D01800C58C22 /* Toast_UsageApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast_UsageApp.swift; sourceTree = "<group>"; };
-		8489F1662AD3D01800C58C22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8489F1662AD3D01800C58C22 /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		8489F1682AD3D02200C58C22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8489F16B2AD3D02200C58C22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		8489F1722AD3DC8700C58C22 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				8489F1642AD3D01800C58C22 /* Toast_UsageApp.swift */,
-				8489F1662AD3D01800C58C22 /* ContentView.swift */,
+				8489F1662AD3D01800C58C22 /* ToastView.swift */,
 				8489F1722AD3DC8700C58C22 /* Extensions.swift */,
 				8489F1682AD3D02200C58C22 /* Assets.xcassets */,
 				8489F16A2AD3D02200C58C22 /* Preview Content */,
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8489F1672AD3D01800C58C22 /* ContentView.swift in Sources */,
+				8489F1672AD3D01800C58C22 /* ToastView.swift in Sources */,
 				8489F1732AD3DC8700C58C22 /* Extensions.swift in Sources */,
 				8489F1652AD3D01800C58C22 /* Toast_UsageApp.swift in Sources */,
 			);
