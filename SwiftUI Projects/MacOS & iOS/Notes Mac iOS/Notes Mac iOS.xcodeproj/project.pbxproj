@@ -22,6 +22,8 @@
 		848EDC102AE263FD00E41F4F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EDC0F2AE263FC00E41F4F /* BlurView.swift */; };
 		84D073162AEA5A65005857B7 /* NewOrEditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073152AEA5A65005857B7 /* NewOrEditNote.swift */; };
 		84D073172AEA5A65005857B7 /* NewOrEditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073152AEA5A65005857B7 /* NewOrEditNote.swift */; };
+		84D073192AEA7D3F005857B7 /* PasswordCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073182AEA7D3F005857B7 /* PasswordCheckView.swift */; };
+		84D0731A2AEA7D3F005857B7 /* PasswordCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073182AEA7D3F005857B7 /* PasswordCheckView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,7 @@
 		8476F4C22AE148D0008B7D27 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		848EDC0F2AE263FC00E41F4F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		84D073152AEA5A65005857B7 /* NewOrEditNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrEditNote.swift; sourceTree = "<group>"; };
+		84D073182AEA7D3F005857B7 /* PasswordCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 				8476F4BA2AE10E20008B7D27 /* Home.swift */,
 				848EDC0F2AE263FC00E41F4F /* BlurView.swift */,
 				84D073152AEA5A65005857B7 /* NewOrEditNote.swift */,
+				84D073182AEA7D3F005857B7 /* PasswordCheckView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -225,6 +229,7 @@
 				8476F4AA2AE106C3008B7D27 /* Notes_Mac_iOSApp.swift in Sources */,
 				8476F4C02AE11AD7008B7D27 /* Extensions.swift in Sources */,
 				848EDC102AE263FD00E41F4F /* BlurView.swift in Sources */,
+				84D073192AEA7D3F005857B7 /* PasswordCheckView.swift in Sources */,
 				84D073162AEA5A65005857B7 /* NewOrEditNote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,6 +242,7 @@
 				8476F4AD2AE106C3008B7D27 /* ContentView.swift in Sources */,
 				8476F4BC2AE10EB8008B7D27 /* Home.swift in Sources */,
 				84D073172AEA5A65005857B7 /* NewOrEditNote.swift in Sources */,
+				84D0731A2AEA7D3F005857B7 /* PasswordCheckView.swift in Sources */,
 				8476F4AB2AE106C3008B7D27 /* Notes_Mac_iOSApp.swift in Sources */,
 				8476F4C12AE11ADE008B7D27 /* Extensions.swift in Sources */,
 			);

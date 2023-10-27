@@ -18,8 +18,11 @@ struct Home: View {
     @State private var searchField: String = ""
     @State var storedNotes: [Note]  = [ ]
     @State private var isEditNote: Bool = false
+    @State private var isEditNoteCall: Bool = false
     @State private var isNewNote: Bool = false
-    @State private var editNote: Note = Note(title: "",note: "", date: getSampleDate(offset: 1), cardColor: "Color-Orange")
+    @State private var isPassword: Bool = false
+    
+    @State private var editNote: Note = Note(title: "",note: "", date: getSampleDate(offset: 1), cardColor: "Color-Orange", password: "")
     
     var body: some View {
         HStack(spacing: 0){
@@ -77,9 +80,9 @@ struct Home: View {
                             filteredNotes = storedNotes
                         }
                         else {
-                            
+                             
                             filteredNotes = storedNotes.filter { note in
-// Use the range(of:options:) method with the .caseInsensitive option
+                                // Use the range(of:options:) method with the .caseInsensitive option
                                 return note.title.range(of: searchField, options: .caseInsensitive) != nil
                             }
                         }
@@ -145,7 +148,8 @@ struct Home: View {
                 //Edit Button
                 Button {
                     editNote = note
-                    isEditNote.toggle()
+                    isEditNoteCall = true
+                    isPassword = true
                 } label: {
                     Image(systemName: "pencil")
                         .font(.system(size: 15, weight: .bold))
@@ -161,11 +165,19 @@ struct Home: View {
                             saveNotes()
                         }
                 }
+                
+                .sheet(isPresented: $isPassword) {
+                    PasswordCheckView(editNote: $editNote, isPassword: $isPassword, isEditNote: $isEditNote, isEditNoteCall: $isEditNoteCall, storedNotes: $storedNotes)
+                        .onDisappear{
+                            filteredNotes = storedNotes
+                            saveNotes()
+                        }
+                }
+                
                 Button {
                     if let index = storedNotes.firstIndex(of: note){
                         storedNotes.remove(at: index)
                         filteredNotes = storedNotes
-                        
                         saveNotes()
                     }
                 } label: {
@@ -176,6 +188,31 @@ struct Home: View {
                         .background(Color.black)
                         .clipShape(Circle())
                 }
+                
+                Button {
+                    editNote = note
+                    isEditNoteCall = false
+                    isPassword = true
+                } label: {
+                    if note.password == "" {
+                        Image(systemName: "lock.open.fill")
+                            .font(.system(size: 15, weight: .bold))
+                            .padding(8)
+                            .foregroundColor(.white)
+                            .background(Color.black)
+                            .clipShape(Circle())
+                    }else {
+                        Image(systemName: "lock.fill")
+                            .font(.system(size: 15, weight: .bold))
+                            .padding(8)
+                            .foregroundColor(.white)
+                            .background(Color.black)
+                            .clipShape(Circle())
+                    }
+                }
+                
+                
+                
             }
             .padding(.top, 55)
         }
@@ -208,7 +245,7 @@ struct Home: View {
                     //                        .fill(color)
                         .frame(width: isMacOS() ? 20 : 25, height: isMacOS() ? 20 : 25)
                         .onTapGesture {
-                            editNote = Note(id: "", title: "", note: "", date: getSampleDate(offset: 0), cardColor: color)
+                            editNote = Note(id: "", title: "", note: "", date: getSampleDate(offset: 0), cardColor: color, password: "")
                             storedNotes.append(editNote)
                             isNewNote.toggle()
                         }
