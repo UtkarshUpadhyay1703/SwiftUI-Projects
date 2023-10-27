@@ -5,6 +5,7 @@
 //  Created by admin on 10/26/23.
 //
 import SwiftUI
+import AlertToast
 
 struct NewOrEditNote: View {
     @State private var editDate = getSampleDate(offset: 0)
@@ -13,22 +14,18 @@ struct NewOrEditNote: View {
     @State private var titleFieldNote: String = ""
     @State private var passwordNote: String = ""
     @State private var passwordNoteSave: String = ""
-//    @Binding private var isPassword: Bool
-//    @State private var isPasswordCorrect: Bool = false
     @Binding private var storedNotes: [Note]
     @Binding private var isEditNote: Bool
+    @Binding private var rightPassword: Bool
+    @State private var titleRight: Bool = false
+    @State private var textRight: Bool = false
+//    @State private var isRightPassword: Bool = false
     
-//    init(editNote: Binding<Note>, storedNotes: Binding<[Note]>, isEditNote: Binding<Bool>, isPassword: Binding<Bool>) {
-//        self._editNote = editNote
-//        self._storedNotes = storedNotes
-//        self._isEditNote = isEditNote
-//        self._isPassword = isPassword
-//    }
-    init(editNote: Binding<Note>, storedNotes: Binding<[Note]>, isEditNote: Binding<Bool>) {
+    init(editNote: Binding<Note>, storedNotes: Binding<[Note]>, isEditNote: Binding<Bool>, rightPassword: Binding<Bool>) {
         self._editNote = editNote
         self._storedNotes = storedNotes
         self._isEditNote = isEditNote
-//        self._isPassword = isPassword
+        self._rightPassword = rightPassword
     }
     
     var body: some View{
@@ -44,6 +41,14 @@ struct NewOrEditNote: View {
                     .font(isMacOS() ? .title2 : .title3)
                     .background(Color.black)
                     .cornerRadius(10)
+                    .toast(isPresenting: $rightPassword) {
+                        AlertToast(displayMode: .alert, type: .complete(Color.greenColor), title: "Right Password!!!!!")
+                    }
+                    .onAppear {
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                            rightPassword = false
+                        }
+                    }
                 HStack{
                     Spacer()
                     DatePicker("  Date: ", selection: $editDate, displayedComponents: .date)
@@ -68,10 +73,15 @@ struct NewOrEditNote: View {
                 
                 Button {
                     if (textFieldNote == "" || titleFieldNote == ""){
-                        if let index = storedNotes.firstIndex(of: editNote){
-                            storedNotes.remove(at: index)
-                            print("Not Saved")
+                        if textFieldNote == ""{
+                            textRight = true
+                        }else{
+                            titleRight = true
                         }
+//                        if let index = storedNotes.firstIndex(of: editNote){
+//                            storedNotes.remove(at: index)
+//                            print("Not Saved")
+//                        }
                     } else{
                         if let index = storedNotes.firstIndex(of: editNote) {
                             storedNotes[index].note = textFieldNote
@@ -79,10 +89,10 @@ struct NewOrEditNote: View {
                             storedNotes[index].date = editDate
                             storedNotes[index].password = passwordNoteSave
                             print("Ho gaya Disappear: \(passwordNoteSave)")
+                            isEditNote = false
                         }
                     }
 //                    isPassword = false
-                    isEditNote = false
                 } label: {
                     Text("Save")
                         .font(.title2.bold())
@@ -94,6 +104,12 @@ struct NewOrEditNote: View {
                 Spacer()
             
         }
+        .toast(isPresenting: $titleRight, alert: {
+            AlertToast(displayMode: .banner(.slide), type: .error(Color.redColor), title: "Enter Title: ")
+        })
+        .toast(isPresenting: $textRight, alert: {
+            AlertToast(displayMode: .banner(.slide), type: .error(Color.redColor), title: "Enter Text: ")
+        })
         .padding()
         .background(Color(editNote.cardColor))
 #if os(macOS)
@@ -107,30 +123,9 @@ struct NewOrEditNote: View {
 //            if editNote.password == ""{
 //                isPasswordCorrect = true
 //            }
+//            if let val = rightPassword{
+//            isRightPassword = val
+//        }
         }
     }
-    
-//    @ViewBuilder
-//    func passwordCheckView() -> some View {
-//        VStack{
-//            Text("Enter Password \(String(isPasswordCorrect))")
-//            TextField("password", text: $passwordNote)
-//            Button {
-//                print("Passworf = \(passwordNote)  real = \(editNote.password)")
-//                isPassword = false
-//                if passwordNote == editNote.password{
-//                    isPasswordCorrect = true
-//                    isEditNote = true
-//                }
-//            } label: {
-//                Text("Submit")
-//            }
-//        }
-//    }
 }
-
-//struct MyPreviewProvider_Previews: PreviewProvider {
-//    static var previews: some View {
-//        NewOrEditNote(editNote: Binding<Note>, storedNotes: Binding<[Note]>, isEditNote: Binding<Bool>)
-//    }
-//}

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AlertToast
 
 struct Home: View {
     //Showing Card colors on button click
@@ -21,6 +22,9 @@ struct Home: View {
     @State private var isEditNoteCall: Bool = false
     @State private var isNewNote: Bool = false
     @State private var isPassword: Bool = false
+    @State private var wrongPassword: Bool = false
+    @State private var rightPassword: Bool = false
+    @State private var nodeDeleted: Bool = false
     
     @State private var editNote: Note = Note(title: "",note: "", date: getSampleDate(offset: 1), cardColor: "Color-Orange", password: "")
     
@@ -38,13 +42,37 @@ struct Home: View {
             }
             //Main Content
             MainContent()
+//                .alert("Confirm to Delete", isPresented: $nodeDeleted){
+//                    Text("")
+////                    print("")
+//                }
+                .toast(isPresenting: $wrongPassword, alert: {
+                    AlertToast(displayMode: .alert, type: .error(Color.redColor), title: "Wrong Password")
+                        
+                })
+                
+                .toast(isPresenting: $nodeDeleted, duration: 2, tapToDismiss: true, alert: {
+                    AlertToast(displayMode: .alert, type: .error(Color.redColor), title: "Tab if not to Delete", subTitle: "This node is going to be deleted, \n if does not want to delete then Tab on this Alert")
+                }, onTap: {
+                    nodeDeleted = false
+                }, completion: {
+                    if let index = storedNotes.firstIndex(of: editNote){
+                        storedNotes.remove(at: index)
+                        filteredNotes = storedNotes
+                        saveNotes()
+                    }
+                })
+                    
+//            Alert(title: "", message: "If You now deleted then it will never be retreated", dismissButton: Text("Delete"))
+
                 .onAppear {
                     if let data = storedNotesData,
                        let decodedNotes = try? JSONDecoder().decode([Note].self, from: data) {
                         _storedNotes.wrappedValue = decodedNotes
                         _filteredNotes.wrappedValue = decodedNotes
                         print("Kuch to h!!!!! \(_storedNotes.wrappedValue.count)")
-                    } else {
+                    }
+                    else {
                         print("Kuch bhi nahi h!!!!!")
                         storedNotes = notes
                         filteredNotes = notes
@@ -138,7 +166,7 @@ struct Home: View {
                 .font(isMacOS() ? .title3 : .body)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            
+                
             HStack{
                 Text(note.date, style: .date)
                     .foregroundColor(.black)
@@ -159,7 +187,7 @@ struct Home: View {
                         .clipShape(Circle())
                 }
                 .sheet(isPresented: $isEditNote) {
-                    NewOrEditNote(editNote: $editNote, storedNotes: $storedNotes, isEditNote: $isEditNote)
+                    NewOrEditNote(editNote: $editNote, storedNotes: $storedNotes, isEditNote: $isEditNote, rightPassword: $rightPassword)
                         .onDisappear{
                             filteredNotes = storedNotes
                             saveNotes()
@@ -167,7 +195,7 @@ struct Home: View {
                 }
                 
                 .sheet(isPresented: $isPassword) {
-                    PasswordCheckView(editNote: $editNote, isPassword: $isPassword, isEditNote: $isEditNote, isEditNoteCall: $isEditNoteCall, storedNotes: $storedNotes)
+                    PasswordCheckView(editNote: $editNote, isPassword: $isPassword, isEditNote: $isEditNote, isEditNoteCall: $isEditNoteCall, storedNotes: $storedNotes, wrongPassword: $wrongPassword, rightPassword: $rightPassword)
                         .onDisappear{
                             filteredNotes = storedNotes
                             saveNotes()
@@ -175,11 +203,13 @@ struct Home: View {
                 }
                 
                 Button {
-                    if let index = storedNotes.firstIndex(of: note){
-                        storedNotes.remove(at: index)
-                        filteredNotes = storedNotes
-                        saveNotes()
-                    }
+//                    if let index = storedNotes.firstIndex(of: note){
+//                        storedNotes.remove(at: index)
+//                        filteredNotes = storedNotes
+//                        saveNotes()
+//                    }
+                    editNote = note
+                    nodeDeleted = true
                 } label: {
                     Image(systemName: "trash")
                         .font(.system(size: 15, weight: .bold))
@@ -250,7 +280,7 @@ struct Home: View {
                             isNewNote.toggle()
                         }
                         .sheet(isPresented: $isNewNote) {
-                            NewOrEditNote(editNote: $editNote, storedNotes: $storedNotes, isEditNote: $isNewNote)
+                            NewOrEditNote(editNote: $editNote, storedNotes: $storedNotes, isEditNote: $isNewNote, rightPassword: $rightPassword)
                                 .onDisappear{
                                     filteredNotes = storedNotes
                                     

@@ -19,6 +19,8 @@
 		8476F4C12AE11ADE008B7D27 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4BF2AE11AD7008B7D27 /* Extensions.swift */; };
 		8476F4C32AE148D0008B7D27 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4C22AE148D0008B7D27 /* Note.swift */; };
 		8476F4C42AE16647008B7D27 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4C22AE148D0008B7D27 /* Note.swift */; };
+		8477680F2AEBA1E70094D83A /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 8477680E2AEBA1E70094D83A /* AlertToast */; };
+		847768122AEBA50A0094D83A /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 847768112AEBA50A0094D83A /* AlertToast */; };
 		848EDC102AE263FD00E41F4F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EDC0F2AE263FC00E41F4F /* BlurView.swift */; };
 		84D073162AEA5A65005857B7 /* NewOrEditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073152AEA5A65005857B7 /* NewOrEditNote.swift */; };
 		84D073172AEA5A65005857B7 /* NewOrEditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073152AEA5A65005857B7 /* NewOrEditNote.swift */; };
@@ -46,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8477680F2AEBA1E70094D83A /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				847768122AEBA50A0094D83A /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +69,7 @@
 				8476F4992AE106C0008B7D27 /* Shared */,
 				8476F4A82AE106C3008B7D27 /* macOS */,
 				8476F4A22AE106C3008B7D27 /* Products */,
+				847768102AEBA50A0094D83A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +130,13 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		847768102AEBA50A0094D83A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +153,9 @@
 			dependencies = (
 			);
 			name = "Notes Mac iOS (iOS)";
+			packageProductDependencies = (
+				8477680E2AEBA1E70094D83A /* AlertToast */,
+			);
 			productName = "Notes Mac iOS (iOS)";
 			productReference = 8476F4A12AE106C3008B7D27 /* Notes Mac iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +173,9 @@
 			dependencies = (
 			);
 			name = "Notes Mac iOS (macOS)";
+			packageProductDependencies = (
+				847768112AEBA50A0094D83A /* AlertToast */,
+			);
 			productName = "Notes Mac iOS (macOS)";
 			productReference = 8476F4A72AE106C3008B7D27 /* Notes Mac iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -189,6 +207,9 @@
 				Base,
 			);
 			mainGroup = 8476F4942AE106C0008B7D27;
+			packageReferences = (
+				8477680D2AEBA1E70094D83A /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
 			productRefGroup = 8476F4A22AE106C3008B7D27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -504,6 +525,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8477680D2AEBA1E70094D83A /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8477680E2AEBA1E70094D83A /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8477680D2AEBA1E70094D83A /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+		847768112AEBA50A0094D83A /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8477680D2AEBA1E70094D83A /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8476F4952AE106C0008B7D27 /* Project object */;
 }
