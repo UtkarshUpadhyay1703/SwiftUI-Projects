@@ -19,13 +19,17 @@
 		8476F4C12AE11ADE008B7D27 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4BF2AE11AD7008B7D27 /* Extensions.swift */; };
 		8476F4C32AE148D0008B7D27 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4C22AE148D0008B7D27 /* Note.swift */; };
 		8476F4C42AE16647008B7D27 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4C22AE148D0008B7D27 /* Note.swift */; };
-		8477680F2AEBA1E70094D83A /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 8477680E2AEBA1E70094D83A /* AlertToast */; };
-		847768122AEBA50A0094D83A /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 847768112AEBA50A0094D83A /* AlertToast */; };
 		848EDC102AE263FD00E41F4F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EDC0F2AE263FC00E41F4F /* BlurView.swift */; };
 		84D073162AEA5A65005857B7 /* NewOrEditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073152AEA5A65005857B7 /* NewOrEditNote.swift */; };
 		84D073172AEA5A65005857B7 /* NewOrEditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073152AEA5A65005857B7 /* NewOrEditNote.swift */; };
 		84D073192AEA7D3F005857B7 /* PasswordCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073182AEA7D3F005857B7 /* PasswordCheckView.swift */; };
 		84D0731A2AEA7D3F005857B7 /* PasswordCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073182AEA7D3F005857B7 /* PasswordCheckView.swift */; };
+		84EC61E92AF4CAFC003F19EF /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC61E82AF4CAFC003F19EF /* ToastView.swift */; };
+		84EC61EB2AF4CB25003F19EF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC61EA2AF4CB25003F19EF /* Extension.swift */; };
+		84EC61EC2AF4CB25003F19EF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC61EA2AF4CB25003F19EF /* Extension.swift */; };
+		84EC61ED2AF4CB3E003F19EF /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC61E82AF4CAFC003F19EF /* ToastView.swift */; };
+		84EC61F12AF4FD9E003F19EF /* ColorChangingStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC61F02AF4FD9E003F19EF /* ColorChangingStrip.swift */; };
+		84EC61F22AF4FD9E003F19EF /* ColorChangingStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC61F02AF4FD9E003F19EF /* ColorChangingStrip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +45,9 @@
 		848EDC0F2AE263FC00E41F4F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		84D073152AEA5A65005857B7 /* NewOrEditNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrEditNote.swift; sourceTree = "<group>"; };
 		84D073182AEA7D3F005857B7 /* PasswordCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckView.swift; sourceTree = "<group>"; };
+		84EC61E82AF4CAFC003F19EF /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		84EC61EA2AF4CB25003F19EF /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		84EC61F02AF4FD9E003F19EF /* ColorChangingStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangingStrip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +55,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8477680F2AEBA1E70094D83A /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847768122AEBA50A0094D83A /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,7 @@
 		8476F4992AE106C0008B7D27 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				84EC61E72AF4CACB003F19EF /* Toast */,
 				8476F4BE2AE11ABA008B7D27 /* ViewModel */,
 				8476F4BD2AE11AAC008B7D27 /* Model */,
 				8476F4B82AE10B13008B7D27 /* Views */,
@@ -137,6 +143,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		84EC61E72AF4CACB003F19EF /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				84EC61E82AF4CAFC003F19EF /* ToastView.swift */,
+				84EC61F02AF4FD9E003F19EF /* ColorChangingStrip.swift */,
+				84EC61EA2AF4CB25003F19EF /* Extension.swift */,
+			);
+			path = Toast;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,7 +170,6 @@
 			);
 			name = "Notes Mac iOS (iOS)";
 			packageProductDependencies = (
-				8477680E2AEBA1E70094D83A /* AlertToast */,
 			);
 			productName = "Notes Mac iOS (iOS)";
 			productReference = 8476F4A12AE106C3008B7D27 /* Notes Mac iOS.app */;
@@ -174,7 +189,6 @@
 			);
 			name = "Notes Mac iOS (macOS)";
 			packageProductDependencies = (
-				847768112AEBA50A0094D83A /* AlertToast */,
 			);
 			productName = "Notes Mac iOS (macOS)";
 			productReference = 8476F4A72AE106C3008B7D27 /* Notes Mac iOS.app */;
@@ -208,7 +222,6 @@
 			);
 			mainGroup = 8476F4942AE106C0008B7D27;
 			packageReferences = (
-				8477680D2AEBA1E70094D83A /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 8476F4A22AE106C3008B7D27 /* Products */;
 			projectDirPath = "";
@@ -249,8 +262,11 @@
 				8476F4BB2AE10E20008B7D27 /* Home.swift in Sources */,
 				8476F4AA2AE106C3008B7D27 /* Notes_Mac_iOSApp.swift in Sources */,
 				8476F4C02AE11AD7008B7D27 /* Extensions.swift in Sources */,
+				84EC61EB2AF4CB25003F19EF /* Extension.swift in Sources */,
 				848EDC102AE263FD00E41F4F /* BlurView.swift in Sources */,
 				84D073192AEA7D3F005857B7 /* PasswordCheckView.swift in Sources */,
+				84EC61E92AF4CAFC003F19EF /* ToastView.swift in Sources */,
+				84EC61F12AF4FD9E003F19EF /* ColorChangingStrip.swift in Sources */,
 				84D073162AEA5A65005857B7 /* NewOrEditNote.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -266,6 +282,9 @@
 				84D0731A2AEA7D3F005857B7 /* PasswordCheckView.swift in Sources */,
 				8476F4AB2AE106C3008B7D27 /* Notes_Mac_iOSApp.swift in Sources */,
 				8476F4C12AE11ADE008B7D27 /* Extensions.swift in Sources */,
+				84EC61ED2AF4CB3E003F19EF /* ToastView.swift in Sources */,
+				84EC61EC2AF4CB25003F19EF /* Extension.swift in Sources */,
+				84EC61F22AF4FD9E003F19EF /* ColorChangingStrip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,30 +544,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		8477680D2AEBA1E70094D83A /* XCRemoteSwiftPackageReference "AlertToast" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/elai950/AlertToast";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		8477680E2AEBA1E70094D83A /* AlertToast */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8477680D2AEBA1E70094D83A /* XCRemoteSwiftPackageReference "AlertToast" */;
-			productName = AlertToast;
-		};
-		847768112AEBA50A0094D83A /* AlertToast */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 8477680D2AEBA1E70094D83A /* XCRemoteSwiftPackageReference "AlertToast" */;
-			productName = AlertToast;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8476F4952AE106C0008B7D27 /* Project object */;
 }

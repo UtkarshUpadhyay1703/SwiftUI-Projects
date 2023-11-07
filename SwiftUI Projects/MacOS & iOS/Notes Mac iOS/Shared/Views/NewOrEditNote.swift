@@ -5,7 +5,7 @@
 //  Created by admin on 10/26/23.
 //
 import SwiftUI
-import AlertToast
+//import AlertToast
 
 struct NewOrEditNote: View {
     @State private var editDate = getSampleDate(offset: 0)
@@ -19,7 +19,7 @@ struct NewOrEditNote: View {
     @Binding private var rightPassword: Bool
     @State private var titleRight: Bool = false
     @State private var textRight: Bool = false
-//    @State private var isRightPassword: Bool = false
+    //    @State private var isRightPassword: Bool = false
     
     init(editNote: Binding<Note>, storedNotes: Binding<[Note]>, isEditNote: Binding<Bool>, rightPassword: Binding<Bool>) {
         self._editNote = editNote
@@ -30,86 +30,109 @@ struct NewOrEditNote: View {
     
     var body: some View{
         VStack{
+            Spacer()
+            TextField("Title:", text: $titleFieldNote)
+                .font(.title.bold())
+                .cornerRadius(10)
+                .background(Color.white)
+                .frame(alignment: .center)
+            
+            TextEditor(text: $textFieldNote)
+                .font(isMacOS() ? .title2 : .title3)
+                .background(Color.black)
+                .cornerRadius(10)
+            //                    .toast(isPresenting: $rightPassword) {
+            //                        AlertToast(displayMode: .alert, type: .complete(Color.greenColor), title: "Right Password!!!!!")
+            //                    }
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                        rightPassword = false
+                    }
+                }
+            HStack{
                 Spacer()
-                TextField("Title:", text: $titleFieldNote)
-                    .font(.title.bold())
+                DatePicker("  Date: ", selection: $editDate, displayedComponents: .date)
+                    .frame(width: 200, height: 50)
+                    .foregroundColor(.black)
+                    .background(Color(editNote.cardColor))
+                    .border(.gray, width: 5)
+                    .cornerRadius(5)
+                Spacer()
+                
+            }
+            .padding(.horizontal, 10)
+            HStack{
+                Text("Enter Password")
+                    .font(.title2.bold())
+                TextField("Password...", text: $passwordNoteSave)
+                    .font(.title2)
                     .cornerRadius(10)
                     .background(Color.white)
                     .frame(alignment: .center)
-                
-                TextEditor(text: $textFieldNote)
-                    .font(isMacOS() ? .title2 : .title3)
-                    .background(Color.black)
+            }
+            
+            Button {
+                if (textFieldNote == "" || titleFieldNote == ""){
+                    if textFieldNote == ""{
+                        textRight = true
+                    }else{
+                        titleRight = true
+                    }
+                    //                        if let index = storedNotes.firstIndex(of: editNote){
+                    //                            storedNotes.remove(at: index)
+                    //                            print("Not Saved")
+                    //                        }
+                } else{
+                    if let index = storedNotes.firstIndex(of: editNote) {
+                        storedNotes[index].note = textFieldNote
+                        storedNotes[index].title = titleFieldNote
+                        storedNotes[index].date = editDate
+                        storedNotes[index].password = passwordNoteSave
+                        print("Ho gaya Disappear: \(passwordNoteSave)")
+                        isEditNote = false
+                    }
+                }
+                //                    isPassword = false
+            } label: {
+                Text("Save")
+                    .font(.title2.bold())
+                    .frame(width: isMacOS() ? 80 : 150, height: isMacOS() ? 20 : 50)
+                    .background(Color.purple)
+                    .foregroundColor(Color.black)
                     .cornerRadius(10)
-                    .toast(isPresenting: $rightPassword) {
-                        AlertToast(displayMode: .alert, type: .complete(Color.greenColor), title: "Right Password!!!!!")
-                    }
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-                            rightPassword = false
-                        }
-                    }
-                HStack{
-                    Spacer()
-                    DatePicker("  Date: ", selection: $editDate, displayedComponents: .date)
-                        .frame(width: 200, height: 50)
-                        .foregroundColor(.black)
-                        .background(Color(editNote.cardColor))
-                        .border(.gray, width: 5)
-                        .cornerRadius(5)
-                    Spacer()
-                    
-                }
-                .padding(.horizontal, 10)
-                HStack{
-                    Text("Enter Password")
-                        .font(.title2.bold())
-                    TextField("Password...", text: $passwordNoteSave)
-                        .font(.title2)
-                        .cornerRadius(10)
-                        .background(Color.white)
-                        .frame(alignment: .center)
-                }
-                
-                Button {
-                    if (textFieldNote == "" || titleFieldNote == ""){
-                        if textFieldNote == ""{
-                            textRight = true
-                        }else{
-                            titleRight = true
-                        }
-//                        if let index = storedNotes.firstIndex(of: editNote){
-//                            storedNotes.remove(at: index)
-//                            print("Not Saved")
-//                        }
-                    } else{
-                        if let index = storedNotes.firstIndex(of: editNote) {
-                            storedNotes[index].note = textFieldNote
-                            storedNotes[index].title = titleFieldNote
-                            storedNotes[index].date = editDate
-                            storedNotes[index].password = passwordNoteSave
-                            print("Ho gaya Disappear: \(passwordNoteSave)")
-                            isEditNote = false
-                        }
-                    }
-//                    isPassword = false
-                } label: {
-                    Text("Save")
-                        .font(.title2.bold())
-                        .frame(width: isMacOS() ? 80 : 150, height: isMacOS() ? 20 : 50)
-                        .background(Color.purple)
-                        .foregroundColor(Color.black)
-                        .cornerRadius(10)
-                }
-                Spacer()
+            }
+            Spacer()
             
         }
-        .toast(isPresenting: $titleRight, alert: {
-            AlertToast(displayMode: .banner(.slide), type: .error(Color.redColor), title: "Enter Title: ")
-        })
-        .toast(isPresenting: $textRight, alert: {
-            AlertToast(displayMode: .banner(.slide), type: .error(Color.redColor), title: "Enter Text: ")
-        })
+        //        .toast(isPresenting: $titleRight, alert: {
+        //            AlertToast(displayMode: .banner(.slide), type: .error(Color.redColor), title: "Enter Title: ")
+        //        })
+        .overlay(
+            ZStack{
+                VStack{
+                    if titleRight {
+                        ColorChangingStrip(stripColor: .greenColor, animationDuration: 5.0)
+                            .frame(width: titleRight ? .infinity : 0)
+                    }
+                    ToastView(type: .error, title: "Empty Title", message: "Please Enter Title")
+                        .frame(width: titleRight ? .infinity : 0 , height: 100)
+                        .offset(y: titleRight ? 0 : 200) // Adjust the vertical offset as needed
+                }
+                
+                VStack{
+                    if textRight {
+                        ColorChangingStrip(stripColor: .greenColor, animationDuration: 5.0)
+                            .frame(width: textRight ? .infinity : 0)
+                    }
+                    ToastView(type: .error, title: "Empty Text", message: "Please Enter Text")
+                        .frame(width: textRight ? .infinity : 0 , height: 100)
+                        .offset(y: textRight ? 0 : 200) // Adjust the vertical offset as needed
+                }
+            }
+        )
+        //        .toast(isPresenting: $textRight, alert: {
+        //            AlertToast(displayMode: .banner(.slide), type: .error(Color.redColor), title: "Enter Text: ")
+        //        })
         .padding()
         .background(Color(editNote.cardColor))
 #if os(macOS)
@@ -120,12 +143,12 @@ struct NewOrEditNote: View {
             titleFieldNote = editNote.title
             editDate = editNote.date
             passwordNoteSave = editNote.password
-//            if editNote.password == ""{
-//                isPasswordCorrect = true
-//            }
-//            if let val = rightPassword{
-//            isRightPassword = val
-//        }
+            //            if editNote.password == ""{
+            //                isPasswordCorrect = true
+            //            }
+            //            if let val = rightPassword{
+            //            isRightPassword = val
+            //        }
         }
     }
 }

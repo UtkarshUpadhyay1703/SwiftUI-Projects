@@ -1,8 +1,8 @@
 //
 //  ToastView.swift
-//  Toast Usage
+//  Notes Mac iOS (iOS)
 //
-//  Created by admin on 10/9/23.
+//  Created by admin on 11/3/23.
 //
 
 import SwiftUI
@@ -11,11 +11,17 @@ struct ToastView: View {
     var type: ToastStyle
     var title: String
     var message: String
-    var onCancleTapped: (() -> Void)
+//    var onCancleTapped: (() -> Void)
     
     var body: some View {
+        HStack{
+//            Rectangle()
+//                .fill(type.themeColor)
+//                .frame(width: 6)
+//                .clipped()
+        
         VStack(alignment: .leading){
-            ColorChangingStrip( rectangleColor: type.themeColor, animationDuration: 10)
+//            ColorChangingStrip(xOffset: 1.0, animationDuration: 5.0)
             HStack(alignment: .top){
                 Image(systemName: type.iconFileName)
                     .foregroundColor(type.themeColor)
@@ -34,37 +40,45 @@ struct ToastView: View {
                 
                 Spacer(minLength: 10)
                 
-                Button {
-                    //Todo
-                    onCancleTapped()
-                } label: {
-                    Image(systemName: "xmark")
-                        .foregroundColor(.black)
-                }
+//                Button {
+//                    //Todo
+//                    onCancleTapped()
+//                } label: {
+//                    Image(systemName: "xmark")
+//                        .foregroundColor(.black)
+//                }
             }
             .padding()
         }
-        .background(.white)
-        .overlay(
-        Rectangle()
-            .fill(type.themeColor)
-            .frame(width: 6)
-            .clipped(),
-        alignment: .leading
-        )
+        .background(Color.white)
+//        .overlay(
+//            VStack{
+//                ColorChangingStrip()
+//
+//            },
+//        alignment: .topLeading
+//        )
         .frame(minWidth: 0, maxWidth: .infinity)
         .cornerRadius(8)
         .shadow(color: .black.opacity(0.25), radius: 4, x: 0, y: 1)
         .padding(.horizontal, 16)
+//        .overlay(
+//            Rectangle()
+//                .fill(type.themeColor)
+//                .frame(width: 6)
+//                .clipped(),
+//            alignment: .topLeading
+//        )
     }
 }
+}
 
-struct ContentView_Previews: PreviewProvider {
+struct ToastView_Previews: PreviewProvider {
     static var previews: some View {
         VStack{
-            ToastView(type: .error, title: "ERROR", message: "Its time for a war") {}
+            ToastView(type: .error, title: "ERROR", message: "Its time for a war")
             
-            ToastView(type: .info, title: "INFO", message: "Please first understanf info then purchase"){}
+            ToastView(type: .info, title: "INFO", message: "Please first understand info then purchase")
         }
     }
 }

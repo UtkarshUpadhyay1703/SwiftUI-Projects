@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import AlertToast
+//import AlertToast
 
 struct Home: View {
     //Showing Card colors on button click
@@ -22,9 +22,10 @@ struct Home: View {
     @State private var isEditNoteCall: Bool = false
     @State private var isNewNote: Bool = false
     @State private var isPassword: Bool = false
-    @State private var wrongPassword: Bool = false
+    @State private var wrongPasswordToast: Bool = false
     @State private var rightPassword: Bool = false
     @State private var nodeDeleted: Bool = false
+    @State private var noteDeletedToast: Bool = false
     
     @State private var editNote: Note = Note(title: "",note: "", date: getSampleDate(offset: 1), cardColor: "Color-Orange", password: "")
     
@@ -42,29 +43,66 @@ struct Home: View {
             }
             //Main Content
             MainContent()
-//                .alert("Confirm to Delete", isPresented: $nodeDeleted){
-//                    Text("")
-////                    print("")
-//                }
-                .toast(isPresenting: $wrongPassword, alert: {
-                    AlertToast(displayMode: .alert, type: .error(Color.redColor), title: "Wrong Password")
-                        
-                })
-                
-                .toast(isPresenting: $nodeDeleted, duration: 2, tapToDismiss: true, alert: {
-                    AlertToast(displayMode: .alert, type: .error(Color.redColor), title: "Tab if not to Delete", subTitle: "This node is going to be deleted, \n if does not want to delete then Tab on this Alert")
-                }, onTap: {
-                    nodeDeleted = false
-                }, completion: {
-                    if let index = storedNotes.firstIndex(of: editNote){
-                        storedNotes.remove(at: index)
-                        filteredNotes = storedNotes
-                        saveNotes()
+            
+                .overlay(
+                    ZStack{
+                        VStack{
+                            if rightPassword{
+                                ColorChangingStrip(stripColor: .redColor, animationDuration: 5.0)
+                                    .frame(width: rightPassword ? .infinity : 0)
+                            }
+                            
+                            ToastView(type: .error, title: "Tab if not wanted to Delete", message: "This node is going to be deleted, \n if does not want to delete then Tab on this Alert")
+                                .frame(width: rightPassword ? .infinity : 0 , height: 100)
+                                .offset(y: rightPassword ? 0 : 200) // Adjust the vertical offset as needed
+                                .onTapGesture {
+                                    nodeDeleted = false
+                                    rightPassword = false
+                                }
+                        }
+                        VStack{
+                            if wrongPasswordToast{
+                                ColorChangingStrip(stripColor: .redColor, animationDuration: 5.0)
+                                    .frame(width: wrongPasswordToast ? .infinity : 0)
+                            }
+                            ToastView(type: .error, title: "Wrong Password", message: "Please enter right password")
+                                .frame(width: wrongPasswordToast ? .infinity : 0 , height: 100)
+                                .offset(y: wrongPasswordToast ? 0 : 200) // Adjust the vertical offset as needed
+                        }
                     }
-                })
-                    
-//            Alert(title: "", message: "If You now deleted then it will never be retreated", dismissButton: Text("Delete"))
-
+                )
+            
+            //                .alert("Confirm to Delete", isPresented: $nodeDeleted){
+            //                    Text("")
+            ////                    print("")
+            //                }
+            //                .toast(isPresenting: $wrongPasswordToast, alert: {
+            //                    AlertToast(displayMode: .alert, type: .error(Color.redColor), title: "Wrong Password")
+            //                })
+            
+            //                .onChange(of: $wrongPasswordToast, perform: { newValue in
+            //                    ToastView(type: .error, title: "Wrong Password", message: "Please Enter right password")
+            //                })
+            
+            //                .toast(isPresenting: $nodeDeleted, duration: 2, tapToDismiss: true, alert: {
+            //                    AlertToast(displayMode: .alert, type: .error(Color.redColor), title: "Tab if not to Delete", subTitle: "This node is going to be deleted, \n if does not want to delete then Tab on this Alert")
+            //                }, onTap: {
+            //                    nodeDeleted = false
+            //                }, completion: {
+            //                    if let index = storedNotes.firstIndex(of: editNote){
+            //                        storedNotes.remove(at: index)
+            //                        filteredNotes = storedNotes
+            //                        saveNotes()
+            //                    }
+            //                })
+            
+            //                .onChange(of: $nodeDeleted) { newValue in
+            //                ToastView(type: .error, title: "Tab if not wanted to Delete", message: "This node is going to be deleted, \n if does not want to delete then Tab on this Alert")
+            //            }
+            
+            
+            //            Alert(title: "", message: "If You now deleted then it will never be retreated", dismissButton: Text("Delete"))
+            
                 .onAppear {
                     if let data = storedNotesData,
                        let decodedNotes = try? JSONDecoder().decode([Note].self, from: data) {
@@ -93,6 +131,7 @@ struct Home: View {
         .preferredColorScheme(.light)
     }
     
+    
     @ViewBuilder
     func MainContent() -> some View {
         VStack(spacing: 6){
@@ -108,12 +147,13 @@ struct Home: View {
                             filteredNotes = storedNotes
                         }
                         else {
-                             
+                            
                             filteredNotes = storedNotes.filter { note in
                                 // Use the range(of:options:) method with the .caseInsensitive option
                                 return note.title.range(of: searchField, options: .caseInsensitive) != nil
                             }
                         }
+                        
                     }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -133,6 +173,14 @@ struct Home: View {
                     Text("Notes")
                         .font( isMacOS() ? .system(size: 33, weight: .bold) : .largeTitle.bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    //                    if wrongPasswordToast {
+                    //                            ToastView(type: .error, title: "Wrong Password", message: "Please Enter right password")
+                    //                    }
+                    //                    if nodeDeleted {
+                    //                        ToastView(type: .error, title: "Tab if not wanted to Delete", message: "This node is going to be deleted, \n if does not want to delete then Tab on this Alert")
+                    //                    }
+                    
                     
                     //Column
                     let columns = Array(repeating: GridItem(.flexible(), spacing: isMacOS() ? 25 : 15), count: isMacOS() ? 3 : 1)
@@ -166,7 +214,7 @@ struct Home: View {
                 .font(isMacOS() ? .title3 : .body)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                
+            
             HStack{
                 Text(note.date, style: .date)
                     .foregroundColor(.black)
@@ -195,21 +243,28 @@ struct Home: View {
                 }
                 
                 .sheet(isPresented: $isPassword) {
-                    PasswordCheckView(editNote: $editNote, isPassword: $isPassword, isEditNote: $isEditNote, isEditNoteCall: $isEditNoteCall, storedNotes: $storedNotes, wrongPassword: $wrongPassword, rightPassword: $rightPassword)
+                    PasswordCheckView(editNote: $editNote, isPassword: $isPassword, isEditNote: $isEditNote, isEditNoteCall: $isEditNoteCall, storedNotes: $storedNotes, wrongPassword: $wrongPasswordToast, rightPassword: $rightPassword, nodeDeleted: $nodeDeleted, nodeDeletedToast: $noteDeletedToast)
                         .onDisappear{
                             filteredNotes = storedNotes
                             saveNotes()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 6){
+                                filteredNotes = storedNotes
+                                saveNotes()
+                                rightPassword = false
+                            }
                         }
                 }
                 
                 Button {
-//                    if let index = storedNotes.firstIndex(of: note){
-//                        storedNotes.remove(at: index)
-//                        filteredNotes = storedNotes
-//                        saveNotes()
-//                    }
+                    //                    if let index = storedNotes.firstIndex(of: note){
+                    //                        storedNotes.remove(at: index)
+                    //                        filteredNotes = storedNotes
+                    //                        saveNotes()
+                    //                    }
                     editNote = note
                     nodeDeleted = true
+                    isPassword = true
+                    
                 } label: {
                     Image(systemName: "trash")
                         .font(.system(size: 15, weight: .bold))
@@ -283,7 +338,6 @@ struct Home: View {
                             NewOrEditNote(editNote: $editNote, storedNotes: $storedNotes, isEditNote: $isNewNote, rightPassword: $rightPassword)
                                 .onDisappear{
                                     filteredNotes = storedNotes
-                                    
                                     saveNotes()
                                 }
                         }

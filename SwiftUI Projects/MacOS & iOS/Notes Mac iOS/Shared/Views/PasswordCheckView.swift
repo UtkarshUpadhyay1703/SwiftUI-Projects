@@ -4,7 +4,7 @@
 //
 //  Created by admin on 10/26/23.
 //
-import AlertToast
+//import AlertToast
 import SwiftUI
 
 struct PasswordCheckView: View {
@@ -16,8 +16,10 @@ struct PasswordCheckView: View {
     @Binding private var storedNotes: [Note]
     @Binding private var wrongPassword: Bool
     @Binding private var rightPassword: Bool
+    @Binding private var nodeDeleted: Bool
+    @Binding private var noteDeletedToast: Bool
     
-    init(editNote: Binding<Note>, isPassword: Binding<Bool>, isEditNote: Binding<Bool>, isEditNoteCall: Binding<Bool>, storedNotes: Binding<[Note]>, wrongPassword: Binding<Bool>, rightPassword: Binding<Bool>){
+    init(editNote: Binding<Note>, isPassword: Binding<Bool>, isEditNote: Binding<Bool>, isEditNoteCall: Binding<Bool>, storedNotes: Binding<[Note]>, wrongPassword: Binding<Bool>, rightPassword: Binding<Bool>, nodeDeleted: Binding<Bool>, nodeDeletedToast: Binding<Bool>){
         self._editNote = editNote
         self._isPassword = isPassword
         self._isEditNote = isEditNote
@@ -25,6 +27,15 @@ struct PasswordCheckView: View {
         self._storedNotes = storedNotes
         self._wrongPassword = wrongPassword
         self._rightPassword = rightPassword
+        self._nodeDeleted = nodeDeleted
+        self._noteDeletedToast = nodeDeletedToast
+    }
+    
+    func delayWrongPassword(){
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+            wrongPassword = false
+            print("False kar diya@@")
+        }
     }
     
     var body: some View {
@@ -38,7 +49,7 @@ struct PasswordCheckView: View {
                         .background(Color.gray)
                         .cornerRadius(10)
                         .frame(alignment: .center)
-                        
+                    
                 } else {
                     Text("Password to Disable Lock: ")
                         .padding()
@@ -72,6 +83,25 @@ struct PasswordCheckView: View {
                     }else {
                         print("Wrong password######")
                         wrongPassword = true
+                        delayWrongPassword()
+                    }
+                }else if nodeDeleted{
+                    if checkPassword == editNote.password{
+                        rightPassword = true
+                            noteDeletedToast = true
+                        print("checked Password and called delete")
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                                if nodeDeleted {
+                                    if let index = storedNotes.firstIndex(of: editNote){
+                                        storedNotes.remove(at: index)
+                                    }
+                                }
+                            }
+                        
+                    }else {
+                        print("Wrong password######")
+                        wrongPassword = true
+                        delayWrongPassword()
                     }
                 } else{
                     if editNote.password == "" {
@@ -85,6 +115,10 @@ struct PasswordCheckView: View {
                                 storedNotes[index].password = ""
                                 print("Password Setup to: \"\"")
                             }
+                        }else {
+                            print("Wrongg PASSSSSS")
+                            wrongPassword = true
+                            delayWrongPassword()
                         }
                     }
                 }
@@ -106,15 +140,15 @@ struct PasswordCheckView: View {
                     .foregroundColor(Color.black)
                     .cornerRadius(10)
             }
-//            .padding(10)
-//            Spacer()
-//            Spacer()
-//            Spacer()
-//            Spacer()
+            //            .padding(10)
+            //            Spacer()
+            //            Spacer()
+            //            Spacer()
+            //            Spacer()
         }
         .frame(width: isMacOS() ? 300 : nil, height: isMacOS() ? 200 : nil, alignment: .center)
-//        .padding(.horizontal, 50)
-//        .padding(.vertical, 100)
+        //        .padding(.horizontal, 50)
+        //        .padding(.vertical, 100)
         .padding()
         .background(Color(editNote.cardColor))
         .onAppear {
@@ -122,8 +156,15 @@ struct PasswordCheckView: View {
                 if isEditNoteCall {
                     isEditNote = true
                     isPassword = false
-                }else{
-                    //                    storedNotes =
+                }else if nodeDeleted{
+                    noteDeletedToast = true
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+                        if nodeDeleted {
+                            if let index = storedNotes.firstIndex(of: editNote){
+                                storedNotes.remove(at: index)
+                            }
+                        }
+                    }
                 }
             }else{
                 if !isEditNoteCall {
