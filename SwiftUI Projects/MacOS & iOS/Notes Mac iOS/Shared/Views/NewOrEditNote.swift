@@ -75,8 +75,14 @@ struct NewOrEditNote: View {
                 if (textFieldNote == "" || titleFieldNote == ""){
                     if textFieldNote == ""{
                         textRight = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                            textRight = false
+                        }
                     }else{
                         titleRight = true
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
+                            titleRight = false
+                        }
                     }
                     //                        if let index = storedNotes.firstIndex(of: editNote){
                     //                            storedNotes.remove(at: index)
@@ -111,7 +117,7 @@ struct NewOrEditNote: View {
             ZStack{
                 VStack{
                     if titleRight {
-                        ColorChangingStrip(stripColor: .greenColor, animationDuration: 5.0)
+                        ColorChangingStrip(stripColor: Color(editNote.cardColor), animationDuration: 2.0)
                             .frame(width: titleRight ? .infinity : 0)
                     }
                     ToastView(type: .error, title: "Empty Title", message: "Please Enter Title")
@@ -121,7 +127,7 @@ struct NewOrEditNote: View {
                 
                 VStack{
                     if textRight {
-                        ColorChangingStrip(stripColor: .greenColor, animationDuration: 5.0)
+                        ColorChangingStrip(stripColor: Color(editNote.cardColor), animationDuration: 2.0)
                             .frame(width: textRight ? .infinity : 0)
                     }
                     ToastView(type: .error, title: "Empty Text", message: "Please Enter Text")

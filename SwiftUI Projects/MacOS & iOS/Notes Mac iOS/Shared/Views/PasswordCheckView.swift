@@ -16,10 +16,10 @@ struct PasswordCheckView: View {
     @Binding private var storedNotes: [Note]
     @Binding private var wrongPassword: Bool
     @Binding private var rightPassword: Bool
-    @Binding private var nodeDeleted: Bool
+    @Binding private var noteDeleted: Bool
     @Binding private var noteDeletedToast: Bool
     
-    init(editNote: Binding<Note>, isPassword: Binding<Bool>, isEditNote: Binding<Bool>, isEditNoteCall: Binding<Bool>, storedNotes: Binding<[Note]>, wrongPassword: Binding<Bool>, rightPassword: Binding<Bool>, nodeDeleted: Binding<Bool>, nodeDeletedToast: Binding<Bool>){
+    init(editNote: Binding<Note>, isPassword: Binding<Bool>, isEditNote: Binding<Bool>, isEditNoteCall: Binding<Bool>, storedNotes: Binding<[Note]>, wrongPassword: Binding<Bool>, rightPassword: Binding<Bool>, noteDeleted: Binding<Bool>, noteDeletedToast: Binding<Bool>){
         self._editNote = editNote
         self._isPassword = isPassword
         self._isEditNote = isEditNote
@@ -27,12 +27,12 @@ struct PasswordCheckView: View {
         self._storedNotes = storedNotes
         self._wrongPassword = wrongPassword
         self._rightPassword = rightPassword
-        self._nodeDeleted = nodeDeleted
-        self._noteDeletedToast = nodeDeletedToast
+        self._noteDeleted = noteDeleted
+        self._noteDeletedToast = noteDeletedToast
     }
     
     func delayWrongPassword(){
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
             wrongPassword = false
             print("False kar diya@@")
         }
@@ -42,7 +42,15 @@ struct PasswordCheckView: View {
         VStack{
             Spacer(minLength: 2)
             if !isEditNoteCall {
-                if editNote.password == "" {
+                if noteDeleted{
+                    Text("Password For Delete: ")
+                        .padding()
+                        .font(.title.bold())
+                        .background(Color.gray)
+                        .cornerRadius(10)
+                        .frame(alignment: .center)
+                }
+                else if editNote.password == "" {
                     Text("Password to setup Lock:")
                         .padding()
                         .font(.title.bold())
@@ -58,7 +66,7 @@ struct PasswordCheckView: View {
                         .cornerRadius(10)
                         .frame(alignment: .center)
                 }
-            } else{
+            } else {
                 Text("Password To Edit: ")
                     .padding()
                     .font(.title.bold())
@@ -85,13 +93,13 @@ struct PasswordCheckView: View {
                         wrongPassword = true
                         delayWrongPassword()
                     }
-                }else if nodeDeleted{
+                } else if noteDeleted{
                     if checkPassword == editNote.password{
                         rightPassword = true
                             noteDeletedToast = true
                         print("checked Password and called delete")
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
-                                if nodeDeleted {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                                if noteDeleted {
                                     if let index = storedNotes.firstIndex(of: editNote){
                                         storedNotes.remove(at: index)
                                     }
@@ -156,10 +164,11 @@ struct PasswordCheckView: View {
                 if isEditNoteCall {
                     isEditNote = true
                     isPassword = false
-                }else if nodeDeleted{
+                }else if noteDeleted{
                     noteDeletedToast = true
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
-                        if nodeDeleted {
+                    isPassword = false
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                        if noteDeleted {
                             if let index = storedNotes.firstIndex(of: editNote){
                                 storedNotes.remove(at: index)
                             }

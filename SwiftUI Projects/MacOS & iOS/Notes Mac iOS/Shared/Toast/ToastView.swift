@@ -15,26 +15,22 @@ struct ToastView: View {
     
     var body: some View {
         HStack{
-//            Rectangle()
-//                .fill(type.themeColor)
-//                .frame(width: 6)
-//                .clipped()
-        
         VStack(alignment: .leading){
 //            ColorChangingStrip(xOffset: 1.0, animationDuration: 5.0)
             HStack(alignment: .top){
                 Image(systemName: type.iconFileName)
                     .foregroundColor(type.themeColor)
+                    .font( isMacOS() ? .system(size: 14, weight: .semibold) : .title2.bold())
                 
                 VStack(alignment: .leading){
                     Text(title)
-                        .font(.system(size: 14, weight: .semibold))
+                        .font( isMacOS() ? .system(size: 14, weight: .semibold) : .title2.bold())
                         .padding(3)
                         .background(type.themeColor)
                         .cornerRadius(5)
                     
                     Text(message)
-                        .font(.system(size: 12))
+                        .font(isMacOS() ? .system(size: 12) : .title3)
                         .foregroundColor(Color.black.opacity(0.6))
                 }
                 
