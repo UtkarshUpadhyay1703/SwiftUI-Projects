@@ -104,6 +104,8 @@ struct PasswordCheckView: View {
                                         storedNotes.remove(at: index)
                                     }
                                 }
+                                rightPassword = false
+                                noteDeletedToast = false
                             }
                         
                     }else {
@@ -173,6 +175,8 @@ struct PasswordCheckView: View {
                                 storedNotes.remove(at: index)
                             }
                         }
+                        rightPassword = false
+                        noteDeletedToast = false
                     }
                 }
             }else{

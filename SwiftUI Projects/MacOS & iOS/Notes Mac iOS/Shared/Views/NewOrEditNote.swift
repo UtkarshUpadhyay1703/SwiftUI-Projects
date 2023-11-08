@@ -78,7 +78,7 @@ struct NewOrEditNote: View {
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2){
                             textRight = false
                         }
-                    }else{
+                    } else{
                         titleRight = true
                         DispatchQueue.main.asyncAfter(deadline: .now() + 2){
                             titleRight = false

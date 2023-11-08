@@ -47,17 +47,18 @@ struct Home: View {
                 .overlay(
                     ZStack{
                         VStack{
-                            if rightPassword{
-                                ColorChangingStrip(stripColor: .redColor, animationDuration: 3.0)
-                                    .frame(width: rightPassword ? .infinity : 0)
+                            if noteDeletedToast{
+                                ColorChangingStrip(stripColor: .redColor, animationDuration: 4.0)
+                                    .frame(width: noteDeletedToast ? .infinity : 0)
                             }
                             
                             ToastView(type: .error, title: "Tab if not wanted to Delete", message: "This note is going to be deleted, \n if does not want to delete then Tab on this Alert")
-                                .frame(width: rightPassword ? .infinity : 0 , height: 100)
-                                .offset(y: rightPassword ? 0 : 200) // Adjust the vertical offset as needed
+                                .frame(width: noteDeletedToast ? .infinity : 0 , height: 100)
+                                .offset(y: noteDeletedToast ? 0 : 200) // Adjust the vertical offset as needed
                                 .onTapGesture {
                                     noteDeleted = false
                                     rightPassword = false
+                                    noteDeletedToast = false
                                 }
                         }
                         VStack{
@@ -72,38 +73,13 @@ struct Home: View {
                     }
                 )
             
-            //                .alert("Confirm to Delete", isPresented: $noteDeleted){
-            //                    Text("")
-            ////                    print("")
-            //                }
-            //                .toast(isPresenting: $wrongPasswordToast, alert: {
-            //                    AlertToast(displayMode: .alert, type: .error(Color.redColor), title: "Wrong Password")
-            //                })
-            
-            //                .onChange(of: $wrongPasswordToast, perform: { newValue in
-            //                    ToastView(type: .error, title: "Wrong Password", message: "Please Enter right password")
-            //                })
-            
-            //                .toast(isPresenting: $noteDeleted, duration: 2, tapToDismiss: true, alert: {
-            //                    AlertToast(displayMode: .alert, type: .error(Color.redColor), title: "Tab if not to Delete", subTitle: "This node is going to be deleted, \n if does not want to delete then Tab on this Alert")
-            //                }, onTap: {
-            //                    noteDeleted = false
-            //                }, completion: {
-            //                    if let index = storedNotes.firstIndex(of: editNote){
-            //                        storedNotes.remove(at: index)
-            //                        filteredNotes = storedNotes
-            //                        saveNotes()
-            //                    }
-            //                })
-            
-            //                .onChange(of: $noteDeleted) { newValue in
-            //                ToastView(type: .error, title: "Tab if not wanted to Delete", message: "This node is going to be deleted, \n if does not want to delete then Tab on this Alert")
-            //            }
-            
-            
-            //            Alert(title: "", message: "If You now deleted then it will never be retreated", dismissButton: Text("Delete"))
-            
                 .onAppear {
+//                    If any error then to format the storage use these 3 lines of code only
+//                    storedNotes = notes
+//                    filteredNotes = notes
+//                    saveNotes()
+                    
+                    //If all right then run these lines
                     if let data = storedNotesData,
                        let decodedNotes = try? JSONDecoder().decode([Note].self, from: data) {
                         _storedNotes.wrappedValue = decodedNotes
@@ -173,13 +149,6 @@ struct Home: View {
                     Text("Notes")
                         .font( isMacOS() ? .system(size: 33, weight: .bold) : .largeTitle.bold())
                         .frame(maxWidth: .infinity, alignment: .leading)
-                    
-                    //                    if wrongPasswordToast {
-                    //                            ToastView(type: .error, title: "Wrong Password", message: "Please Enter right password")
-                    //                    }
-                    //                    if noteDeleted {
-                    //                        ToastView(type: .error, title: "Tab if not wanted to Delete", message: "This node is going to be deleted, \n if does not want to delete then Tab on this Alert")
-                    //                    }
                     
                     
                     //Column
@@ -256,11 +225,6 @@ struct Home: View {
                 }
                 
                 Button {
-                    //                    if let index = storedNotes.firstIndex(of: note){
-                    //                        storedNotes.remove(at: index)
-                    //                        filteredNotes = storedNotes
-                    //                        saveNotes()
-                    //                    }
                     editNote = note
                     noteDeleted = true
                     isPassword = true
@@ -295,9 +259,6 @@ struct Home: View {
                             .clipShape(Circle())
                     }
                 }
-                
-                
-                
             }
             .padding(.top, 55)
         }
@@ -330,15 +291,17 @@ struct Home: View {
                     //                        .fill(color)
                         .frame(width: isMacOS() ? 20 : 25, height: isMacOS() ? 20 : 25)
                         .onTapGesture {
-                            editNote = Note(id: "", title: "", note: "", date: getSampleDate(offset: 0), cardColor: color, password: "")
+                            editNote = Note(title: "", note: "", date: getSampleDate(offset: 0), cardColor: color, password: "")
                             storedNotes.append(editNote)
-                            isNewNote.toggle()
+                            isNewNote = true
                         }
                         .sheet(isPresented: $isNewNote) {
                             NewOrEditNote(editNote: $editNote, storedNotes: $storedNotes, isEditNote: $isNewNote, rightPassword: $rightPassword)
                                 .onDisappear{
                                     filteredNotes = storedNotes
                                     saveNotes()
+                                    rightPassword = false
+                                    isEditNote = false
                                 }
                         }
                 }
@@ -395,10 +358,11 @@ struct Home: View {
         .scaleEffect(animateButton ? 1.1 : 1)
         .padding(.top, 30)
     }
+    
     func saveNotes(){
         if let encodedData = try? JSONEncoder().encode(storedNotes) {
             storedNotesData = encodedData
-            print("Encode kar k aagaya)))))")
+            print("Encode kar k aagaya and Save ho gaya")
         }
     }
 }
