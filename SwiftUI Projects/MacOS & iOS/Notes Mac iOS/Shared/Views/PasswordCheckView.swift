@@ -3,8 +3,6 @@
 //  Notes Mac iOS
 //
 //  Created by admin on 10/26/23.
-//
-//import AlertToast
 import SwiftUI
 
 struct PasswordCheckView: View {
@@ -40,6 +38,7 @@ struct PasswordCheckView: View {
     
     var body: some View {
         VStack{
+            Text("isPassword = \(String(isPassword)), isEditNote = \(String(isEditNote)), rightPassword = \(String(rightPassword)) ")
             Spacer(minLength: 2)
             if !isEditNoteCall {
                 if noteDeleted{
@@ -96,18 +95,17 @@ struct PasswordCheckView: View {
                 } else if noteDeleted{
                     if checkPassword == editNote.password{
                         rightPassword = true
-                            noteDeletedToast = true
+                        noteDeletedToast = true
                         print("checked Password and called delete")
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-                                if noteDeleted {
-                                    if let index = storedNotes.firstIndex(of: editNote){
-                                        storedNotes.remove(at: index)
-                                    }
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
+                            if noteDeleted {
+                                if let index = storedNotes.firstIndex(of: editNote){
+                                    storedNotes.remove(at: index)
                                 }
-                                rightPassword = false
-                                noteDeletedToast = false
                             }
-                        
+                            rightPassword = false
+                            noteDeletedToast = false
+                        }
                     }else {
                         print("Wrong password######")
                         wrongPassword = true
@@ -161,14 +159,16 @@ struct PasswordCheckView: View {
         //        .padding(.vertical, 100)
         .padding()
         .background(Color(editNote.cardColor))
+        
         .onAppear {
             if editNote.password == "" {
                 if isEditNoteCall {
                     isEditNote = true
                     isPassword = false
-                }else if noteDeleted{
+                } else if noteDeleted{
+                    rightPassword = true
                     noteDeletedToast = true
-                    isPassword = false
+                    print("checked Password and called delete")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                         if noteDeleted {
                             if let index = storedNotes.firstIndex(of: editNote){
@@ -178,10 +178,13 @@ struct PasswordCheckView: View {
                         rightPassword = false
                         noteDeletedToast = false
                     }
-                }
-            }else{
-                if !isEditNoteCall {
-                    
+                    if isMacOS(){
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            isPassword = false
+                        }
+                    }else{
+                        isPassword = false
+                    }
                 }
             }
         }

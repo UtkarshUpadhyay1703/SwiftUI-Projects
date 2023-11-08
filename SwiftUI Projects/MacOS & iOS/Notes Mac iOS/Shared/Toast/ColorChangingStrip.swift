@@ -6,13 +6,11 @@
 //
 
 import SwiftUI
-
-
 struct ColorChangingStrip: View {
     @State private var xOffset: CGFloat = 1.0
     @State var stripColor: Color
     @State var animationDuration: Double
-
+    
     var body: some View {
         GeometryReader { geometry in
             HStack {

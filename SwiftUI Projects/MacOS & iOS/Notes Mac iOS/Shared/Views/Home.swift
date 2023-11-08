@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-//import AlertToast
 
 struct Home: View {
     //Showing Card colors on button click
@@ -213,6 +212,9 @@ struct Home: View {
                 
                 .sheet(isPresented: $isPassword) {
                     PasswordCheckView(editNote: $editNote, isPassword: $isPassword, isEditNote: $isEditNote, isEditNoteCall: $isEditNoteCall, storedNotes: $storedNotes, wrongPassword: $wrongPasswordToast, rightPassword: $rightPassword, noteDeleted: $noteDeleted, noteDeletedToast: $noteDeletedToast)
+                        .onAppear{
+                            print("isPassword = \(String(isPassword)), isEditNote = \(String(isEditNote)), rightPassword = \(String(rightPassword)), isNewNote = \(String(isNewNote)) ")
+                        }
                         .onDisappear{
                             filteredNotes = storedNotes
                             saveNotes()
@@ -220,6 +222,7 @@ struct Home: View {
                                 filteredNotes = storedNotes
                                 saveNotes()
                                 rightPassword = false
+                                print("isPassword = \(String(isPassword)), isEditNote = \(String(isEditNote)), rightPassword = \(String(rightPassword)), isNewNote = \(String(isNewNote)) ")
                             }
                         }
                 }
@@ -271,7 +274,7 @@ struct Home: View {
     func SideBar() -> some View {
         VStack{
             if isMacOS(){
-                Text("Pocket")
+                Text("Sticky Notes")
                     .font(.title2)
                     .fontWeight(.semibold)
             }

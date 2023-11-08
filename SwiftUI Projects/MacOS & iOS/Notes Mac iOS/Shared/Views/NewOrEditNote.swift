@@ -19,7 +19,6 @@ struct NewOrEditNote: View {
     @Binding private var rightPassword: Bool
     @State private var titleRight: Bool = false
     @State private var textRight: Bool = false
-    //    @State private var isRightPassword: Bool = false
     
     init(editNote: Binding<Note>, storedNotes: Binding<[Note]>, isEditNote: Binding<Bool>, rightPassword: Binding<Bool>) {
         self._editNote = editNote
@@ -41,9 +40,6 @@ struct NewOrEditNote: View {
                 .font(isMacOS() ? .title2 : .title3)
                 .background(Color.black)
                 .cornerRadius(10)
-            //                    .toast(isPresenting: $rightPassword) {
-            //                        AlertToast(displayMode: .alert, type: .complete(Color.greenColor), title: "Right Password!!!!!")
-            //                    }
                 .onAppear {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 2){
                         rightPassword = false
@@ -84,10 +80,6 @@ struct NewOrEditNote: View {
                             titleRight = false
                         }
                     }
-                    //                        if let index = storedNotes.firstIndex(of: editNote){
-                    //                            storedNotes.remove(at: index)
-                    //                            print("Not Saved")
-                    //                        }
                 } else{
                     if let index = storedNotes.firstIndex(of: editNote) {
                         storedNotes[index].note = textFieldNote
@@ -98,7 +90,6 @@ struct NewOrEditNote: View {
                         isEditNote = false
                     }
                 }
-                //                    isPassword = false
             } label: {
                 Text("Save")
                     .font(.title2.bold())
@@ -110,9 +101,6 @@ struct NewOrEditNote: View {
             Spacer()
             
         }
-        //        .toast(isPresenting: $titleRight, alert: {
-        //            AlertToast(displayMode: .banner(.slide), type: .error(Color.redColor), title: "Enter Title: ")
-        //        })
         .overlay(
             ZStack{
                 VStack{
@@ -136,9 +124,6 @@ struct NewOrEditNote: View {
                 }
             }
         )
-        //        .toast(isPresenting: $textRight, alert: {
-        //            AlertToast(displayMode: .banner(.slide), type: .error(Color.redColor), title: "Enter Text: ")
-        //        })
         .padding()
         .background(Color(editNote.cardColor))
 #if os(macOS)
@@ -149,12 +134,6 @@ struct NewOrEditNote: View {
             titleFieldNote = editNote.title
             editDate = editNote.date
             passwordNoteSave = editNote.password
-            //            if editNote.password == ""{
-            //                isPasswordCorrect = true
-            //            }
-            //            if let val = rightPassword{
-            //            isRightPassword = val
-            //        }
         }
     }
 }
