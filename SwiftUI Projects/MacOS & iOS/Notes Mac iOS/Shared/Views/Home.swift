@@ -25,8 +25,44 @@ struct Home: View {
     @State private var rightPassword: Bool = false
     @State private var noteDeleted: Bool = false
     @State private var noteDeletedToast: Bool = false
+    @State private var sortingAlgo: [String] = ["Date Of Creation", "Title", "Date Of Reminder", "Color"]
+    @State private var sortedValue: String = "Date Of Creation"
+    @State private var isAcending: Bool = true
     
     @State private var editNote: Note = Note(title: "",note: "", date: getSampleDate(offset: 1), cardColor: "Color-Orange", password: "")
+    
+    fileprivate func sortNotesFunction() {
+        if sortedValue == "Date Of Creation" {
+            if isAcending{
+                filteredNotes = storedNotes
+            }else {
+                filteredNotes = []
+                var index = storedNotes.count - 1
+                while(index >= 0) {
+                    filteredNotes.append(storedNotes[index])
+                    index-=1
+                }
+            }
+        } else if sortedValue == "Title" {
+            if isAcending{
+                filteredNotes.sort { $0.title < $1.title }
+            }else{
+                filteredNotes.sort { $0.title > $1.title }
+            }
+        } else if sortedValue == "Date Of Reminder" {
+            if isAcending{
+                filteredNotes.sort { $0.date < $1.date }
+            }else{
+                filteredNotes.sort { $0.date > $1.date }
+            }
+        } else {
+            if isAcending{
+                filteredNotes.sort { $0.cardColor < $1.cardColor }
+            }else{
+                filteredNotes.sort { $0.cardColor > $1.cardColor }
+            }
+        }
+    }
     
     var body: some View {
         HStack(spacing: 0){
@@ -42,7 +78,9 @@ struct Home: View {
             }
             //Main Content
             MainContent()
-            
+                .onChange(of: sortedValue) { newValue in
+                    sortNotesFunction()
+                }
                 .overlay(
                     ZStack{
                         VStack{
@@ -73,10 +111,10 @@ struct Home: View {
                 )
             
                 .onAppear {
-//                    If any error then to format the storage use these 3 lines of code only
-//                    storedNotes = notes
-//                    filteredNotes = notes
-//                    saveNotes()
+                    //                    If any error then to format the storage use these 3 lines of code only
+                    //                                        storedNotes = notes
+                    //                                        filteredNotes = notes
+                    //                                        saveNotes()
                     
                     //If all right then run these lines
                     if let data = storedNotesData,
@@ -91,6 +129,9 @@ struct Home: View {
                         filteredNotes = notes
                         saveNotes()
                     }
+                    
+                    //Setting up the notification
+                    NotificationManager.instance.requestAuthorization()
                 }
             
         }
@@ -122,13 +163,11 @@ struct Home: View {
                             filteredNotes = storedNotes
                         }
                         else {
-                            
                             filteredNotes = storedNotes.filter { note in
                                 // Use the range(of:options:) method with the .caseInsensitive option
                                 return note.title.range(of: searchField, options: .caseInsensitive) != nil
                             }
                         }
-                        
                     }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -142,6 +181,8 @@ struct Home: View {
                     .offset(y: 6),
                 alignment: .bottom
             )
+            SortOrder()
+            
             
             ScrollView(.vertical, showsIndicators: false){
                 VStack(spacing: 15){
@@ -157,6 +198,7 @@ struct Home: View {
                         ForEach(filteredNotes){note in
                             //Card View
                             CardView(note: note)
+                            
                         }
                     }
                     .padding(.top, 30)
@@ -168,6 +210,62 @@ struct Home: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
         .padding(.top, isMacOS() ? 40 : 15)
         .padding(.horizontal, 25)
+        
+    }
+    
+    @ViewBuilder
+    func SortOrder() -> some View {
+        if isMacOS(){
+            Picker(selection: $sortedValue) {
+                ForEach(sortingAlgo.indices){ index in
+                    Text(sortingAlgo[index])
+                        .foregroundColor(Color.purple)
+                        .tag(sortingAlgo[index])
+                }
+            } label: {
+                Text("Sort")
+            }
+            .background(Color.gray)
+            .cornerRadius(10)
+            .pickerStyle(.segmented)
+            
+        } else{
+            HStack{
+                Text("Soring Order: ")
+                    .font(.title3.bold())
+                    .padding(5)
+                    .background(Color.purple)
+                    .cornerRadius(5)
+                Picker(selection: $sortedValue) {
+                    ForEach(sortingAlgo.indices){ index in
+                        Text(sortingAlgo[index])
+                        //                        .bold()
+                        //                        .padding()
+                            .font(.title)
+                            .foregroundColor(Color.purple)
+                            .background(Color.pink)
+                            .tag(sortingAlgo[index])
+                    }
+                } label: {
+                    Text("Soring Order:")
+                    
+                }
+                .pickerStyle(.automatic)
+                
+                Image(systemName: isAcending ? "arrow.down" : "arrow.up")
+                    .padding(5)
+                    .background(Color.purple)
+                    .cornerRadius(5)
+                    .onTapGesture {
+                        isAcending.toggle()
+                        sortNotesFunction()
+                    }
+            }
+            //        .frame(maxWidth: .infinity, alignment: .leading)
+            .padding(7)
+            .background(Color.gray)
+            .cornerRadius(10)
+        }
     }
     
     @ViewBuilder

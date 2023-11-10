@@ -47,12 +47,15 @@ struct NewOrEditNote: View {
                 }
             HStack{
                 Spacer()
-                DatePicker("  Date: ", selection: $editDate, displayedComponents: .date)
-                    .frame(width: 200, height: 50)
-                    .foregroundColor(.black)
-                    .background(Color(editNote.cardColor))
-                    .border(.gray, width: 5)
-                    .cornerRadius(5)
+                HStack{
+                    DatePicker("  Date: ", selection: $editDate, displayedComponents: .date)
+                    DatePicker("  Time: ", selection: $editDate, displayedComponents: .hourAndMinute)
+                }
+                .frame(width: 200, height: 50)
+                .foregroundColor(.black)
+                .background(Color(editNote.cardColor))
+                .border(.gray, width: 5)
+                .cornerRadius(5)
                 Spacer()
                 
             }
@@ -86,6 +89,9 @@ struct NewOrEditNote: View {
                         storedNotes[index].title = titleFieldNote
                         storedNotes[index].date = editDate
                         storedNotes[index].password = passwordNoteSave
+                        //Setup the user notification
+                        NotificationManager.instance.cancleSpecificLocalNotification(identifier: editNote.id)
+                        NotificationManager.instance.scheduledNotificationOnSpecificDate(identifier: storedNotes[index].id, title: titleFieldNote, subTitle: textFieldNote, date: editDate)
                         print("Ho gaya Disappear: \(passwordNoteSave)")
                         isEditNote = false
                     }

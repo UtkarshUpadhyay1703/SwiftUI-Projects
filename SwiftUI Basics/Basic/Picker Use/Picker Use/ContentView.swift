@@ -41,7 +41,7 @@ struct ContentView: View {
             Picker(selection: $filterValue, label: Text("Picker"), content: {
                 ForEach(filter.indices){ index in
                     Text(filter[index])
-                        .foregroundColor(.red)
+//                        .foregroundColor(.red)
                         .tag(filter[index])
                 }
             })

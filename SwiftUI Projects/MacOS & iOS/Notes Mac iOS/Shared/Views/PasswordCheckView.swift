@@ -38,7 +38,7 @@ struct PasswordCheckView: View {
     
     var body: some View {
         VStack{
-            Text("isPassword = \(String(isPassword)), isEditNote = \(String(isEditNote)), rightPassword = \(String(rightPassword)) ")
+//            Text("isPassword = \(String(isPassword)), isEditNote = \(String(isEditNote)), rightPassword = \(String(rightPassword)) ")
             Spacer(minLength: 2)
             if !isEditNoteCall {
                 if noteDeleted{
@@ -99,6 +99,7 @@ struct PasswordCheckView: View {
                         print("checked Password and called delete")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                             if noteDeleted {
+                                NotificationManager.instance.cancleSpecificLocalNotification(identifier: editNote.id)
                                 if let index = storedNotes.firstIndex(of: editNote){
                                     storedNotes.remove(at: index)
                                 }
@@ -171,6 +172,7 @@ struct PasswordCheckView: View {
                     print("checked Password and called delete")
                     DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                         if noteDeleted {
+                            NotificationManager.instance.cancleSpecificLocalNotification(identifier: editNote.id)
                             if let index = storedNotes.firstIndex(of: editNote){
                                 storedNotes.remove(at: index)
                             }
