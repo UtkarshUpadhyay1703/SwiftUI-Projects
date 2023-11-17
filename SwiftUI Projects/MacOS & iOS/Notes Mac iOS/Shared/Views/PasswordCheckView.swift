@@ -96,6 +96,7 @@ struct PasswordCheckView: View {
                     if checkPassword == editNote.password{
                         rightPassword = true
                         noteDeletedToast = true
+                            
                         print("checked Password and called delete")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
                             if noteDeleted {

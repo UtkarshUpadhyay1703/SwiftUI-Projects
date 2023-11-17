@@ -47,15 +47,28 @@ struct NewOrEditNote: View {
                 }
             HStack{
                 Spacer()
+                if isMacOS() {
                 HStack{
-                    DatePicker("  Date: ", selection: $editDate, displayedComponents: .date)
-                    DatePicker("  Time: ", selection: $editDate, displayedComponents: .hourAndMinute)
+                    DatePicker(" Date: ", selection: $editDate, displayedComponents: .date)
+                    DatePicker(" Time: ", selection: $editDate, displayedComponents: .hourAndMinute)
                 }
-                .frame(width: 200, height: 50)
+                .padding()
+                .frame(width: .infinity, height: 50)
                 .foregroundColor(.black)
                 .background(Color(editNote.cardColor))
                 .border(.gray, width: 5)
                 .cornerRadius(5)
+                }else{
+                    HStack{
+                    DatePicker(" Date: ", selection: $editDate, displayedComponents: .date)
+                    DatePicker(" Time: ", selection: $editDate, displayedComponents: .hourAndMinute)
+                    }
+                    .frame(width: .infinity, height: 50)
+                    .foregroundColor(.black)
+                    .background(Color(editNote.cardColor))
+                    .border(.gray, width: 5)
+                    .cornerRadius(5)
+                }
                 Spacer()
                 
             }

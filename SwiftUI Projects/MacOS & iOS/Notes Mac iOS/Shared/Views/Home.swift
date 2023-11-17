@@ -136,6 +136,7 @@ struct Home: View {
             
         }
         
+        
 #if os(macOS)
         .ignoresSafeArea()
 #endif
@@ -181,6 +182,7 @@ struct Home: View {
                     .offset(y: 6),
                 alignment: .bottom
             )
+            Spacer()
             SortOrder()
             
             
@@ -223,12 +225,25 @@ struct Home: View {
                         .tag(sortingAlgo[index])
                 }
             } label: {
-                Text("Sort")
+                HStack{
+                    Text("  Soring Order: ")
+                        .font(.title3.bold())
+                        .padding(5)
+                        .background(Color.purple)
+                        .cornerRadius(5)
+                    Image(systemName: isAcending ? "arrow.down" : "arrow.up")
+                        .padding(5)
+                        .background(Color.purple)
+                        .cornerRadius(5)
+                        .onTapGesture {
+                            isAcending.toggle()
+                            sortNotesFunction()
+                        }
+                }
             }
             .background(Color.gray)
             .cornerRadius(10)
             .pickerStyle(.segmented)
-            
         } else{
             HStack{
                 Text("Soring Order: ")
@@ -276,15 +291,27 @@ struct Home: View {
                 .bold()
                 .lineLimit(1)
                 .frame(maxWidth: .infinity, alignment: .leading)
+            
             Text(note.note)
                 .font(isMacOS() ? .title3 : .body)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
             
-            HStack{
+            //            Spacer()
+            if isMacOS(){
+                Spacer(minLength: 0)
+                
                 Text(note.date, style: .date)
                     .foregroundColor(.black)
                     .opacity(0.8)
+            }
+            
+            HStack{
+                if !isMacOS(){
+                    Text(note.date, style: .date)
+                        .foregroundColor(.black)
+                        .opacity(0.8)
+                }
                 
                 Spacer(minLength: 0)
                 //Edit Button
@@ -361,7 +388,7 @@ struct Home: View {
                     }
                 }
             }
-            .padding(.top, 55)
+            .padding(.top, isMacOS() ? 5 : 55)
         }
         .padding()
         .background(Color(note.cardColor))
@@ -471,6 +498,7 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+            .preferredColorScheme(.dark)
     }
 }
 
