@@ -25,7 +25,7 @@ func getSampleDate(offset: Int) -> Date {
 }
 
 var notes: [Note] = [
-    Note(title: "India" ,note: "India’s third lunar mission, Chandrayaan – 3 made history on August 23, 2023, by successfully achieving a soft landing on the south pole of the moon. ", date: getSampleDate(offset: 1), cardColor: "Color-Red", password: "123"),
+    Note(title: "India's Pride" ,note: "India’s third lunar mission, Chandrayaan – 3 made history on August 23, 2023, by successfully achieving a soft landing on the south pole of the moon. ", date: getSampleDate(offset: 1), cardColor: "Color-Red", password: "123"),
     Note(title: "US and China" ,note: "With this, India became the first nation to land on the moon’s south pole and the fourth (after Russia, the US and China) to land successfully on Earth’s only natural satellite.", date: getSampleDate(offset: -11), cardColor: "Color-Green", password: ""),
     Note(title: "Chandrayaan III" ,note: "In this article, you will learn all you need to know about the Chandrayaan III mission for the UPSC exam. ", date: getSampleDate(offset: 5), cardColor: "Color-Yellow", password: ""),
     Note(title: "India" ,note: "This topic is important for the science and technology segment of the UPSC syllabus.", date: getSampleDate(offset: -5), cardColor: "Color-Blue", password: ""),

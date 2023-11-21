@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8443C7A62B0B3C1E002AF1A1 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C744AC2B07A9EC00C54D77 /* WidgetKit.framework */; platformFilter = maccatalyst; };
+		8443C7A72B0B3C1E002AF1A1 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C744AE2B07A9EC00C54D77 /* SwiftUI.framework */; platformFilter = maccatalyst; };
+		8443C7AA2B0B3C1E002AF1A1 /* IOSWidged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8443C7A92B0B3C1E002AF1A1 /* IOSWidged.swift */; };
+		8443C7AC2B0B3C21002AF1A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8443C7AB2B0B3C21002AF1A1 /* Assets.xcassets */; };
+		8443C7B02B0B3C21002AF1A1 /* IOSWidgedExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 8443C7A52B0B3C1E002AF1A1 /* IOSWidgedExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		8443C7B72B0B3FFB002AF1A1 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4C22AE148D0008B7D27 /* Note.swift */; };
+		8443C7B82B0B3FFB002AF1A1 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F4C22AE148D0008B7D27 /* Note.swift */; };
 		8476F4AA2AE106C3008B7D27 /* Notes_Mac_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F49A2AE106C0008B7D27 /* Notes_Mac_iOSApp.swift */; };
 		8476F4AB2AE106C3008B7D27 /* Notes_Mac_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F49A2AE106C0008B7D27 /* Notes_Mac_iOSApp.swift */; };
 		8476F4AC2AE106C3008B7D27 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8476F49B2AE106C0008B7D27 /* ContentView.swift */; };
@@ -22,6 +29,13 @@
 		847F94DA2AFE0A4A001E5C6C /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F94D92AFE0A4A001E5C6C /* NotificationManager.swift */; };
 		847F94DB2AFE0A4A001E5C6C /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F94D92AFE0A4A001E5C6C /* NotificationManager.swift */; };
 		848EDC102AE263FD00E41F4F /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848EDC0F2AE263FC00E41F4F /* BlurView.swift */; };
+		84C744AD2B07A9EC00C54D77 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C744AC2B07A9EC00C54D77 /* WidgetKit.framework */; platformFilter = maccatalyst; };
+		84C744AF2B07A9EC00C54D77 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C744AE2B07A9EC00C54D77 /* SwiftUI.framework */; platformFilter = maccatalyst; };
+		84C744B22B07A9EC00C54D77 /* MacWidged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C744B12B07A9EC00C54D77 /* MacWidged.swift */; };
+		84C744B52B07A9EF00C54D77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C744B42B07A9EF00C54D77 /* Assets.xcassets */; };
+		84C744B82B07A9EF00C54D77 /* MacWidged.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 84C744B32B07A9EC00C54D77 /* MacWidged.intentdefinition */; };
+		84C744B92B07A9EF00C54D77 /* MacWidged.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 84C744B32B07A9EC00C54D77 /* MacWidged.intentdefinition */; };
+		84C744BC2B07A9EF00C54D77 /* MacWidgedExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 84C744AB2B07A9EC00C54D77 /* MacWidgedExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		84D073162AEA5A65005857B7 /* NewOrEditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073152AEA5A65005857B7 /* NewOrEditNote.swift */; };
 		84D073172AEA5A65005857B7 /* NewOrEditNote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073152AEA5A65005857B7 /* NewOrEditNote.swift */; };
 		84D073192AEA7D3F005857B7 /* PasswordCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D073182AEA7D3F005857B7 /* PasswordCheckView.swift */; };
@@ -34,7 +48,54 @@
 		84EC61F22AF4FD9E003F19EF /* ColorChangingStrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EC61F02AF4FD9E003F19EF /* ColorChangingStrip.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8443C7AE2B0B3C21002AF1A1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8476F4952AE106C0008B7D27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8443C7A42B0B3C1E002AF1A1;
+			remoteInfo = IOSWidgedExtension;
+		};
+		84C744BA2B07A9EF00C54D77 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8476F4952AE106C0008B7D27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84C744AA2B07A9EC00C54D77;
+			remoteInfo = MacWidgedExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8443C7B42B0B3C21002AF1A1 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				8443C7B02B0B3C21002AF1A1 /* IOSWidgedExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84C744BD2B07A9EF00C54D77 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				84C744BC2B07A9EF00C54D77 /* MacWidgedExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		8443C7A52B0B3C1E002AF1A1 /* IOSWidgedExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IOSWidgedExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		8443C7A92B0B3C1E002AF1A1 /* IOSWidged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSWidged.swift; sourceTree = "<group>"; };
+		8443C7AB2B0B3C21002AF1A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8443C7AD2B0B3C21002AF1A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8443C7BB2B0B8F2C002AF1A1 /* IOSWidgedExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOSWidgedExtension.entitlements; sourceTree = "<group>"; };
 		8476F49A2AE106C0008B7D27 /* Notes_Mac_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notes_Mac_iOSApp.swift; sourceTree = "<group>"; };
 		8476F49B2AE106C0008B7D27 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		8476F49C2AE106C3008B7D27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -46,14 +107,32 @@
 		8476F4C22AE148D0008B7D27 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		847F94D92AFE0A4A001E5C6C /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		848EDC0F2AE263FC00E41F4F /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		84C744AB2B07A9EC00C54D77 /* MacWidgedExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MacWidgedExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		84C744AC2B07A9EC00C54D77 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		84C744AE2B07A9EC00C54D77 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		84C744B12B07A9EC00C54D77 /* MacWidged.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacWidged.swift; sourceTree = "<group>"; };
+		84C744B32B07A9EC00C54D77 /* MacWidged.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = MacWidged.intentdefinition; sourceTree = "<group>"; };
+		84C744B42B07A9EF00C54D77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84C744B62B07A9EF00C54D77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84C744B72B07A9EF00C54D77 /* MacWidged.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacWidged.entitlements; sourceTree = "<group>"; };
 		84D073152AEA5A65005857B7 /* NewOrEditNote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrEditNote.swift; sourceTree = "<group>"; };
 		84D073182AEA7D3F005857B7 /* PasswordCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordCheckView.swift; sourceTree = "<group>"; };
+		84D888B82B0B92C2007A64F6 /* Notes Mac iOS (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Notes Mac iOS (iOS).entitlements"; sourceTree = "<group>"; };
 		84EC61E82AF4CAFC003F19EF /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
 		84EC61EA2AF4CB25003F19EF /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		84EC61F02AF4FD9E003F19EF /* ColorChangingStrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorChangingStrip.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		8443C7A22B0B3C1E002AF1A1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8443C7A72B0B3C1E002AF1A1 /* SwiftUI.framework in Frameworks */,
+				8443C7A62B0B3C1E002AF1A1 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8476F49E2AE106C3008B7D27 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -68,14 +147,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84C744A82B07A9EC00C54D77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C744AF2B07A9EC00C54D77 /* SwiftUI.framework in Frameworks */,
+				84C744AD2B07A9EC00C54D77 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8443C7A82B0B3C1E002AF1A1 /* IOSWidged */ = {
+			isa = PBXGroup;
+			children = (
+				8443C7A92B0B3C1E002AF1A1 /* IOSWidged.swift */,
+				8443C7AB2B0B3C21002AF1A1 /* Assets.xcassets */,
+				8443C7AD2B0B3C21002AF1A1 /* Info.plist */,
+			);
+			path = IOSWidged;
+			sourceTree = "<group>";
+		};
 		8476F4942AE106C0008B7D27 = {
 			isa = PBXGroup;
 			children = (
+				84D888B82B0B92C2007A64F6 /* Notes Mac iOS (iOS).entitlements */,
+				8443C7BB2B0B8F2C002AF1A1 /* IOSWidgedExtension.entitlements */,
 				8476F4992AE106C0008B7D27 /* Shared */,
 				8476F4A82AE106C3008B7D27 /* macOS */,
+				84C744B02B07A9EC00C54D77 /* MacWidged */,
+				8443C7A82B0B3C1E002AF1A1 /* IOSWidged */,
 				8476F4A22AE106C3008B7D27 /* Products */,
 				847768102AEBA50A0094D83A /* Frameworks */,
 			);
@@ -99,6 +201,8 @@
 			children = (
 				8476F4A12AE106C3008B7D27 /* Notes Mac iOS.app */,
 				8476F4A72AE106C3008B7D27 /* Notes Mac iOS.app */,
+				84C744AB2B07A9EC00C54D77 /* MacWidgedExtension.appex */,
+				8443C7A52B0B3C1E002AF1A1 /* IOSWidgedExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,8 +247,22 @@
 		847768102AEBA50A0094D83A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				84C744AC2B07A9EC00C54D77 /* WidgetKit.framework */,
+				84C744AE2B07A9EC00C54D77 /* SwiftUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		84C744B02B07A9EC00C54D77 /* MacWidged */ = {
+			isa = PBXGroup;
+			children = (
+				84C744B12B07A9EC00C54D77 /* MacWidged.swift */,
+				84C744B32B07A9EC00C54D77 /* MacWidged.intentdefinition */,
+				84C744B42B07A9EF00C54D77 /* Assets.xcassets */,
+				84C744B62B07A9EF00C54D77 /* Info.plist */,
+				84C744B72B07A9EF00C54D77 /* MacWidged.entitlements */,
+			);
+			path = MacWidged;
 			sourceTree = "<group>";
 		};
 		84EC61E72AF4CACB003F19EF /* Toast */ = {
@@ -160,6 +278,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		8443C7A42B0B3C1E002AF1A1 /* IOSWidgedExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8443C7B12B0B3C21002AF1A1 /* Build configuration list for PBXNativeTarget "IOSWidgedExtension" */;
+			buildPhases = (
+				8443C7A12B0B3C1E002AF1A1 /* Sources */,
+				8443C7A22B0B3C1E002AF1A1 /* Frameworks */,
+				8443C7A32B0B3C1E002AF1A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IOSWidgedExtension;
+			productName = IOSWidgedExtension;
+			productReference = 8443C7A52B0B3C1E002AF1A1 /* IOSWidgedExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		8476F4A02AE106C3008B7D27 /* Notes Mac iOS (iOS) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8476F4B22AE106C3008B7D27 /* Build configuration list for PBXNativeTarget "Notes Mac iOS (iOS)" */;
@@ -167,10 +302,12 @@
 				8476F49D2AE106C3008B7D27 /* Sources */,
 				8476F49E2AE106C3008B7D27 /* Frameworks */,
 				8476F49F2AE106C3008B7D27 /* Resources */,
+				8443C7B42B0B3C21002AF1A1 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				8443C7AF2B0B3C21002AF1A1 /* PBXTargetDependency */,
 			);
 			name = "Notes Mac iOS (iOS)";
 			packageProductDependencies = (
@@ -186,10 +323,12 @@
 				8476F4A32AE106C3008B7D27 /* Sources */,
 				8476F4A42AE106C3008B7D27 /* Frameworks */,
 				8476F4A52AE106C3008B7D27 /* Resources */,
+				84C744BD2B07A9EF00C54D77 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				84C744BB2B07A9EF00C54D77 /* PBXTargetDependency */,
 			);
 			name = "Notes Mac iOS (macOS)";
 			packageProductDependencies = (
@@ -197,6 +336,23 @@
 			productName = "Notes Mac iOS (macOS)";
 			productReference = 8476F4A72AE106C3008B7D27 /* Notes Mac iOS.app */;
 			productType = "com.apple.product-type.application";
+		};
+		84C744AA2B07A9EC00C54D77 /* MacWidgedExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84C744C02B07A9EF00C54D77 /* Build configuration list for PBXNativeTarget "MacWidgedExtension" */;
+			buildPhases = (
+				84C744A72B07A9EC00C54D77 /* Sources */,
+				84C744A82B07A9EC00C54D77 /* Frameworks */,
+				84C744A92B07A9EC00C54D77 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacWidgedExtension;
+			productName = MacWidgedExtension;
+			productReference = 84C744AB2B07A9EC00C54D77 /* MacWidgedExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -208,10 +364,16 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					8443C7A42B0B3C1E002AF1A1 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
 					8476F4A02AE106C3008B7D27 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					8476F4A62AE106C3008B7D27 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					84C744AA2B07A9EC00C54D77 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
 				};
@@ -233,11 +395,21 @@
 			targets = (
 				8476F4A02AE106C3008B7D27 /* Notes Mac iOS (iOS) */,
 				8476F4A62AE106C3008B7D27 /* Notes Mac iOS (macOS) */,
+				84C744AA2B07A9EC00C54D77 /* MacWidgedExtension */,
+				8443C7A42B0B3C1E002AF1A1 /* IOSWidgedExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		8443C7A32B0B3C1E002AF1A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8443C7AC2B0B3C21002AF1A1 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8476F49F2AE106C3008B7D27 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -254,9 +426,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84C744A92B07A9EC00C54D77 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C744B52B07A9EF00C54D77 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		8443C7A12B0B3C1E002AF1A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8443C7AA2B0B3C1E002AF1A1 /* IOSWidged.swift in Sources */,
+				8443C7B72B0B3FFB002AF1A1 /* Note.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8476F49D2AE106C3008B7D27 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -288,15 +477,100 @@
 				84D0731A2AEA7D3F005857B7 /* PasswordCheckView.swift in Sources */,
 				8476F4AB2AE106C3008B7D27 /* Notes_Mac_iOSApp.swift in Sources */,
 				8476F4C12AE11ADE008B7D27 /* Extensions.swift in Sources */,
+				84C744B92B07A9EF00C54D77 /* MacWidged.intentdefinition in Sources */,
 				84EC61ED2AF4CB3E003F19EF /* ToastView.swift in Sources */,
 				84EC61EC2AF4CB25003F19EF /* Extension.swift in Sources */,
 				84EC61F22AF4FD9E003F19EF /* ColorChangingStrip.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		84C744A72B07A9EC00C54D77 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C744B82B07A9EF00C54D77 /* MacWidged.intentdefinition in Sources */,
+				84C744B22B07A9EC00C54D77 /* MacWidged.swift in Sources */,
+				8443C7B82B0B3FFB002AF1A1 /* Note.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		8443C7AF2B0B3C21002AF1A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8443C7A42B0B3C1E002AF1A1 /* IOSWidgedExtension */;
+			targetProxy = 8443C7AE2B0B3C21002AF1A1 /* PBXContainerItemProxy */;
+		};
+		84C744BB2B07A9EF00C54D77 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84C744AA2B07A9EC00C54D77 /* MacWidgedExtension */;
+			targetProxy = 84C744BA2B07A9EF00C54D77 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		8443C7B22B0B3C21002AF1A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = IOSWidgedExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22JGD274N4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IOSWidged/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IOSWidged;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Notes-Mac-iOS.IOSWidged";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8443C7B32B0B3C21002AF1A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = IOSWidgedExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22JGD274N4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = IOSWidged/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = IOSWidged;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Notes-Mac-iOS.IOSWidged";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		8476F4B02AE106C3008B7D27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -411,10 +685,13 @@
 		8476F4B32AE106C3008B7D27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Notes Mac iOS (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22JGD274N4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -440,10 +717,13 @@
 		8476F4B42AE106C3008B7D27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Notes Mac iOS (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22JGD274N4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -470,12 +750,14 @@
 		8476F4B62AE106C3008B7D27 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22JGD274N4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -496,12 +778,14 @@
 		8476F4B72AE106C3008B7D27 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22JGD274N4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -519,9 +803,78 @@
 			};
 			name = Release;
 		};
+		84C744BE2B07A9EF00C54D77 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MacWidged/MacWidged.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22JGD274N4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacWidged/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MacWidged;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Notes-Mac-iOS.MacWidged";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		84C744BF2B07A9EF00C54D77 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = MacWidged/MacWidged.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 22JGD274N4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MacWidged/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MacWidged;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.faronics.Notes-Mac-iOS.MacWidged";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		8443C7B12B0B3C21002AF1A1 /* Build configuration list for PBXNativeTarget "IOSWidgedExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8443C7B22B0B3C21002AF1A1 /* Debug */,
+				8443C7B32B0B3C21002AF1A1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8476F4982AE106C0008B7D27 /* Build configuration list for PBXProject "Notes Mac iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -545,6 +898,15 @@
 			buildConfigurations = (
 				8476F4B62AE106C3008B7D27 /* Debug */,
 				8476F4B72AE106C3008B7D27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84C744C02B07A9EF00C54D77 /* Build configuration list for PBXNativeTarget "MacWidgedExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84C744BE2B07A9EF00C54D77 /* Debug */,
+				84C744BF2B07A9EF00C54D77 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

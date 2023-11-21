@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WidgetKit
 
 struct Home: View {
     //Showing Card colors on button click
@@ -165,7 +166,7 @@ struct Home: View {
                         }
                         else {
                             filteredNotes = storedNotes.filter { note in
-                                // Use the range(of:options:) method with the .caseInsensitive option
+                                
                                 return note.title.range(of: searchField, options: .caseInsensitive) != nil
                             }
                         }
@@ -492,6 +493,7 @@ struct Home: View {
             storedNotesData = encodedData
             print("Encode kar k aagaya and Save ho gaya")
         }
+        WidgetCenter.shared.reloadAllTimelines()
     }
 }
 
