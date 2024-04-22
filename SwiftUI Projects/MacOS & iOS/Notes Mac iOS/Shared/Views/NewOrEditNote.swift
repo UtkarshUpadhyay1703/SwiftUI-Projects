@@ -60,10 +60,11 @@ struct NewOrEditNote: View {
                     .cornerRadius(5)
                 }else {
                     HStack{
-                        DatePicker(" Date: ", selection: $editDate, displayedComponents: .date)
+                        DatePicker("Date: ", selection: $editDate, displayedComponents: .date)
                         DatePicker(" Time: ", selection: $editDate, displayedComponents: .hourAndMinute)
                     }
                     .frame(width: .infinity, height: 50)
+                    .padding(5)
                     .foregroundColor(.black)
                     .background(Color(editNote.cardColor))
                     .border(.gray, width: 5)

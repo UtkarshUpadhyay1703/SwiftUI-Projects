@@ -24,31 +24,31 @@ class NotificationManager{
     }
     
     func scheduledNotificationOnSpecificDate(identifier: String, title: String, subTitle: String, date: Date){
-        let content = UNMutableNotificationContent()
-        content.title = title
-        content.subtitle = subTitle
-        content.sound = .default
-        content.badge = 1
-        
-        var dateComponent: DateComponents{
-            let calendar = Calendar.current
-            return calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
-        }
-        
-        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: true)
-        
-        let request = UNNotificationRequest(
-            identifier: identifier,
-            content: content,
-            trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error{
-                print("Error in showing User Notifications", error)
-            }else {
-                print("Successfully scheduled the user Notification")
-            }
-        }
+//        let content = UNMutableNotificationContent()
+//        content.title = title
+//        content.subtitle = subTitle
+//        content.sound = .default
+//        content.badge = 1
+//
+//        var dateComponent: DateComponents{
+//            let calendar = Calendar.current
+//            return calendar.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+//        }
+//
+//        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponent, repeats: true)
+//
+//        let request = UNNotificationRequest(
+//            identifier: identifier,
+//            content: content,
+//            trigger: trigger)
+//
+//        UNUserNotificationCenter.current().add(request) { error in
+//            if let error = error{
+//                print("Error in showing User Notifications", error)
+//            }else {
+//                print("Successfully scheduled the user Notification")
+//            }
+//        }
     }
     
     func cancleSpecificLocalNotification(identifier: String){

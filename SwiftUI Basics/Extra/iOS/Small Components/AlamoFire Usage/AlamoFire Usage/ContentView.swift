@@ -14,7 +14,7 @@ struct ContentView: View {
         
         AF.request("https://jsonplaceholder.typicode.com/todos").responseJSON { response in
 //            print("Response = \(response.request)")
-            print("Response = \(response.result)")
+            print("Response= \(response.result)")
 //            print("Response = \(response.response)")
         }
     }
