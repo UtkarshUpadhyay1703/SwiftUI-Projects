@@ -11,36 +11,28 @@ struct NoteView: View {
     @State private var newNote: String = ""
     @Binding var notes: [String]
     let selectedIndex: Int
+    @FocusState private var isFocused:Bool
     
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
         VStack {
-        TextEditor(text: $newNote)
-                .frame(width: 350, height: 700, alignment: .center)
-                .padding()
-                .colorMultiply(Color("ForegroundBackgroundColor"))
-            
-            Spacer()
-            
-            Button {
-                notes.insert(newNote, at: 0)
-                dismiss()
-            } label: {
-                Text("Save")
-                    .font(.headline)
+            GeometryReader { geometry in
+                TextEditor(text: $newNote)
+                    .frame(width: geometry.size.width * 0.92, height: geometry.size.height * 0.9, alignment: .center)
                     .padding()
-                    .background(.secondary)
-                    .cornerRadius(10)
+                    .colorMultiply(Color("ForegroundBackgroundColor"))
             }
-            .foregroundColor(.primary)
         }
-        .navigationBarBackButtonHidden(true)
         .onAppear() {
+            isFocused = true
             if (selectedIndex >= 0) {
                 newNote = notes[selectedIndex]
                 notes.remove(at: selectedIndex)
             }
+        }
+        .onDisappear() {
+            notes.insert(newNote, at: 0)
         }
     }
 }

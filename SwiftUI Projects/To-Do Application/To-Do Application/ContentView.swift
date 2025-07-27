@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var notes: [String] = ["aa", "kjhgfdcx", "jhtyretyui", "fdghjgfgf", "hewgo;ihgiwehrghwnrhigwhnr;otho;wthrhuhwurgwiylrgjnfqwrohfow;bgruf;q;gbgqrhuegqhb.bfjqebrquh"]
+    @StateObject private var viewModel = HandelOperations()
     
     var body: some View {
         NavigationStack {
@@ -18,19 +18,20 @@ struct ContentView: View {
                 VStack {
                     List {
                         Section {
-                            ForEach(notes.indices, id: \.self) { index in
+                            ForEach(viewModel.toDoList.indices, id: \.self) { index in
                                 NavigationLink {
-                                    NoteView(notes: $notes, selectedIndex: index)
+                                    NoteView(notes: $viewModel.toDoList, selectedIndex: index)
                                 } label: {
-                                    Text(notes[index])
+                                    Text(viewModel.toDoList[index])
+                                        .lineLimit(1)
                                 }
                                 .shadow(radius: 5, x: 5, y: 5)
                             }
                             .onDelete { indexSet in
-                                notes.remove(atOffsets: indexSet)
+                                viewModel.toDoList.remove(atOffsets: indexSet)
                             }
                             .onMove { (indices, newOffset) in
-                                notes.move(fromOffsets: indices, toOffset: newOffset)
+                                viewModel.toDoList.move(fromOffsets: indices, toOffset: newOffset)
                             }
                         }
                     }
@@ -46,7 +47,7 @@ struct ContentView: View {
                 
                 ToolbarItem(placement: .topBarLeading, content: {
                     NavigationLink {
-                        NoteView(notes: $notes, selectedIndex: -1)
+                        NoteView(notes: $viewModel.toDoList, selectedIndex: -1)
                     } label: {
                         Image(systemName: "plus")
                             .font(.title2)
