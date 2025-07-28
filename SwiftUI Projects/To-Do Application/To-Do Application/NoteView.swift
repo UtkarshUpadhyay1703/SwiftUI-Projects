@@ -32,6 +32,7 @@ struct NoteView: View {
             }
         }
         .onDisappear() {
+            if newNote.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty { return }
             notes.insert(newNote, at: 0)
         }
     }

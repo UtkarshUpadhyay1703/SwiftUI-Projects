@@ -34,6 +34,12 @@ struct ContentView: View {
                                 viewModel.toDoList.move(fromOffsets: indices, toOffset: newOffset)
                             }
                         }
+                        .swipeActions(edge: .leading) {
+                            Button("Archive") {
+                                
+                            }
+                            .tint(.yellow)
+                        }
                     }
                 }
                 .padding()
